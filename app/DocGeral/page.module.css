@@ -1,0 +1,19 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+.card{
+    width: 100%;
+    max-width: 400px;
+    padding: 90px;
+    height: 300px;
+    flex-wrap: wrap;
+    margin: 50px;
+    background: #B5979787;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
