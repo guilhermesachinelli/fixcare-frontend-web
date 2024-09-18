@@ -6,7 +6,7 @@ const Header = () => (
         <div className={styles.header}>
             <div className={styles.title}>
                 <a href='./' >
-                    <img className={styles.logo} src='/senaiLogo.png' alt='Logo' width={120} height={80} />
+                    <img className={styles.logo} src='/senaiLogo.png' alt='Logo' width={140} height={80} />
                 </a>
             </div>
 
@@ -18,7 +18,7 @@ const Header = () => (
                 <a href="./Maquinas">
                     <h1 className={styles.titulo}>Máquinas</h1>
                 </a>
-                <a href='./Servicos'>
+                <a href='./Servico'>
                     <h1 className={styles.titulo}>Serviços</h1>
                 </a>
                 <a href='./Adm'>

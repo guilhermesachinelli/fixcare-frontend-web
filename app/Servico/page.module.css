@@ -1,0 +1,73 @@
+.footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: #750202;
+    color: white;
+    height: 100px;
+    width: 100%;
+    margin-top: 200px;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: #FF0000 0.01%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-top: 0px;
+  }
+
+  .Cards {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+
+.manutencao, .lubrificacao {
+  width: 413px;
+  height: 527px;
+  top: 527px;
+  gap: 0px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 0px;
+  background: #71000087;
+  margin-left: 50px;
+  margin-top: 100px;
+}
+
+.ferramentas {
+  width: 215px;
+  height: 210px;
+  top: 86px;
+  left: 74px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 100px;
+  margin-top: 80px;
+}
+
+.oleo {
+  width: 207px;
+  height: 192px;
+  top: 95px;
+  left: 573px;
+  gap: 0px;
+  opacity: 0px;
+  margin-left: 105px;
+  margin-top: 80px;
+}
+
+.titulo {
+  width: 100%;
+  height: 100px;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #fff;
+}
