@@ -1,0 +1,54 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: #FF0000 0.01%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: auto;
+}
+
+.logo {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-left: 25px;
+}
+
+.titulo{
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    margin: 0 1rem;
+    margin-left: 800px;
+}
+
+@media only screen and (max-width: 450px) {
+    .body {
+        width: 100vw;
+    }
+
+    .logo {
+        font-size: 0.5rem;
+        width: 7.8rem;   
+        height: 2.5rem; 
+    }
+
+    .titulo{
+        background-color: transparent;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 0.9rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        padding: -5rem -0.3rem;
+        margin: 0 0.1rem;
+    }
+
+}
