@@ -1,3 +1,4 @@
+import Footer from "../components/footer/page";
 import styles from "./page.module.css"
 
 function page() {
@@ -37,6 +38,9 @@ function page() {
                 </div>
                 </a>
             </div>
+            <footer className={styles.footer}>
+                <Footer />
+            </footer>
         </div>
     )
 }
