@@ -1,11 +1,17 @@
 :root {
   --background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
+  --primary: rgba(241, 241, 241, 0.603);
+  --secondary: rgba(253, 31, 31, 0.4);
+  --tertiary: rgba(255, 0, 0, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
     --foreground: #ededed;
+    --primary: rgba(241, 241, 241, 0.603);
+  --secondary: rgba(253, 31, 31, 0.4);
+  --tertiary: rgba(255, 0, 0, 0.6);
   }
 }
 
@@ -34,6 +40,25 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+*::-webkit-scrollbar {
+  width: 17px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 14px;
+  border: 3px solid var(--primary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--tertiary);
 }
 
 @media (prefers-color-scheme: dark) {
