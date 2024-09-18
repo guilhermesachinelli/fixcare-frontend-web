@@ -2,7 +2,7 @@ import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 
-function page() {
+function DocGeral() {
     return (
         <div className={styles.container}>
             <header className={styles.header}>
@@ -42,4 +42,4 @@ function page() {
     )
 }
 
-export default page;
+export default DocGeral;
