@@ -1,6 +1,6 @@
 import styles from "./page.module.css"
 
-function DocGeral() {
+function page() {
     return (
         <div className={styles.container}>
             <div className={styles.Cards}>
@@ -33,4 +33,4 @@ function DocGeral() {
     )
 }
 
-export default DocGeral;
+export default page;
