@@ -1,32 +1,33 @@
 .footer {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background: #750202;
-    color: white;
-    height: 100px;
-    width: 100%;
-    margin-top: 200px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  background: #750202;
+  color: white;
+  height: 100px;
+  width: 100%;
+  margin-top: 200px;
 }
 
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
-    background-color: #FF0000 0.01%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-top: 0px;
-  }
-
-  .Cards {
-    display: flex;
-    justify-content: space-around; 
-    align-items: center; 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: #FF0000 0.01%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 0px;
 }
 
-.manutencao, .lubrificacao {
+.Cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.manutencao,
+.lubrificacao {
   width: 413px;
   height: 527px;
   top: 527px;
@@ -36,6 +37,18 @@
   background: #71000087;
   margin-left: 50px;
   margin-top: 100px;
+}
+
+.manutencao:hover {
+  background-color: #BC0303;
+  transition: 0.5s;
+  opacity: 0.7;
+}
+
+.lubrificacao:hover {
+  background-color: #BC0303;
+  transition: 0.5s;
+  opacity: 0.7;
 }
 
 .ferramentas {
