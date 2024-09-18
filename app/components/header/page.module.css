@@ -15,20 +15,26 @@
 
 .navegar {
   display: flex;
-  justify-content: space-around; 
-  align-items: center; 
+  justify-content: space-around;
+  align-items: center;
 }
 
 .navegar a {
-  text-decoration: none; 
-  color: inherit; 
-  margin: 0 1em; 
+  text-decoration: none;
+  color: inherit;
+  margin: 0 1em;
 }
 
 .titulo {
-  margin: 0; 
-  font-size: 1.5em; 
-  color: #ffffff; 
+  margin: 0;
+  font-size: 1.5em;
+  color: #ffffff;
   margin-left: 200px;
   font-size: 30px;
+}
+
+.titulo:hover {
+  color: #710000c5;
+  transition: 0.5s;
+  opacity: 0.9;
 }
