@@ -1,15 +1,14 @@
-import {Swiper, SwiperSlide} from 'swiper';
-import 'swiper/css';
-function page(){
-<>
-<Swiper>
-    <SwiperSlide>
-        <div>
-            <p>aaa</p>
+
+import styles from "./page.module.css";
+
+
+function page() {
+
+    return (
+        <div className={styles.container}>
+
         </div>
-    </SwiperSlide>
-</Swiper>
-</>
+    );
 }
 
-export default page
+export default page;
