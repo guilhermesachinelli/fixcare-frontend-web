@@ -6,26 +6,24 @@ const Header = () => (
         <div className={styles.header}>
             <div className={styles.title}>
                 <a href='./' >
-            <img className={styles.logo} src='/fixcare.png' alt='Logo' width={80} height={80} />
-            </a>
+                    <img className={styles.logo} src='/senaiLogo.png' alt='Logo' width={120} height={80} />
+                </a>
             </div>
-            
-              
-        <div className={styles.navegar}>
-              <a href='./DocGeral' >
+
+
+            <div className={styles.navegar}>
+                <a href='./DocGeral'>
                     <h1 className={styles.titulo}>Documentação</h1>
                 </a>
-           {/* <a href="./batalha" >
-                <h1 className={styles.titulo}>Máquinas</h1>
-            </a>
-            <a href='./personagens' >
-                <h1 className={styles.titulo}>Serviços</h1>
-            </a>
-            <a href='./pessoa' >
-                <h1 className={styles.titulo}>Administração</h1>
-            </a>
-            */}
-
+                <a href="./Maquinas">
+                    <h1 className={styles.titulo}>Máquinas</h1>
+                </a>
+                <a href='./Servicos'>
+                    <h1 className={styles.titulo}>Serviços</h1>
+                </a>
+                <a href='./Adm'>
+                    <h1 className={styles.titulo}>Administração</h1>
+                </a>
             </div>
         </div>
     </header>
