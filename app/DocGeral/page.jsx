@@ -1,31 +1,36 @@
 import styles from "./page.module.css"
 
-function page() {
+function DocGeral() {
     return (
-        <div className={styles.page}>
-            {/* Bloco das informções do manuel mecânico */}
-            <main className={styles.card}>
-                <img src="/engrenagem.png" className={styles.img} />
-                <h1 className={styles.title}>Manual Mecânico</h1>
-            </main>
-            {/* Bloco das informções do manuel elétrico */}
-            <main className={styles.card}>
-            <img src="/eletrico.png" className={styles.img2} />
-                <h1 className={styles.title}>Manual Elétrico</h1>
-            </main>
-            {/* Bloco das informções da ficha de dados de segurança */}
-            <main className={styles.card}>
-            <img src="/fds.png" className={styles.img2} />
-                <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
-            </main>
-            {/* Bloco das informções do protocolo de segurança */}
-            <main className={styles.card}>
-            <img src="/seguranca.png" className={styles.img3} />
-                <h1 className={styles.title}>Protocolo de Segurança</h1>
-            </main>
+        <div className={styles.container}>
+            <div className={styles.Cards}>
+                <a href='./ManualMecanico'> 
+                <div className={styles.manualM}>
+                    <img className={styles.engrenagens} src="/engrenagens.png" />
+                    <h1 className={styles.titulo}>Manual Mecânico</h1>
+                </div>
+                </a>
+                <a href='./ManualEletrico'>
+                <div className={styles.manualE}>
+                    <img className={styles.eletrica} src="/eletrico.png" />
+                    <h1 className={styles.titulo}>Manual Elétrico</h1>
+                </div>
+                </a>
+                <a href='./FDS'>
+                <div className={styles.Fds}>
+                    <img className={styles.fds} src="/fds.png" />
+                    <h1 className={styles.titulo}>FDS</h1>
+                </div>
+                </a>
+                <a href='./ProtocoloSeguranca'>
+                <div className={styles.Pls}>
+                    <img className={styles.pls} src="/seguranca.png" />
+                    <h1 className={styles.titulo2}>Protocolo de Segurança</h1>
+                </div>
+                </a>
+            </div>
         </div>
-        
     )
 }
 
-export default page
+export default DocGeral;

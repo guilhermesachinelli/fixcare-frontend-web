@@ -1,47 +1,96 @@
-.page{
+.container {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #ffffff;
+    background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
 }
-.card{
+
+
+.Cards {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+}
+  
+  .manualM, .manualE , .Fds, .Pls {
+    width: 413px;
+    height: 527px;
+    top: 527px;
+    gap: 0px;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0px;
+    background: #B5979787;
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+
+.engrenagens {
+    width: 215px;
+    height: 210px;
+    top: 86px;
+    left: 74px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 100px;
+    margin-top: 80px;
+}
+
+.titulo {
     width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    height: 300px;
-    flex-wrap: wrap;
-    margin: 50px;
-    background: #b82a2a87;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
 }
-.img{
-    max-width: 350px;
-    margin: 0 auto;
-    display: block;
-    padding: 0;
-    margin-bottom: 50px;
+
+.eletrica {
+    width: 207px;
+    height: 192px;
+    top: 95px;
+    left: 573px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 105px;
+    margin-top: 80px;
 }
-.img2{
-    max-width: 150px;
-    margin: 0 auto;
-    display: block;
-    padding: 0;
-    margin-bottom: 50px;
+
+.fds {
+    width: 207px;
+    height: 192px;
+    top: 95px;
+    left: 573px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 105px;
+    margin-top: 80px;
 }
-.img3{
-    width: 150px;
-    margin: 0 auto;
-    display: block;
-    padding: 0;
-    margin-bottom: 50px;
+
+.pls {
+    width: 207px;
+    height: 192px;
+    top: 95px;
+    left: 573px;
+    gap: 0px;
+    opacity: 0px;
+    margin-left: 105px;
+    margin-top: 80px;
 }
-.title{
-    font-size: 30px;
-    font-weight: 700;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 20px;
+
+.titulo2 {
+    width: 100%;
+    height: 100px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 80px;
 }
