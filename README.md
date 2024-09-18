@@ -1,8 +1,8 @@
-<div align="center">Historico de Manutenção SENAI 564 (Fixcare)</div>
+#<div align="center">Historico de Manutenção SENAI 564 (Fixcare)</div>
 
 
 ## 💻 Seja muito bem-vindo!
-Esta documentação fornecerá informações abrangentes sobre como usar o nosso software e apresentará o nosso projeto em detalhes.
+#### Esta documentação fornecerá informações abrangentes sobre como usar o nosso software e apresentará o nosso projeto em detalhes.
 
 ### O que é?
 
