@@ -35,7 +35,7 @@ function Adm() {
                         className={styles.toggleButton}
                         onClick={togglePassaworVisibility}
                         >
-                            <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEyeSlash : faEye} />
+                            <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
                         </button>
                     </div>
                 </div>
