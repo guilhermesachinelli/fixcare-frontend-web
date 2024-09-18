@@ -4,6 +4,10 @@
 ## 💻 Seja muito bem-vindo!
 #### Esta documentação fornecerá informações abrangentes sobre como usar o nosso software e apresentará o nosso projeto em detalhes.
 
+<center>
+<img src="./public/arquivo data ex.png" width="200" height="130">
+</center>
+
 ### O que é?
 
 Esse software de código aberto  utiliza  uma API criada pelos alunos para documentar as manutenções nos equipamentos utilizados pelas turmas que utilizam  a oficina de mecânica do SENAI 564 Valinhos.
