@@ -23,7 +23,7 @@
     opacity: 0px;
     background: #B5979787;
     margin-left: 20px;
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
 .engrenagens {
@@ -93,4 +93,15 @@
     font-weight: bold;
     color: #fff;
     margin-left: 80px;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: #750202;
+    color: white;
+    height: 100px;
+    width: 100%;
+    margin-top: 150px;
 }
