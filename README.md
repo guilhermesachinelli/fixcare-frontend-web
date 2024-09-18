@@ -16,7 +16,7 @@ Para começar a utilizar esse software e entender melhor o projeto, siga os pass
 
 ## Documentação de cores oficiais do site
 
-| Cors Degrade             | Hexadecimal                                                |
+| Cores Degrade             | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
 | Cor Vermelha 1       | ![##FF0000](https://via.placeholder.com/10/FF0000?text=+) #FF0000 |
 | Cor  Vermelha 2      | ![#BC0303](https://via.placeholder.com/10/BC0303?text=+) #BC0303 |
