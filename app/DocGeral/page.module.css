@@ -10,11 +10,14 @@
 
 .Cards {
     display: flex;
-    justify-content: space-around; 
-    align-items: center; 
+    justify-content: space-around;
+    align-items: center;
 }
-  
-  .manualM, .manualE , .Fds, .Pls {
+
+.manualM,
+.manualE,
+.Fds,
+.Pls {
     width: 413px;
     height: 527px;
     top: 527px;
@@ -24,7 +27,7 @@
     background: #71000087;
     margin-left: 20px;
     margin-top: 100px;
-  }
+}
 
 .engrenagens {
     width: 215px;
@@ -106,7 +109,7 @@
     margin-top: 150px;
 }
 
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -115,4 +118,28 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin-top: 55px;
-  }
+}
+
+.manualM:hover {
+    background-color: #BC0303;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.manualE:hover {
+    background-color: #BC0303;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.Fds:hover {
+    background-color: #BC0303;
+    transition: 0.5s;
+    opacity: 0.7;
+}
+
+.Pls:hover {
+    background-color: #BC0303;
+    transition: 0.5s;
+    opacity: 0.7;
+}
