@@ -16,12 +16,20 @@ Para começar a utilizar esse software e entender melhor o projeto, siga os pass
 
 ## Documentação de cores oficiais do site
 
+| Cors Degrade             | Hexadecimal                                                |
+| ----------------- | ---------------------------------------------------------------- |
+| Cor Vermelha 1       | ![##FF0000](https://via.placeholder.com/10/FF0000?text=+) #FF0000 |
+| Cor  Vermelha 2      | ![#BC0303](https://via.placeholder.com/10/BC0303?text=+) #BC0303 |
+| Cor Vermelha 3       | ![#750202](https://via.placeholder.com/10/750202?text=+) #750202 |
+
+
 | Cor               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| Cor Cinza escuro       | ![#222222B0](https://via.placeholder.com/10/222222B0?text=+) #222222B0 |
-| Cor  Preta      | ![#0B2123](https://via.placeholder.com/10/0B2123?text=+) #0B2123 |
-| Cor Cappuccino       | ![#AB966F](https://via.placeholder.com/10/AB966F?text=+) #AB966F |
-| Cor Branca      | ![#fff](https://via.placeholder.com/10/fff?text=+) #fff |
+| Cor Branca       | ![#F1F1F19A](https://via.placeholder.com/10/F1F1F19A?text=+) #F1F1F19A |
+| Cor Vermelho Rosa     | ![#FD1F1F66](https://via.placeholder.com/10/FD1F1F66?text=+) #FD1F1F66 |
+| Cor Vermelho Claro 1       | ![#FF000099](https://via.placeholder.com/10/FF000099?text=+) #FF000099 |
+| Cor Vermelho Escuro     | ![#71000087](https://via.placeholder.com/10/71000087?text=+) #71000087 |
+| Cor Vermelho Claro 2     | ![#BC0303](https://via.placeholder.com/10/BC0303?text=+) #BC0303 |
 
 
 # Equipe
