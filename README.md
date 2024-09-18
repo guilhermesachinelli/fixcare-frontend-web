@@ -5,7 +5,7 @@
 #### Esta documentação fornecerá informações abrangentes sobre como usar o nosso software e apresentará o nosso projeto em detalhes.
 
 <center>
-<img src="./public/paginainicial.png" width="300" height="250">
+<img src="./public/paginainicial.png" width="60%" height="60%">
 </center>
 
 ### O que é?
