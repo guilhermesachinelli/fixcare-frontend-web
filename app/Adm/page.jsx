@@ -46,7 +46,9 @@ function Adm() {
             </div>
 
             <div className={styles.buttonContainer}>
-                <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
+                <a href='./Developers'>
+                <button className={styles.buttonText2} >Conhecer os Desenvolvedores</button>
+                </a>
                 </div>
 
             <footer className={styles.footer}>
