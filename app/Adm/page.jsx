@@ -8,12 +8,13 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
 
-    const togglePassaworVisibility = () => {
+    const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const fetchLogin = async () => {
+    const fetchLogin = async (e) => {
+        e.preventDefault();
         const response = await fetch('http://localhost:4000/admin', {
             method: 'POST',
             headers: {
@@ -21,21 +22,19 @@ function Adm() {
             },
             body: JSON.stringify({
                 email,
-                password,
+        senha: password,
+
             }),
         });
         const data = await response.json();
         console.log(data);
     }
-    useEffect(() => {
-        fetchLogin();
-    }, []);
     return (
         <div className={styles.container}>
             <header className={styles.header}>
                 <Header />
             </header>
-
+            <form onSubmit={fetchLogin}>
             <div className={styles.Card}>
                 <img className={styles.logoSenai} src="/senaiLogo.png" />
                 <div className={styles.inputsContainer}>
@@ -43,13 +42,15 @@ function Adm() {
                         <input 
                         className={styles.input} 
                         type="text" 
-                        laceholder="E-mail"
+                        value={email}
+                        placeholder="E-mail"
                         onChange={(event) => setEmail(event.target.value)}
                         />
                     </div>
                     <div className={styles.inputWrapper}>
                         <input 
                         className={styles.input} 
+                        value={password}
                         type={showPassword ? "text" : "password"} 
                         placeholder='Senha'
                         onChange={(event) => setPassword(event.target.value)}
@@ -57,7 +58,7 @@ function Adm() {
                         <button
                         type="button"
                         className={styles.toggleButton}
-                        onClick={togglePassaworVisibility}
+                        onClick={togglePasswordVisibility}
                         >
                             <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
                         </button>
@@ -68,13 +69,12 @@ function Adm() {
                     <button className={styles.buttonText}>Entrar</button>
                 </div>
             </div>
-
+            </form>
             <div className={styles.buttonContainer}>
                 <a href='./Developers'>
-                <button className={styles.buttonText2} >Conhecer os Desenvolvedores</button>
+                <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
                 </a>
                 </div>
-
             <footer className={styles.footer}>
                 <Footer />
             </footer>
