@@ -1,10 +1,11 @@
 'use client'
-import React, { useState,useEffect} from 'react';
+import React, { useState } from 'react';
 import styles from "./page.module.css"
 import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
 
@@ -26,6 +27,7 @@ function Adm() {
 
             }),
         });
+
         const data = await response.json();
         console.log(data);
     }
@@ -68,6 +70,9 @@ function Adm() {
                 <div className={styles.buttonContainer}>
                     <button className={styles.buttonText}>Entrar</button>
                 </div>
+                <a href='./AdmPrincipal'>
+                <h1 className={styles.buttonText2}>Entrar como Administrador</h1>
+                </a>
             </div>
             </form>
             <div className={styles.buttonContainer}>
