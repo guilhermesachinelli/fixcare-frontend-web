@@ -1,10 +1,11 @@
 'use client'
-import React, { useState,useEffect} from 'react';
+import React, { useState } from 'react';
 import styles from "./page.module.css"
 import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
 
@@ -15,7 +16,7 @@ function Adm() {
     const [password, setPassword] = useState('');
     const fetchLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:4000/admin', {
+        const response = await fetch('http://10.88.199.223:4000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,6 +27,7 @@ function Adm() {
 
             }),
         });
+
         const data = await response.json();
         console.log(data);
     }
@@ -68,6 +70,9 @@ function Adm() {
                 <div className={styles.buttonContainer}>
                     <button className={styles.buttonText}>Entrar</button>
                 </div>
+                <a href='./AdmPrincipal'>
+                <h1 className={styles.buttonText2}>Entrar como Administrador</h1>
+                </a>
             </div>
             </form>
             <div className={styles.buttonContainer}>
