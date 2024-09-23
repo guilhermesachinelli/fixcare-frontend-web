@@ -9,14 +9,14 @@ function AdmPrincipal() {
                 <Header />
             </header>
             <div className={styles.Cards}>
-                <a href="./Nardini">
+                <a href="./Manutenção">
                 <div className={styles.Nardini}>
                     <img className={styles.nardini} src="/ferramenta1.png" />
                     <h1 className={styles.titulo}>Manutenções</h1>
                 </div>
                 </a>
 
-                <a href="./Romi">
+                <a href="./CadastroMaquinas">
                 <div className={styles.Romi}>
                     <img className={styles.romi} src="/cadastroM.png" />
                     <h1 className={styles.titulo}>Cadastro de Máquinas</h1>
