@@ -7,7 +7,6 @@
     background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
 }
 
-
 .Cards {
     display: flex;
     justify-content: space-around;
