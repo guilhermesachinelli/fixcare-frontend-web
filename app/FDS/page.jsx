@@ -36,14 +36,13 @@ function Fds() {
                     <p className={styles.textos}>
                         FDS é um documento essencial para quem trabalha ou utiliza produtos químicos, pois fornece todas as informações necessárias para garantir a segurança e o bom uso desses produtos.
                     </p>
+                <div className={styles.informacao}>
+                    <img src="/maisInformacao.png" alt="FDS" className={styles.imagem} />
+                    <p className={styles.informacao}>Mais Informações</p>
                 </div>
-
+                </div>
             </div>
 
-            <div className={styles.informacao}>
-                <img src="/maisInformacao.png" alt="FDS" className={styles.imagem} />
-                <p className={styles.informacao}>Mais Informações</p>
-            </div>
 
             <footer className={styles.footer}>
                 <Footer />

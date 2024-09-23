@@ -13,14 +13,6 @@ function Footer() {
       <div className={styles.footerText}>
         <p>© 2024 - Todos os direitos reservados AllCode.</p>
       </div>
-      <div className={styles.footerIcon}>
-        <a href="https://www.instagram.com/">
-          <FaInstagram />
-        </a>
-        <a href="https://www.github.com/">
-          <FaGithub />
-        </a>
-      </div>
     </div>
   );
 }
