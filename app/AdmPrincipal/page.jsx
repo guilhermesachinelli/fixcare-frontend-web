@@ -16,7 +16,7 @@ function AdmPrincipal() {
                 </div>
                 </a>
 
-                <a href="./cadastroMaquinas">
+                <a href="./CadastroMaquinas">
                 <div className={styles.Romi}>
                     <img className={styles.romi} src="/cadastroM.png" />
                     <h1 className={styles.titulo}>Cadastro de Máquinas</h1>
