@@ -15,7 +15,7 @@ function Adm() {
     const [password, setPassword] = useState('');
     const fetchLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://172.17.192.1:4000/admin', {
+        const response = await fetch('http:// 10.88.199.223:4000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
