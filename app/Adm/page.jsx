@@ -14,6 +14,7 @@ function Adm() {
     };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const fetchLogin = async (e) => {
         e.preventDefault();
         const response = await fetch('http://10.88.200.139:4000/admin', {
@@ -29,7 +30,13 @@ function Adm() {
         });
 
         const data = await response.json();
-        console.log(data);
+        console.log(data.length);
+        if (data.length === 1) {
+            alert('Login efetuado com sucesso');
+            window.location.href = '/AdmPrincipal';
+        } else {
+            alert('Email ou senha incorretos');
+        }
     }
     return (
         <div className={styles.container}>
@@ -70,9 +77,6 @@ function Adm() {
                 <div className={styles.buttonContainer}>
                     <button className={styles.buttonText}>Entrar</button>
                 </div>
-                <a href='./AdmPrincipal'>
-                <h1 className={styles.buttonText2}>Entrar como Administrador</h1>
-                </a>
             </div>
             </form>
             <div className={styles.buttonContainer}>
