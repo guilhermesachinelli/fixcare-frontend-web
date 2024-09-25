@@ -6,6 +6,7 @@
     padding-bottom: 1.875rem;
     color: white;
     margin-top: 0.rem;
+
 }
 
 .footerIcon {
@@ -19,6 +20,7 @@
 
 .footerLogo {
     margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .footerContent {

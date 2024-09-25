@@ -1,6 +1,7 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
+import Link from "next/link";
 
 function Fds() {
     return (
@@ -36,10 +37,12 @@ function Fds() {
                     <p className={styles.textos}>
                         FDS é um documento essencial para quem trabalha ou utiliza produtos químicos, pois fornece todas as informações necessárias para garantir a segurança e o bom uso desses produtos.
                     </p>
-                <div className={styles.informacao}>
-                    <img src="/maisInformacao.png" alt="FDS" className={styles.imagem} />
-                    <p className={styles.informacao}>Mais Informações</p>
-                </div>
+                    <Link href='https://www.quimicabrasileira.com.br/fispqs/'>
+                        <div className={styles.informacao}>
+                            <img src="/maisInformacao.png" alt="FDS" className={styles.imagem} />
+                            <p className={styles.informacaoText}>Mais Informações</p>
+                        </div>
+                    </Link>
                 </div>
             </div>
 
