@@ -12,16 +12,7 @@ function CadastroMaquinas() {
     const [numSerie, setNumSerie] = useState('');
     const [numMaquina, setNumMaquina] = useState('');
     const [dataAquisicao, setDataAquisicao] = useState('');
-    const [tipoOleo, setTipoOleo] = useState('');
-    const [pontoLubrificacao, setPontoLubrificacao] = useState('');
-    const [frequenciaLubrificacao, setFrequenciaLubrificacao] = useState('');
-    const [quantidadeDeOleoLubrificacao, setQuantidadeDeOleoLubrificacao] = useState('');
     const [UltimaLubrificacao, setUltimaLubrificacao] = useState('');
-    const [imagem, setImagem] = useState(null);
-
-    const handleImageChange = (event) => {
-        setImagem(URL.createObjectURL(event.target.files[0]));
-      };
 
     return (
         <form>
@@ -88,6 +79,7 @@ function CadastroMaquinas() {
                         />
                     </div>
                     <div className={styles.inputWrapper}>
+                    <h1 className={styles.title}>Data de Aquisição</h1>
                         <input 
                         className={styles.input} 
                         type="date" 
@@ -97,42 +89,7 @@ function CadastroMaquinas() {
                         />
                     </div>
                     <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        type="text" 
-                        value={tipoOleo}
-                        placeholder="Tipo do Óleo para Lubrificação"
-                        onChange={(event) => setTipoOleo(event.target.value)}
-                        />
-                    </div>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        type="text" 
-                        value={pontoLubrificacao}
-                        placeholder="Pontos de Lubrificação"
-                        onChange={(event) => setPontoLubrificacao(event.target.value)}
-                        />
-                    </div>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        type="text" 
-                        value={frequenciaLubrificacao}
-                        placeholder="Frequência de Lubrificação"
-                        onChange={(event) => setFrequenciaLubrificacao(event.target.value)}
-                        />
-                    </div>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        type="text" 
-                        value={quantidadeDeOleoLubrificacao}
-                        placeholder="Quantidade de Óleo para Lubrificação"
-                        onChange={(event) => setQuantidadeDeOleoLubrificacao(event.target.value)}
-                        />
-                    </div>
-                    <div className={styles.inputWrapper}>
+                        <h1 className={styles.title}>Data da Última Troca de Óleo/lubrificação</h1>
                         <input 
                         className={styles.input} 
                         type="date" 
@@ -141,20 +98,6 @@ function CadastroMaquinas() {
                         onChange={(event) => setUltimaLubrificacao(event.target.value)}
                         />
                     </div>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input}
-                        type="file"
-                        accept="image/*"
-                        onChange={handleImageChange}
-                        />
-                    </div>
-                    {imagem && (
-                        <div className={styles.imagePreview}>
-                            <img src={imagem} alt="Preview" />
-                        </div>
-                    )
-                    }
 
                 </div>
             </div>
