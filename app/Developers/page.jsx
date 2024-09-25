@@ -19,27 +19,27 @@ function page() {
                 </a>
                 <a href='https://github.com/richardmsiqueira'>
                     <div className={styles.manualE}>
-                        <img className={styles.eletrica} src="/richard.jpeg" />
+                        <img className={styles.engrenagens} src="/richard.jpeg" />
                         <h1 className={styles.titulo}>Richard Macedo</h1>
                     </div>
                 </a>
                 <a href='https://github.com/guilhermesachinelli'>
                     <div className={styles.Fds}>
-                        <img className={styles.fds} src="/isa.jpeg" />
+                        <img className={styles.engrenagens} src="/isa.jpeg" />
                         <h1 className={styles.titulo}>Guilherme Godoy</h1>
                     </div>
                 </a>
             </div>
             <div className={styles.Cards}>
-                <a href='./ManualMecanico'>
+                <a href='./https://github.com/LuFassini'>
                     <div className={styles.manualM}>
-                        <img className={styles.engrenagens} src="/isa.jpeg" />
+                        <img className={styles.engrenagens} src="/luana.jpeg" />
                         <h1 className={styles.titulo}>Luana Fascini</h1>
                     </div>
                 </a>
                 <a href='https://github.com/IsaBarquilia'>
                     <div className={styles.manualE}>
-                        <img className={styles.eletrica} src="/isa.jpeg" />
+                        <img className={styles.engrenagens} src="/isa.jpeg" />
                         <h1 className={styles.titulo}>Isabele Barquilia</h1>
                     </div>
                 </a>
