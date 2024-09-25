@@ -46,7 +46,12 @@
     margin-left: 50px;
     margin-top: 100px;
 }
-
+.tituloManutencao{
+    font-size: 2rem;
+    color: white;
+    margin-top: 60px;
+    margin-left: 100px;
+}
 .Nardini:hover {
     background-color: #BC0303;
     transition: 0.5s;
@@ -74,16 +79,15 @@
     width: 300px;
     height: 200px;
     top: 90px;
-    left: 90px;
     gap: 0px;
     opacity: 0px;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 120px;
 }
 
 .titulo {
     font-size: 2rem;
     color: white;
-    margin-top: 50px;
-    margin-left: 25px;
+    margin-top: 60px;
+    margin-left: 35px;
 }
