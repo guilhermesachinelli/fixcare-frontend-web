@@ -26,7 +26,7 @@ function Adm() {
             },
             body: JSON.stringify({
                 email,
-        senha: password,
+                senha: password,
 
             }),
         });
@@ -36,16 +36,16 @@ function Adm() {
         if (data.length === 1) {
             setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
             setTimeout(() => {
-            window.location.href = '/AdmPrincipal';
+                window.location.href = '/AdmPrincipal';
             }
-            , 2000);
+                , 2000);
         } else {
             setPopup({ visible: true, message: 'Email ou senha incorretos', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
+            }
+                , 2000);
         }
-        , 2000);
-    }
     }
     return (
         <div className={styles.container}>
@@ -53,46 +53,46 @@ function Adm() {
                 <Header />
             </header>
             <form onSubmit={fetchLogin}>
-            <div className={styles.Card}>
-                <img className={styles.logoSenai} src="/senaiLogo.png" />
-                <div className={styles.inputsContainer}>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        type="text" 
-                        value={email}
-                        placeholder="E-mail"
-                        onChange={(event) => setEmail(event.target.value)}
-                        />
+                <div className={styles.Card}>
+                    <img className={styles.logoSenai} src="/senaiLogo.png" />
+                    <div className={styles.inputsContainer}>
+                        <div className={styles.inputWrapper}>
+                            <input
+                                className={styles.input}
+                                type="text"
+                                value={email}
+                                placeholder="E-mail"
+                                onChange={(event) => setEmail(event.target.value)}
+                            />
+                        </div>
+                        <div className={styles.inputWrapper}>
+                            <input
+                                className={styles.input}
+                                value={password}
+                                type={showPassword ? "text" : "password"}
+                                placeholder='Senha'
+                                onChange={(event) => setPassword(event.target.value)}
+                            />
+                            <button
+                                type="button"
+                                className={styles.toggleButton}
+                                onClick={togglePasswordVisibility}
+                            >
+                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
+                            </button>
+                        </div>
                     </div>
-                    <div className={styles.inputWrapper}>
-                        <input 
-                        className={styles.input} 
-                        value={password}
-                        type={showPassword ? "text" : "password"} 
-                        placeholder='Senha'
-                        onChange={(event) => setPassword(event.target.value)}
-                        />
-                        <button
-                        type="button"
-                        className={styles.toggleButton}
-                        onClick={togglePasswordVisibility}
-                        >
-                            <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
-                        </button>
+                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.buttonText}>Entrar</button>
                     </div>
                 </div>
-                {popup.visible && <PopupMessage message={popup.message} type={popup.type}/>}
-                <div className={styles.buttonContainer}>
-                    <button className={styles.buttonText}>Entrar</button>
-                </div>
-            </div>
             </form>
             <div className={styles.buttonContainer}>
                 <a href='./Developers'>
-                <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
+                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
                 </a>
-                </div>
+            </div>
             <footer className={styles.footer}>
                 <Footer />
             </footer>
