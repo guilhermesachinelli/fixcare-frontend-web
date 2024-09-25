@@ -5,6 +5,7 @@ import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import PopupMessage from '../components/PopUp/PopUp';
 
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
@@ -14,9 +15,11 @@ function Adm() {
     };
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
+
     const fetchLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://10.88.199.223:4000/admin', {
+        const response = await fetch('http://10.88.200.139:4000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -29,7 +32,20 @@ function Adm() {
         });
 
         const data = await response.json();
-        console.log(data);
+        console.log(data.length);
+        if (data.length === 1) {
+            setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
+            setTimeout(() => {
+            window.location.href = '/AdmPrincipal';
+            }
+            , 2000);
+        } else {
+            setPopup({ visible: true, message: 'Email ou senha incorretos', type: 'error' });
+            setTimeout(() => {
+                setPopup({ visible: false, message: '', type: '' });
+        }
+        , 2000);
+    }
     }
     return (
         <div className={styles.container}>
@@ -66,13 +82,10 @@ function Adm() {
                         </button>
                     </div>
                 </div>
-
+                {popup.visible && <PopupMessage message={popup.message} type={popup.type}/>}
                 <div className={styles.buttonContainer}>
                     <button className={styles.buttonText}>Entrar</button>
                 </div>
-                <a href='./AdmPrincipal'>
-                <h1 className={styles.buttonText2}>Entrar como Administrador</h1>
-                </a>
             </div>
             </form>
             <div className={styles.buttonContainer}>
