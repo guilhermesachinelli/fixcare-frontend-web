@@ -9,11 +9,11 @@ function CadastroMaquinas() {
     const [marca, setMarca] = useState('');
     const [modelo, setModelo] = useState('');
     const [categoria, setCategoria] = useState('');
-    const [numPatrimonio, setNumPatrimonio] = useState('');
-    const [numSerie, setNumSerie] = useState('');
-    const [numMaquina, setNumMaquina] = useState('');
-    const [dataAquisicao, setDataAquisicao] = useState('');
-    const [UltimaLubrificacao, setUltimaLubrificacao] = useState('');
+    const [numero_de_patrimonio, setNumero_de_patrimonio] = useState('');
+    const [numero_de_serie, setNumero_de_serie] = useState('');
+    const [numero_do_torno, setNumero_do_torno] = useState('');
+    const [data_de_aquisicao, setData_de_aquisicao] = useState('');
+    const [data_da_ultima_troca_de_oleo, setData_da_ultima_troca_de_oleo] = useState('');
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     
     const handleSubmit = async (e) => {
@@ -28,17 +28,17 @@ function CadastroMaquinas() {
                 categoria,
                 marca,
                 modelo,
-                numPatrimonio,
-                numSerie,
-                numMaquina,
-                dataAquisicao,
-                UltimaLubrificacao,
+                numero_de_patrimonio,
+                numero_de_serie,
+                numero_do_torno,
+                data_de_aquisicao,
+                data_da_ultima_troca_de_oleo,
             }),
 
         });
       
         const data = await response.json();
-        console.log(categoria, marca, modelo, numPatrimonio, numSerie, numMaquina, dataAquisicao, UltimaLubrificacao);
+        console.log(categoria, marca, modelo, numero_de_patrimonio, numero_de_serie, numero_do_torno, data_de_aquisicao, data_da_ultima_troca_de_oleo);
         console.log(data);
         if (data.lenght === undefined) {
             setPopup({ visible: true, message: 'Erro ao Cadastrar', type: 'error' });
@@ -61,7 +61,7 @@ function CadastroMaquinas() {
                 <Header />
             </header>
             <form onSubmit={handleSubmit}>
-                <div className={styles.Card}>
+                <div className={styles.Card}>                 
                     <h1 className={styles.titulo}>Cadastro de Máquinas</h1>
                     <div className={styles.inputsContainer}>
                         <div className={styles.inputWrapper}>
@@ -96,27 +96,27 @@ function CadastroMaquinas() {
                             <input
                                 className={styles.input}
                                 type="text"
-                                value={numPatrimonio}
+                                value={numero_de_patrimonio}
                                 placeholder="Número do Patrimônio"
-                                onChange={(event) => setNumPatrimonio(event.target.value)}
+                                onChange={(event) => setNumero_de_patrimonio(event.target.value)}
                             />
                         </div>
                         <div className={styles.inputWrapper}>
                             <input
                                 className={styles.input}
                                 type="text"
-                                value={numSerie}
+                                value={numero_de_serie}
                                 placeholder="Número de Série"
-                                onChange={(event) => setNumSerie(event.target.value)}
+                                onChange={(event) => setNumero_de_serie(event.target.value)}
                             />
                         </div>
                         <div className={styles.inputWrapper}>
                             <input
                                 className={styles.input}
                                 type="text"
-                                value={numMaquina}
+                                value={numero_do_torno}
                                 placeholder="Número da Máquina"
-                                onChange={(event) => setNumMaquina(event.target.value)}
+                                onChange={(event) => setNumero_do_torno(event.target.value)}
                             />
                         </div>
                         <div className={styles.inputWrapper}>
@@ -124,9 +124,9 @@ function CadastroMaquinas() {
                             <input
                                 className={styles.input}
                                 type="date"
-                                value={dataAquisicao}
+                                value={data_de_aquisicao}
                                 placeholder="Data de Aquisição"
-                                onChange={(event) => setDataAquisicao(event.target.value)}
+                                onChange={(event) => setData_de_aquisicao(event.target.value)}
                             />
                         </div>
                         <div className={styles.inputWrapper}>
@@ -134,9 +134,9 @@ function CadastroMaquinas() {
                             <input
                                 className={styles.input}
                                 type="date"
-                                value={UltimaLubrificacao}
+                                value={data_da_ultima_troca_de_oleo}
                                 placeholder="Data da Última Troca de Óleo/lubrificação"
-                                onChange={(event) => setUltimaLubrificacao(event.target.value)}
+                                onChange={(event) => setData_da_ultima_troca_de_oleo(event.target.value)}
                             />
                         </div>
                         <div className={styles.buttonContainer}>
