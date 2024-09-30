@@ -1,5 +1,6 @@
 'use client'
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect} from 'react';
+import { BrowserRouter, useNavigate } from 'react-router-dom';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
@@ -8,6 +9,7 @@ import PopupMessage from '../components/PopUp/PopUp';
 function page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     const [data, setData] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchMaquinas = async () => {
@@ -36,7 +38,13 @@ function page() {
         fetchMaquinas();
     }, []);
     console.log(data);
+
+    const handleCardClick = (maquina) => {
+        navigate('/MaquinaCadastrada', { state: { maquina } });
+    };
+
     return (
+        <BrowserRouter>
         <div className={styles.container}>
             <header className={styles.header}>
                 <Header />
@@ -45,14 +53,18 @@ function page() {
                 <div className={styles.CardsRow}>
 
                     {data.map((maquina) => (
-                        <a href='./ManutencaoCorretiva' key={maquina.id}>
+                       <div 
+                       key={maquina.id} 
+                       className={styles.Corretiva} 
+                       onClick={() => handleCardClick(maquina)}
+                   >
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
                                 <h1 className={styles.titulo}>{maquina.modelo}</h1>
 
                             </div>
-                        </a>
+                        </div>
 
                     ))}
                 </div>
@@ -62,7 +74,7 @@ function page() {
                 <Footer />
             </footer>
         </div>
-
+        </BrowserRouter>
     )
 }
 
