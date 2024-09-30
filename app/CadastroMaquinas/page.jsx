@@ -40,7 +40,7 @@ function CadastroMaquinas() {
         const data = await response.json();
         console.log(categoria, marca, modelo, numero_de_patrimonio, numero_de_serie, numero_do_torno, data_de_aquisicao, data_da_ultima_troca_de_oleo);
         console.log(data);
-        if (data.lenght === undefined) {
+        if (data.message) {
             setPopup({ visible: true, message: 'Erro ao Cadastrar', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
