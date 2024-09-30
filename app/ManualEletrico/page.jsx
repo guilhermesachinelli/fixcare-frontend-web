@@ -9,7 +9,7 @@ function ManualEletrico() {
                 <Header />
             </header>
             <div className={styles.Cards}>
-                <a href="./Nardini">
+                <a href="./LubriNardini">
                 <div className={styles.Nardini}>
                     <img className={styles.nardini} src="/Nardini.png" />
                 </div>
