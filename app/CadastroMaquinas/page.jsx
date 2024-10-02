@@ -18,8 +18,19 @@ function CadastroMaquinas() {
     
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        const clearInputs = () => {
+            setMarca('');
+            setModelo('');
+            setCategoria('');
+            setNumero_de_patrimonio('');
+            setNumero_de_serie('');
+            setNumero_do_torno('');
+            setData_de_aquisicao('');
+            setData_da_ultima_troca_de_oleo('');
+        }
         
-        const response = await fetch('http://10.88.200.139:4000/machine', {
+        const response = await fetch('http://10.88.199.223:4000/machine', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -52,6 +63,7 @@ function CadastroMaquinas() {
                 setPopup({ visible: false, message: '', type: '' });
             }
                 , 2000);
+            clearInputs();
         }
     }
     return (
