@@ -5,6 +5,7 @@ import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 
+
 function MaquinaCadastrada() {
     const [maquina, setMaquina] = useState(null);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -57,8 +58,7 @@ function MaquinaCadastrada() {
 
     const handleEdit = () => {
         const id = new URLSearchParams(window.location.search).get('id');
-        const queryParams = new URLSearchParams(maquina).toString();
-        window.location.href = `/CadastroMaquinas?id=${id}&${queryParams}`;
+        window.location.href = `/CadastroMaquinas?id=${id}`;
     };
 
     if (!maquina) {

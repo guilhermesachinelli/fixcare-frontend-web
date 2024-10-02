@@ -7,6 +7,8 @@ import PopupMessage from '../components/PopUp/PopUp';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
+        marca: '',
+        modelo: '',
         categoria: '',
         marca: '',
         modelo: '',
@@ -22,35 +24,14 @@ function CadastrarMaquinas() {
     useEffect(() => {
         const id = new URLSearchParams(window.location.search).get('id');
         if (id) {
-            const params = new URLSearchParams(window.location.search);
-            const maquinaData = {
-                categoria: params.get('categoria'),
-                marca: params.get('marca'),
-                modelo: params.get('modelo'),
-                numero_de_patrimonio: params.get('numero_de_patrimonio'),
-                numero_de_serie: params.get('numero_de_serie'),
-                numero_do_torno: params.get('numero_do_torno'),
-                data_da_ultima_troca_de_oleo: params.get('data_da_ultima_troca_de_oleo') ? formatDate(params.get('data_da_ultima_troca_de_oleo')) : '',
-                data_de_aquisicao: params.get('data_de_aquisicao') ? formatDate(params.get('data_de_aquisicao')) : '',
-            };
-            console.log('maquinaData', maquinaData);
-            setMaquina(maquinaData);
-            setEditMode(true);
-        }
-
-        console.log(maquina);
-        
-    }, []);
-
-    const formatDate = (dateString) => {
-        console.log('dateString', dateString);
-        
-        const date = new Date(dateString);
-        if (!isNaN(date.getTime())) {
-            return date.toISOString().split('T')[0];
-        }
-        return '';
-    };
+            fetch(`http://10.88.199.223:4000/machine/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                setMaquina(data);
+                setEditMode(true);
+            });
+            }
+        }, []);
 
     const handleSaveEdit = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
@@ -82,7 +63,10 @@ function CadastrarMaquinas() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setMaquina({ ...maquina, [name]: value });
+        setMaquina(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
     };
 
     return (
@@ -94,6 +78,20 @@ function CadastrarMaquinas() {
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>
                 <form>
+                    <input
+                        type="text"
+                        name="marca"
+                        value={maquina.marca}
+                        onChange={handleChange}
+                        placeholder="Marca"
+                    />
+                    <input 
+                        type="text"
+                        name="modelo"
+                        value={maquina.modelo}
+                        onChange={handleChange}
+                        placeholder="Modelo"
+                    />
                     <input
                         type="text"
                         name="categoria"
