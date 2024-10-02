@@ -33,7 +33,7 @@ function MaquinaCadastrada() {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             } else {
-                setPopup({ visible: true, message: 'Maquinas Encontrada', type: 'success' });
+                setPopup({ visible: true, message: 'Maquina Encontrada', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
@@ -50,16 +50,27 @@ function MaquinaCadastrada() {
             <header className={styles.header}>
                 <Header />
             </header>
-            <div className={styles.Cards}>
-                <div className={styles.CardsRow}>
-                    <div className={styles.Corretiva}>
-                        <img className={styles.corretiva} src="/torno.png" alt="Imagem da máquina" />
-                        <h1 className={styles.titulo}>Marca: {maquina.marca}</h1>
-                        <h1 className={styles.titulo}>Modelo: {maquina.modelo}</h1>
-                        <h1 className={styles.titulo}>Número de Patrimônio: {maquina.numero_de_patrimonio}</h1>
-                    </div>
-                </div>
-            </div>
+                    {
+                        maquina.map((maquina) => (
+                            <div key={maquina.id}>
+                                <div className={styles.CardsRow}>
+                                <div>
+                                <img className={styles.ImgTorno} src="/torno.png" />
+                                </div>
+                                <div className={styles.Card}>
+                                <h1 className={styles.titulo}>Marca: {maquina.marca}</h1>
+                                <h4 className={styles.titulo}>Categoria: {maquina.categoria}</h4>
+                                <h4 className={styles.titulo}>Modelo: {maquina.modelo}</h4>
+                                <h4 className={styles.titulo}>Número de Patrimonio:{maquina.numero_de_patrimonio}</h4>
+                                <h4 className={styles.titulo}>Numero de Serie: {maquina.numero_de_serie}</h4>
+                                <h4 className={styles.titulo}>Número do Torno: {maquina.numero_do_torno}</h4>
+                                <h4 className={styles.titulo}>Data de Aquisicao: {maquina.data_de_aquisicao}</h4>
+                                <h4 className={styles.titulo}>Data da Ultima Troca de Oleo: {maquina.data_da_ultima_troca_de_oleo}</h4>
+                                </div>
+                                </div>
+                            </div>
+                        ))
+                    }
             {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
             <footer className={styles.footer}>
                 <Footer />

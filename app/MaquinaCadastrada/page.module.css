@@ -39,92 +39,26 @@
     margin-left: 220px;
 }
 
+.CardsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    max-width: 100%;
+}
+
 .Card {
-    width: 800px;
-    height: 1100px;
-    top: 2463.31px;
-    left: 265.17px;
-    gap: 0px;
+    width: 60%;
+    height: 100%;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
     background: #71000087;
     margin-top: 50px;
 }
 
-.inputsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
-.inputWrapper {
-    position: relative;
-    margin-left: 80px;
-}
-
-.input {
-    width: 400px;
-    margin-left: 120px;
-    margin-top: 40px;
-    padding: 0.75em;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    font-size: 1em;
-    outline: none;
-    transition: border-color 0.3s;
-    background-color: #750202;
-    border-bottom: 2px solid #750202;
-}
-
-.input:focus {
-    border-color: #FF0000;
-}
-
-.input::placeholder {
-    color: #999;
-}
-
-.imagePreview {
-    margin-top: 15px;
-}
-
-.imagePreview img {
-    max-width: 100%;
-    height: auto;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.title {
-    color: white;
-    font-size: 20px;
-    margin-left: 120px;
-    margin-top: 40px;
-}
-
-.buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.buttonText {
-    background-color: #FF0000;
-    color: #fff;
-    border: none;
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.buttonText:hover {
-    background-color: #750202;
-}
-
-.buttonText:active {
-    transform: scale(0.95);
+.ImgTorno {
+    width: 60%;
+    height: 60%;
+    border-radius: 10px 10px 10px 10px;
 }
