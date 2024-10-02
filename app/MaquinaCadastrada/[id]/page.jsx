@@ -1,15 +1,37 @@
 "use client";
-import React from 'react';
-import { useLocation } from 'react-router-dom';
 import styles from './page.module.css';
-import Header from '../components/header/page.jsx';
-import Footer from '../components/footer/page.jsx';
+import { useRouter } from 'next/navigation';
+import Header from '../../components/header/page.jsx';
+import Footer from '../../components/footer/page.jsx';
+import React, { useState, useEffect } from 'react';
 
 function MaquinaCadastrada() {
-    const { maquina } = location.state || {};
+    const [maquina, setMaquina] = useState(null);
+
+    const router = useRouter();
+
+    const { id } = router.query;
+
+    useEffect(() => {
+        const fetchMaquina = async () => {
+            try {
+                const response = await fetch(`http://10.88.200.139:4000/machine/${id}`, {
+                    method: 'GET',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    }
+                });
+                const result = await response.json();
+                setMaquina(result);
+            } catch (error) {
+                console.error('Erro ao buscar os dados da máquina:', error);
+            }
+        };
+        fetchMaquina();
+    }, [id]);
 
     if (!maquina) {
-        return <div>Informações da máquina não disponíveis</div>;
+        return <div>Carregando...</div>;
     }
 
     return (
