@@ -4,7 +4,6 @@
     align-items: center;
     justify-content: center;
     height: 100%;
-    background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
 }
 
 .footer {
@@ -29,14 +28,15 @@
 }
 
 .titulo {
-    width: 534px;
-    height: 44px;
-    top: 354px;
-    left: 514px;
-    gap: 0px;
-    opacity: 0px;
+    font-size: 40px;
     color: #ffffff;
-    margin-left: 220px;
+    margin-top: 5px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 3px;
 }
 
 .CardsRow {
@@ -49,16 +49,39 @@
 }
 
 .Card {
-    width: 60%;
+    width: 50%;
     height: 100%;
+    align-items: center;
+    justify-content: center;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
     background: #71000087;
     margin-top: 50px;
+    padding: 20px;
 }
 
 .ImgTorno {
     width: 60%;
     height: 60%;
     border-radius: 10px 10px 10px 10px;
+}
+
+
+.buttonText {
+    background-color: #FF0000;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttonText:hover {
+    background-color: #750202;
+}
+
+.buttonText:active {
+    transform: scale(0.95);
 }

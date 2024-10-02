@@ -72,17 +72,23 @@ function MaquinaCadastrada() {
             </header>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                <h1>Detalhes da Máquina</h1>
-                <div>
-                    <h2>{maquina.marca} - {maquina.modelo}</h2>
-                    <p>Categoria: {maquina.categoria}</p>
-                    <p>Número de Patrimônio: {maquina.numero_de_patrimonio}</p>
-                    <p>Número de Série: {maquina.numero_de_serie}</p>
-                    <p>Número do Torno: {maquina.numero_do_torno}</p>
-                    <p>Data de Aquisição: {maquina.data_de_aquisicao}</p>
-                    <p>Data da Última Troca de Óleo: {maquina.data_da_ultima_troca_de_oleo}</p>
-                    <button onClick={handleEdit}>Editar</button>
-                    <button onClick={handleDelete}>Excluir</button>
+                <h1 className={styles.titulo}>Detalhes da Máquina</h1>
+
+                <div className={styles.CardsRow}>
+                    <div>
+                    <img src="/tornoNardini.png" className={styles.ImgTorno}/>
+                    </div>
+                    <div className={styles.Card}>
+                    <h2 className={styles.titulo}>{maquina.marca} - {maquina.modelo}</h2>
+                    <p className={styles.subtitulo}>Categoria: {maquina.categoria}</p>
+                    <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonio}</p>
+                    <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
+                    <p className={styles.subtitulo}>Número do Torno: {maquina.numero_do_torno}</p>
+                    <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_aquisicao}</p>
+                    <p className={styles.subtitulo}>Data da Última Troca de Óleo: {maquina.data_da_ultima_troca_de_oleo}</p>
+                    <button onClick={handleEdit} className={styles.buttonText}>Editar</button>
+                    <button onClick={handleDelete} className={styles.buttonText}>Excluir</button>
+                    </div>
                 </div>
             </div>
             <footer className={styles.footer}>

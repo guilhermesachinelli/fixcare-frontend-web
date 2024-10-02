@@ -15,7 +15,8 @@
 
 .navegar {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  gap: 1em;
   align-items: center;
 }
 
@@ -29,7 +30,6 @@
   margin: 0;
   font-size: 1.5em;
   color: #ffffff;
-  margin-left: 200px;
   font-size: 30px;
 }
 
