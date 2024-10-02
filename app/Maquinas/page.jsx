@@ -16,7 +16,7 @@ function page() {
 
     useEffect(() => {
         const fetchMaquinas = async () => {
-            const response = await fetch('http://10.88.200.139:4000/machine', {
+            const response = await fetch('http://10.88.199.223:4000/machine', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
