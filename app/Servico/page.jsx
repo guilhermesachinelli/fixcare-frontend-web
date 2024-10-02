@@ -17,6 +17,7 @@ function Servico() {
                     </div>
                 </a>
                 <a href='./ManualEletrico'>
+                                                                
                     <div className={styles.lubrificacao}>
                         <img className={styles.oleo} src="/lubrificacao.png" />
                         <h1 className={styles.titulo}>Lubrificação</h1>
