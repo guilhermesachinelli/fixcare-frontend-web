@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
 
 }
 
@@ -49,27 +49,6 @@
     color: #fff;
 }
 
-.eletrica {
-    width: 207px;
-    height: 192px;
-    top: 95px;
-    left: 573px;
-    gap: 0px;
-    opacity: 0px;
-    margin-left: 105px;
-    margin-top: 80px;
-}
-
-.fds {
-    width: 207px;
-    height: 192px;
-    top: 95px;
-    left: 573px;
-    gap: 0px;
-    opacity: 0px;
-    margin-left: 105px;
-    margin-top: 80px;
-}
 
 .pls {
     width: 207px;
@@ -114,5 +93,4 @@
     background-color: #FF0000 0.01%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin-top: 55px;
   }

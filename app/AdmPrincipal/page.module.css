@@ -3,7 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
 }
 
@@ -13,7 +13,6 @@
     align-items: center;
     background: #750202;
     color: white;
-    height: 100px;
     width: 100%;
     margin-top: 150px;
 }
@@ -47,7 +46,12 @@
     margin-left: 50px;
     margin-top: 100px;
 }
-
+.tituloManutencao{
+    font-size: 2rem;
+    color: white;
+    margin-top: 60px;
+    margin-left: 100px;
+}
 .Nardini:hover {
     background-color: #BC0303;
     transition: 0.5s;
@@ -61,10 +65,10 @@
 }
 
 .nardini {
-    width: 320px;
-    height: 210px;
-    top: 86px;
-    left: 74px;
+    width: 300px;
+    height: 200px;
+    top: 90px;
+    left: 90px;
     gap: 0px;
     opacity: 0px;
     margin-left: 50px;
@@ -72,18 +76,18 @@
 }
 
 .romi {
-    width: 350px;
-    height: 210px;
-    top: 86px;
-    left: 74px;
+    width: 300px;
+    height: 200px;
+    top: 90px;
     gap: 0px;
     opacity: 0px;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top: 120px;
 }
 
 .titulo {
     font-size: 2rem;
     color: white;
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-left: 35px;
 }
