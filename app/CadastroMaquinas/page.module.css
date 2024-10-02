@@ -29,13 +29,14 @@
 }
 
 .titulo {
-    width: 534px;
+    width: 500px;
     height: 44px;
     left: 514px;
     gap: 0px;
     opacity: 0px;
     color: #ffffff;
-    margin-left: 220px;
+    margin-left: 120px;
+    font-size: 25px;
 }
 
 .Card {
@@ -54,6 +55,7 @@
     display: flex;
     flex-direction: column;
     gap: 1em;
+    margin-left: 80px;
 }
 
 .inputWrapper {
@@ -118,6 +120,8 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
+    width: 200px;
+    margin-left: 200px;
 }
 
 .buttonText:hover {
