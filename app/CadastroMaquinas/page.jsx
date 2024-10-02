@@ -163,15 +163,6 @@ function CadastrarMaquinas() {
                         placeholder="Data de Aquisição"
                         className={styles.input}
                     />
-                    <h1 className={styles.titulo}>Data da ultima troca de óleo</h1>
-                    <input
-                        type="date"
-                        name="data_da_ultima_troca_de_oleo"
-                        value={maquina.data_da_ultima_troca_de_oleo}
-                        onChange={handleChange}
-                        placeholder="Data da Última Troca de Óleo"
-                        className={styles.input}
-                    />
                     {editMode && <button type="button" className={styles.buttonText} onClick={handleSaveEdit}>Salvar</button>}
                     {!editMode && <button type="button" className={styles.buttonText} onClick={handlePost}>Cadastrar</button>}
                     </div>
