@@ -1,22 +1,23 @@
-'use client'
+"use client";
+import styles from './page.module.css';
+import { useSearchParams } from 'next/navigation';
+import Header from '../components/header/page.jsx';
+import Footer from '../components/footer/page.jsx';
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import Link from 'next/link';
-import styles from "./page.module.css"
-import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 
-function page() {
+function MaquinaCadastrada() {
+    const [maquina, setMaquina] = useState([]);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
-    const [data, setData] = useState([]);
+    
 
-    const router = useRouter();
+    const search = useSearchParams();
 
-
+    const id = search.get("id");
+    console.log(id);
     useEffect(() => {
         const fetchMaquinas = async () => {
-            const response = await fetch('http://10.88.199.223:4000/machine', {
+            const response = await fetch(`http://10.88.199.223:4000/machine/${id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -24,14 +25,15 @@ function page() {
             });
 
             const result = await response.json();
-            setData(result);
+            setMaquina(result);
+            console.log(result);
             if (result == []) {
-                setPopup({ visible: true, message: 'Maquinas API sem registros', type: 'error' });
+                setPopup({ visible: true, message: 'Maquina não Encontrada', type: 'error' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             } else {
-                setPopup({ visible: true, message: 'Maquinas API Funcionando', type: 'success' });
+                setPopup({ visible: true, message: 'Maquinas Encontrada', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
@@ -39,8 +41,9 @@ function page() {
         };
 
         fetchMaquinas();
-    }, []);
-    console.log(data);
+    },[id]);
+
+    console.log(maquina);
 
     return (
         <div className={styles.container}>
@@ -49,21 +52,12 @@ function page() {
             </header>
             <div className={styles.Cards}>
                 <div className={styles.CardsRow}>
-
-                    {data.map((maquina) => (
-                        <Link
-                            key={maquina.id}
-                            href={`/MaquinaCadastrada?id=${maquina.id}`}	
-                        >
-                            <div className={styles.Corretiva}>
-                                <img className={styles.corretiva} src="/torno.png" />
-                                <h1 className={styles.titulo}>{maquina.marca}</h1>
-                                <h1 className={styles.titulo}>{maquina.modelo}</h1>
-
-                            </div>
-                        </Link>
-
-                    ))}
+                    <div className={styles.Corretiva}>
+                        <img className={styles.corretiva} src="/torno.png" alt="Imagem da máquina" />
+                        <h1 className={styles.titulo}>Marca: {maquina.marca}</h1>
+                        <h1 className={styles.titulo}>Modelo: {maquina.modelo}</h1>
+                        <h1 className={styles.titulo}>Número de Patrimônio: {maquina.numero_de_patrimonio}</h1>
+                    </div>
                 </div>
             </div>
             {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
@@ -71,7 +65,7 @@ function page() {
                 <Footer />
             </footer>
         </div>
-    )
+    );
 }
 
-export default page;
+export default MaquinaCadastrada;
