@@ -16,7 +16,6 @@ function CadastrarMaquinas() {
         numero_de_serie: '',
         numero_do_torno: '',
         data_de_aquisicao: '',
-        data_da_ultima_troca_de_oleo: ''
     });
     const [editMode, setEditMode] = useState(false);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
