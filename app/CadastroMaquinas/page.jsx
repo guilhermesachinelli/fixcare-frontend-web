@@ -132,22 +132,6 @@ function CadastrarMaquinas() {
                     />
                     <input
                         type="text"
-                        name="marca"
-                        value={maquina.marca}
-                        onChange={handleChange}
-                        placeholder="Marca"
-                        className={styles.input}
-                    />
-                    <input
-                        type="text"
-                        name="modelo"
-                        value={maquina.modelo}
-                        onChange={handleChange}
-                        placeholder="Modelo"
-                        className={styles.input}
-                    />
-                    <input
-                        type="text"
                         name="numero_de_patrimonio"
                         value={maquina.numero_de_patrimonio}
                         onChange={handleChange}
@@ -170,6 +154,7 @@ function CadastrarMaquinas() {
                         placeholder="Número do Torno"
                         className={styles.input}
                     />
+                    <h1 className={styles.titulo}>Data de Aquisição</h1>
                     <input
                         type="date"
                         name="data_de_aquisicao"
@@ -178,6 +163,7 @@ function CadastrarMaquinas() {
                         placeholder="Data de Aquisição"
                         className={styles.input}
                     />
+                    <h1 className={styles.titulo}>Data da ultima troca de óleo</h1>
                     <input
                         type="date"
                         name="data_da_ultima_troca_de_oleo"
