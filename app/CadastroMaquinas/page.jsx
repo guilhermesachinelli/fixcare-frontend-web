@@ -33,6 +33,33 @@ function CadastrarMaquinas() {
             }
         }, []);
 
+        const handlePost = async () => {
+            try {
+                const response = await fetch('http://10.88.199.223:4000/machine/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(maquina),
+                });
+
+                if (response.ok) {
+                    setPopup({ visible: true, message: 'Máquina cadastrada com sucesso', type: 'success' });
+                    setTimeout(() => {
+                        setPopup({ visible: false, message: '', type: '' });
+                        window.location.href = '/Maquinas';
+                    }, 2000);
+                } else {
+                    throw new Error('Erro ao cadastrar máquina');
+                }
+            } catch (error) {
+                setPopup({ visible: true, message: 'Erro ao cadastrar máquina', type: 'error' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                }, 2000);
+            }
+        };
+
     const handleSaveEdit = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
         try {
@@ -160,7 +187,7 @@ function CadastrarMaquinas() {
                         className={styles.input}
                     />
                     {editMode && <button type="button" className={styles.buttonText} onClick={handleSaveEdit}>Salvar</button>}
-                    {!editMode && <button type="button" className={styles.buttonText}>Cadastrar</button>}
+                    {!editMode && <button type="button" className={styles.buttonText} onClick={handlePost}>Cadastrar</button>}
                     </div>
                 </form>
             </div>
