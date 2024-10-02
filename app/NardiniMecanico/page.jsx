@@ -34,11 +34,10 @@ function NardiniMecanico() {
                 </div>
 
                 <div className={styles.text3}>
-                    
                     <Link href='https://docs.google.com/document/d/1IzMQfQRoDLj79QP6K82AQww9sO4b47-2ZczWxcRXXDk/edit?usp=sharing'>
-                    <p className={styles.textos}>
-                        Clique aqui para acessar o manual mecânico do torno Nardini
-                    </p>
+                        <p className={styles.textos}>
+                            Clique aqui para acessar o manual mecânico do torno Nardini
+                        </p>
                     </Link>
                 </div>
             </div>
