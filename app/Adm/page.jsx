@@ -19,7 +19,7 @@ function Adm() {
 
     const fetchLogin = async (e) => {
         e.preventDefault();
-        const response = await fetch('http://10.88.200.139:4000/admin', {
+        const response = await fetch('http://10.88.199.223:4000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -46,7 +46,8 @@ function Adm() {
             }
                 , 2000);
         }
-    }
+    } 
+
     return (
         <div className={styles.container}>
             <header className={styles.header}>
