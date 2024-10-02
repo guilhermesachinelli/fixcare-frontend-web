@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
@@ -10,9 +9,6 @@ import PopupMessage from '../components/PopUp/PopUp';
 function page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     const [data, setData] = useState([]);
-
-    const router = useRouter();
-
 
     useEffect(() => {
         const fetchMaquinas = async () => {
@@ -40,6 +36,8 @@ function page() {
 
         fetchMaquinas();
     }, []);
+
+    
     console.log(data);
 
     return (
