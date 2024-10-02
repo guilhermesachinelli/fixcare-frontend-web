@@ -76,14 +76,16 @@ function CadastrarMaquinas() {
             </header>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                <h1>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>
-                <form>
+                <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>
+                <form className={styles.Card}>
+                    <div className={styles.inputsContainer}>
                     <input
                         type="text"
                         name="marca"
                         value={maquina.marca}
                         onChange={handleChange}
                         placeholder="Marca"
+                        className={styles.input}
                     />
                     <input 
                         type="text"
@@ -91,6 +93,7 @@ function CadastrarMaquinas() {
                         value={maquina.modelo}
                         onChange={handleChange}
                         placeholder="Modelo"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -98,6 +101,7 @@ function CadastrarMaquinas() {
                         value={maquina.categoria}
                         onChange={handleChange}
                         placeholder="Categoria"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -105,6 +109,7 @@ function CadastrarMaquinas() {
                         value={maquina.marca}
                         onChange={handleChange}
                         placeholder="Marca"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -112,6 +117,7 @@ function CadastrarMaquinas() {
                         value={maquina.modelo}
                         onChange={handleChange}
                         placeholder="Modelo"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -119,6 +125,7 @@ function CadastrarMaquinas() {
                         value={maquina.numero_de_patrimonio}
                         onChange={handleChange}
                         placeholder="Número de Patrimônio"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -126,6 +133,7 @@ function CadastrarMaquinas() {
                         value={maquina.numero_de_serie}
                         onChange={handleChange}
                         placeholder="Número de Série"
+                        className={styles.input}
                     />
                     <input
                         type="text"
@@ -133,6 +141,7 @@ function CadastrarMaquinas() {
                         value={maquina.numero_do_torno}
                         onChange={handleChange}
                         placeholder="Número do Torno"
+                        className={styles.input}
                     />
                     <input
                         type="date"
@@ -140,6 +149,7 @@ function CadastrarMaquinas() {
                         value={maquina.data_de_aquisicao}
                         onChange={handleChange}
                         placeholder="Data de Aquisição"
+                        className={styles.input}
                     />
                     <input
                         type="date"
@@ -147,8 +157,11 @@ function CadastrarMaquinas() {
                         value={maquina.data_da_ultima_troca_de_oleo}
                         onChange={handleChange}
                         placeholder="Data da Última Troca de Óleo"
+                        className={styles.input}
                     />
-                    {editMode && <button type="button" onClick={handleSaveEdit}>Salvar</button>}
+                    {editMode && <button type="button" className={styles.buttonText} onClick={handleSaveEdit}>Salvar</button>}
+                    {!editMode && <button type="button" className={styles.buttonText}>Cadastrar</button>}
+                    </div>
                 </form>
             </div>
             <footer className={styles.footer}>
