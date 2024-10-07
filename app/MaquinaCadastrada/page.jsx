@@ -43,7 +43,7 @@ function MaquinaCadastrada() {
                 setPopup({ visible: true, message: 'Máquina excluída com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
-                    window.location.href = '/'; // Redirecionar para a página inicial após exclusão
+                    window.location.href = '/Maquinas'; // Redirecionar para a página inicial após exclusão
                 }, 2000);
             } else {
                 throw new Error('Erro ao excluir máquina');
