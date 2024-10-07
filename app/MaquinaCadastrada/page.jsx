@@ -85,7 +85,6 @@ function MaquinaCadastrada() {
                     <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
                     <p className={styles.subtitulo}>Número do Torno: {maquina.numero_do_torno}</p>
                     <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_aquisicao}</p>
-                    <p className={styles.subtitulo}>Data da Última Troca de Óleo: {maquina.data_da_ultima_troca_de_oleo}</p>
                     <button onClick={handleEdit} className={styles.buttonText}>Editar</button>
                     <button onClick={handleDelete} className={styles.buttonText}>Excluir</button>
                     </div>
