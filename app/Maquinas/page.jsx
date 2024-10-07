@@ -17,7 +17,7 @@ function Page() {
 
     const fetchMaquinas = async () => {
         try {
-            const response = await fetch('http://10.88.199.223:4000/machine', {
+            const response = await fetch('http://10.88.200.139:4000/machine', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -100,16 +100,18 @@ function Page() {
                 <Header />
             </header>
             <div className={styles.Cards}>
-                <div className={styles.CardsRow}>
-                    <form onSubmit={handleFilter}>
+            <form onSubmit={handleFilter} className={styles.searchForm}>
                         <input
                             type="text"
                             value={patrimonioFiltro}
                             onChange={handleFilterChange}
                             placeholder="Pesquisar máquinas por número de patrimônio"
+                            className={styles.searchInput}
                         />
-                        <button type="submit">Buscar</button>
+                        <button type="submit" className={styles.searchButton}>Buscar</button>
                     </form>
+                <div className={styles.CardsRow}>
+                    
                     {data.map((maquina) => (
                         <Link
                             key={maquina.id}
