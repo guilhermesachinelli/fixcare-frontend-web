@@ -1,17 +1,22 @@
 'use client'
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import styles from "./page.module.css"
-import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
+import styles from "./page.module.css";
+import Footer from "../components/footer/page.jsx";
+import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 
-function page() {
+function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     const [data, setData] = useState([]);
+    const [patrimonioFiltro, setPatrimonioFiltro] = useState('');
 
     useEffect(() => {
-        const fetchMaquinas = async () => {
+        fetchMaquinas();
+    }, []);
+
+    const fetchMaquinas = async () => {
+        try {
             const response = await fetch('http://10.88.199.223:4000/machine', {
                 method: 'GET',
                 headers: {
@@ -19,26 +24,75 @@ function page() {
                 }
             });
 
+            if (!response.ok) {
+                throw new Error('Erro na resposta da API');
+            }
+
             const result = await response.json();
             setData(result);
-            if (result == []) {
-                setPopup({ visible: true, message: 'Maquinas API sem registros', type: 'error' });
+            if (result.length === 0) {
+                setPopup({ visible: true, message: 'Nenhuma máquina encontrada', type: 'error' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             } else {
-                setPopup({ visible: true, message: 'Maquinas API Funcionando', type: 'success' });
+                setPopup({ visible: true, message: 'Máquinas carregadas com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             }
-        };
+        } catch (error) {
+            console.log("Erro ao buscar dados:", error);
+            setPopup({ visible: true, message: 'Erro ao buscar máquinas', type: 'error' });
+            setTimeout(() => {
+                setPopup({ visible: false, message: '', type: '' });
+            }, 4000);
+        }
+    };
 
-        fetchMaquinas();
-    }, []);
+    const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
+        try {
+            const response = await fetch(`http://10.88.199.223:4000/machine/patrimonio/${numeroDePatrimonio}`, {
+                method: 'GET',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
 
-    
-    console.log(data);
+            if (!response.ok) {
+                throw new Error('Erro na resposta da API');
+            }
+
+            const result = await response.json();
+            setData(result);
+            if (result.length === 0) {
+                setPopup({ visible: true, message: 'Máquina não encontrada', type: 'error' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                }, 4000);
+            } else {
+                setPopup({ visible: true, message: 'Máquina encontrada com sucesso', type: 'success' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                }, 4000);
+            }
+        } catch (error) {
+            console.log("Erro ao buscar dados:", error);
+            setPopup({ visible: true, message: 'Erro ao buscar máquina', type: 'error' });
+            setTimeout(() => {
+                setPopup({ visible: false, message: '', type: '' });
+            }, 4000);
+        }
+    };
+
+    const handleFilterChange = (e) => {
+        setPatrimonioFiltro(e.target.value);
+    };
+
+    const handleFilter = (e) => {
+        e.preventDefault();
+        fetchMaquinaByPatrimonio(patrimonioFiltro);
+    };
 
     return (
         <div className={styles.container}>
@@ -47,20 +101,26 @@ function page() {
             </header>
             <div className={styles.Cards}>
                 <div className={styles.CardsRow}>
-
+                    <form onSubmit={handleFilter}>
+                        <input
+                            type="text"
+                            value={patrimonioFiltro}
+                            onChange={handleFilterChange}
+                            placeholder="Pesquisar máquinas por número de patrimônio"
+                        />
+                        <button type="submit">Buscar</button>
+                    </form>
                     {data.map((maquina) => (
                         <Link
                             key={maquina.id}
-                            href={`/MaquinaCadastrada?id=${maquina.id}`}	
+                            href={`/MaquinaCadastrada?id=${maquina.id}`}
                         >
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
                                 <h1 className={styles.titulo}>{maquina.modelo}</h1>
-
                             </div>
                         </Link>
-
                     ))}
                 </div>
             </div>
@@ -69,7 +129,7 @@ function page() {
                 <Footer />
             </footer>
         </div>
-    )
+    );
 }
 
-export default page;
+export default Page;

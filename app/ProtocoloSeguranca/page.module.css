@@ -1,0 +1,135 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #FFFFFF;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-bottom: 20px;
+  justify-content: center;
+  margin-left: 30px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.check {
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: white;
+  height: 100%;
+  width: 100%;
+  margin-top: 200px;
+}
+
+.textos {
+  font-size: 18px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: #fdfdfd 0.01%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  margin-top: 0px;
+}
+
+.title {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  margin-left: 250px;
+}
+
+.titulos {
+  font-size: 30px;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  background-color: #FF0000 0.01%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.titleContainer {
+  width: 926px;
+  margin-top: 35px;
+  height: 37px;
+  top: 210px;
+  left: 288px;
+  opacity: 0px;
+  color: #FFFFFF;
+}
+
+.Card {
+  width: 750px;
+  height: 500px;
+  margin-top: 50px;
+  top: 1203.85px;
+  left: 160.5px;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 0px;
+  background: #71000087;
+}
+
+.imagem {
+  width: 50px;
+  height: 50px;
+  margin-top: 35px;
+  margin-left: -10px;
+
+}
+
+.informacao {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 598px;
+  height: 76px;
+  top: 1498px;
+  margin-top: 10px;
+  margin-left: 20px;
+  left: 577px;
+  opacity: 0px;
+  color: #FFFFFF;
+}
+
+.informacaoText {
+  margin-top: 52px;
+  margin-right: 420px;
+  font-size: 15px;
+}
