@@ -3,8 +3,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-    background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
+    height: 100%;
 }
 
 .Cards {
@@ -116,7 +115,6 @@
     background-color: #FF0000 0.01%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    margin-top: 55px;
 }
 
 .manualM:hover {
