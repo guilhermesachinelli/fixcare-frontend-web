@@ -41,7 +41,7 @@
 
 .Card {
     width: 800px;
-    height: 1100px;
+    height: 920px;
     top: 2463.31px;
     left: 265.17px;
     gap: 0px;
@@ -100,7 +100,7 @@
 .title {
     color: white;
     font-size: 60px;
-    margin-left: 120px;
+    margin-left: 180px;
     margin-top: 40px;
 }
 
