@@ -5,6 +5,10 @@
     justify-content: center;
     height: 100vh;
   }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
 .footer {
     display: flex;
     justify-content: end;
@@ -44,6 +48,10 @@
     align-items: center;
     display: flex;
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
 .header {
     display: flex;
     justify-content: space-between;
