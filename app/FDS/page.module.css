@@ -3,18 +3,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
-    height: 100vh;
   }
   
-  .footer {
-=======
-    height: 100%;
-    background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
-}
 
 .footer {
->>>>>>> ef7f1b2d4d1daf3e13ba76e4981e3595586b12a2
+
     display: flex;
     justify-content: end;
     align-items: center;
@@ -36,13 +29,15 @@
     margin-top: 0px;
   }
 .title{
-    font-size: 30px;
+    font-size: 50px;
+    width: 100%;
     color: #FFFFFF;
     margin-bottom: 20px;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 250px;
+    margin-left: 100px;
+    margin-top: 20px;
     }
 
 .titulos{
@@ -53,8 +48,6 @@
     align-items: center;
     display: flex;
     }
-<<<<<<< HEAD
-=======
     
 .header {
     display: flex;
@@ -65,7 +58,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
->>>>>>> ef7f1b2d4d1daf3e13ba76e4981e3595586b12a2
+
 
 .titleContainer {
     width: 926px;
@@ -75,12 +68,13 @@
     left: 288px;
     opacity: 0px;
     color: #FFFFFF;
+    font-size: 80px;
 }
 
 .Card {
     width: 750px;
-    height: 450px;
-    margin-top: 50px;
+    height: 550px;
+    margin-top: 140px;
     top: 1203.85px;
     left: 160.5px;
     border-radius: 10px 10px 10px 10px;
@@ -90,7 +84,7 @@
 .text1 {
     width: 700px;
     height: 240px;
-    margin-top: 10px;
+    margin-top: 20px;
     padding: 10px;
     margin-right: 20px;
     top: 575px;
@@ -98,6 +92,8 @@
     gap: 0px;
     opacity: 0px;
     color: #FFFFFF;
+    font-size: 20px;
+
 }
 
 .text2 {
@@ -112,12 +108,13 @@
     gap: 0px;
     opacity: 0px;
     color: #FFFFFF;
+    font-size: 20px;
 }
 
 .text3 {
     width: 700px;
     height: 240px;
-    margin-top: -160px;
+    margin-top: -150px;
     padding: 10px;
     margin-right: 20px;
     font-weight: bold;
@@ -126,7 +123,8 @@
     gap: 0px;
     opacity: 0px;
     color: #FFFFFF; 
-    font-size: 15px;
+    font-size: 20px;
+    
 }
 
 .imagem {
@@ -145,14 +143,15 @@
     width: 598px;
     height: 76px;
     top: 1498px;
-    margin-top: 10px;
-    margin-left: 20px;
+    margin-top: 7px;
+    margin-left: 200px;
     left: 577px;
     opacity: 0px;
     color: #FFFFFF;
+    
 }
 .informacaoText{
-    margin-top: 52px;
-    margin-right: 420px;
-    font-size: 15px;
+    margin-top: 45px;
+    font-size: 30px;
+    margin-right: 270px;
 }

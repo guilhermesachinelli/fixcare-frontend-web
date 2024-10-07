@@ -69,7 +69,7 @@ function Adm() {
                         </div>
                         <div className={styles.inputWrapper}>
                             <input
-                                className={styles.input}
+                                className={styles.input2}
                                 value={password}
                                 type={showPassword ? "text" : "password"}
                                 placeholder='Senha'
