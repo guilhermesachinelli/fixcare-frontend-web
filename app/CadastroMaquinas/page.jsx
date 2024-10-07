@@ -10,13 +10,10 @@ function CadastrarMaquinas() {
         marca: '',
         modelo: '',
         categoria: '',
-        marca: '',
-        modelo: '',
         numero_de_patrimonio: '',
         numero_de_serie: '',
         numero_do_torno: '',
         data_de_aquisicao: '',
-        data_da_ultima_troca_de_oleo: ''
     });
     const [editMode, setEditMode] = useState(false);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -27,7 +24,12 @@ function CadastrarMaquinas() {
             fetch(`http://10.88.199.223:4000/machine/${id}`)
             .then(response => response.json())
             .then(data => {
-                setMaquina(data);
+                const formattedData = {
+                    ...data,
+                    data_de_aquisicao: data.data_de_aquisicao ? new Date(data.data_de_aquisicao).toISOString().split('T')[0] : '',
+                    data_da_ultima_troca_de_oleo: data.data_da_ultima_troca_de_oleo ? new Date(data.data_da_ultima_troca_de_oleo).toISOString().split('T')[0] : ''
+                };
+                setMaquina(formattedData);
                 setEditMode(true);
             });
             }
@@ -47,7 +49,6 @@ function CadastrarMaquinas() {
                     setPopup({ visible: true, message: 'Máquina cadastrada com sucesso', type: 'success' });
                     setTimeout(() => {
                         setPopup({ visible: false, message: '', type: '' });
-                        window.location.href = '/Maquinas';
                     }, 2000);
                 } else {
                     throw new Error('Erro ao cadastrar máquina');
