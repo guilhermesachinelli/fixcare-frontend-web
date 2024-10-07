@@ -9,12 +9,13 @@ import PopupMessage from '../components/PopUp/PopUp';
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     const [data, setData] = useState([]);
+    const [buscar, setBuscar] = useState('');
 
     useEffect(() => {
         fetchMaquinas();
     }, []);
 
-    const fetchMaquinas = async (query = '') => {
+    const fetchMaquinas = async () => {
         try {
             const response = await fetch(`http://10.88.199.223:4000/machine`, {
                 method: 'GET',
