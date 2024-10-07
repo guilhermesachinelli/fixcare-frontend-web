@@ -18,7 +18,7 @@ const Header = () => (
                 <a href="./Maquinas">
                     <h1 className={styles.titulo}>Máquinas</h1>
                 </a>
-                <a href='./Servico'>
+                <a href='./LoginServicos'>
                     <h1 className={styles.titulo}>Serviços</h1>
                 </a>
                 <a href='./Adm'>
