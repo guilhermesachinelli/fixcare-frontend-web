@@ -60,10 +60,6 @@ function ProtocoloSeguranca() {
                         <input type="checkbox" className={styles.check}/>
                         Varra as proximidades do seu local de trabalho.                    </label>
 
-                    <label>
-                        <input type="checkbox" className={styles.check}/>
-                        Selecionar Tudo                    
-                        </label>
 
 
                 </div>
