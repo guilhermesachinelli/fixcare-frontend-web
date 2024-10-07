@@ -10,10 +10,18 @@
     --background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
     --foreground: #ededed;
     --primary: rgba(241, 241, 241, 0.603);
-  --secondary: rgba(253, 31, 31, 0.4);
-  --tertiary: rgba(255, 0, 0, 0.6);
+    --secondary: rgba(253, 31, 31, 0.4);
+    --tertiary: rgba(255, 0, 0, 0.6);
   }
 }
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 
 html,
 body {
@@ -29,12 +37,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
 a {
@@ -64,5 +70,55 @@ a {
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Flexbox Container */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header and Footer */
+.header, .footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Main Content */
+.main {
+  flex: 1;
+  padding: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+  .container {
+      padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+      flex-direction: row;
+  }
+
+  .main {
+      flex: 3;
+  }
+
+  .sidebar {
+      flex: 1;
+      padding: 1rem;
+      background-color: #f4f4f4;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+      padding: 2rem;
   }
 }
