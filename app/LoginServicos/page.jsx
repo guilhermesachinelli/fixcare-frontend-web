@@ -44,20 +44,20 @@ function LoginServicos() {
             }),
         });
 
-        const data = await response1.json() || await response2.json();
+        const data = await response1.json();
+        const data2 = await response2.json();
         console.log(data.length);
-        if (data.length === 1) {
-            setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
+        console.log(data2.length);
+        if (data.length === undefined && data2.length === undefined) {
             setTimeout(() => {
-                window.location.href = '/Servico';
-            }
-                , 2000);
-        } else {
-            setPopup({ visible: true, message: 'Email ou senha incorretos', type: 'error' });
-            setTimeout(() => {
-                setPopup({ visible: false, message: '', type: '' });
-            }
-                , 2000);
+                setPopup({ visible: true, message: 'Usuário ou senha inválidos', type: 'error' });
+            }, 2500);
+        }
+        if (data.length > 0 || data2.length > 0) {
+                setPopup({ visible: true, message: 'Login realizado com sucesso', type: 'success' });
+                setTimeout(() => {
+                    window.location.href = '/Servico';
+                }, 2500)
         }
     } 
 
