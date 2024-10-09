@@ -26,6 +26,7 @@
 
   .manualM:hover, .manualE:hover, .Fds:hover, .Pls:hover {
     background: linear-gradient(180deg, #0050ceee 0.01%, #013484 22%, #002D73 50%, #0F3064 77%, #0D213F 100%);
+    box-shadow: #03183A 20px 0px 20px 0px;
 }
 
 .engrenagens {
