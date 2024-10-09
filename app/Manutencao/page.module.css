@@ -98,7 +98,10 @@
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+<<<<<<< HEAD
     background-color: #03183A 0.01%;
+=======
+>>>>>>> 6254d862927a408edc7f291c457213b71e6932c6
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
   }
