@@ -53,7 +53,36 @@ function Manutencao() {
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Manutenção</h1>
             </div>
+            
+            <div className={styles.Forms}>
+                <form className={styles.form}>
+                    <label className={styles.label}>
+                        Número de Patrimônio
+                    </label>
+                    <input type="text" className={styles.input} />
 
+                    <label className={styles.label}>
+                        Nome do responsável:
+                    </label>
+                    <input type="text" className={styles.input} />
+
+                    <label className={styles.label}>
+                        Tipo de Manutenção:
+                    </label>
+                    <input type="text" className={styles.input} />
+
+                    <label className={styles.label}>
+                        Descrição da Manutenção:
+                    </label>
+                    <input type="text" className={styles.input} />
+
+                    <label className={styles.label}>
+                        Data de manutenção:
+                    </label>
+                    <input type="date" className={styles.input} />
+
+                </form>
+            </div>
             <div className={styles.Card}>
                 <div className={styles.checklist}>
 
@@ -143,8 +172,8 @@ function Manutencao() {
                         />
                         Selecionar Tudo
                     </label>
-                <h4 classname={styles.info}> (1)- Lubrificar manualmente pontos que não estiverem ligados á central de lubrificação.</h4>
-                <h4 classname={styles.info}> (2)- Não misturar marcas. Caso seja necessário substituir o óleo lubrificante e drenar completamente o óleo usado antes de colocar o novo.</h4>
+                    <h4 classname={styles.info}> (1)- Lubrificar manualmente pontos que não estiverem ligados á central de lubrificação.</h4>
+                    <h4 classname={styles.info}> (2)- Não misturar marcas. Caso seja necessário substituir o óleo lubrificante e drenar completamente o óleo usado antes de colocar o novo.</h4>
                 </div>
             </div>
 

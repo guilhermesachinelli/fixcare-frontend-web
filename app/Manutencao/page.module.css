@@ -51,7 +51,18 @@
     margin-left: 20px;
     margin-top: 20px;
   }
-  
+  .form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    background-color: #03183A;
+    color: #ffffff;
+  }
   .header {
     display: flex;
     justify-content: space-between;
@@ -70,7 +81,7 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 300px;
+    margin-left: 330px;
   }
   
   .titulos {
@@ -87,6 +98,10 @@
     justify-content: space-between;
     align-items: center;
     height: 6rem;
+<<<<<<< HEAD
+    background-color: #03183A 0.01%;
+=======
+>>>>>>> 6254d862927a408edc7f291c457213b71e6932c6
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
   }
