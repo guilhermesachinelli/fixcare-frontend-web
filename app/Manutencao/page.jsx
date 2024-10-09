@@ -57,7 +57,7 @@ function Manutencao() {
             <div className={styles.Forms}>
                 <form className={styles.form}>
                     <label className={styles.label}>
-                        Número de Patrimônio
+                        Número de Patrimônio:
                     </label>
                     <input type="text" className={styles.input} />
 
