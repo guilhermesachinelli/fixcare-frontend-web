@@ -88,7 +88,6 @@
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    background-color: #FF0000 0.01%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
   }
@@ -111,7 +110,7 @@
     left: 160.5px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #71000087;
+    background: #03183A;
   }
   
   .imagem {

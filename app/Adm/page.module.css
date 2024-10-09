@@ -36,7 +36,7 @@
     left: 450px;
     gap: 0px;
     opacity: 0px;
-    background: #71000087;
+    background: #03183A;
     margin-top: 80px;
     border-radius: 10px;
 }
@@ -70,8 +70,8 @@
     font-size: 1em;
     outline: none;
     transition: border-color 0.3s;
-    background-color: #750202;
-    border-bottom: 2px solid #750202;
+    background-color: #013484;
+    border-bottom: 2px solid #013484;
 }
 
 .input2 {
@@ -86,12 +86,12 @@
     font-size: 1em;
     outline: none;
     transition: border-color 0.3s;
-    background-color: #750202;
-    border-bottom: 2px solid #750202;
+    background-color: #013484;
+    border-bottom: 2px solid #013484;
 }
 
 .input:focus {
-    border-color: #FF0000;
+    border-color: rgba(0, 80, 206, 0.933333)0;
 }
 
 .input::placeholder {
@@ -99,7 +99,7 @@
 }
 
 .input2:focus {
-    border-color: #FF0000;
+    border-color: rgba(0, 80, 206, 0.933333);
 }
 
 .input2::placeholder {
@@ -121,7 +121,7 @@
 }
 
 .toggleButton:hover {
-    color: #FF0000;
+    color: rgba(0, 80, 206, 0.933333);
 }
 
 .buttonContainer {
@@ -133,7 +133,7 @@
 
 .buttonText {
     width: 300px;
-    background-color: #e91212;
+    background-color: rgba(0, 80, 206, 0.933333);
     color: #fff;
     border: none;
     padding: 0.75em 1.5em;
@@ -146,7 +146,7 @@
 }
 
 .buttonText:hover {
-    background-color: #750202;
+    background-color: #03183A;
 }
 
 .buttonText:active {
@@ -156,7 +156,7 @@
 .buttonText2 {
     width: 380px;
     height: 50px;
-    background-color: #750202;
+    background-color: #03183A;
     color: #fff;
     border: none;
     padding: 0.75em 1.5em;
@@ -170,5 +170,5 @@
 }
 
 .buttonText2:hover {
-    background-color: #FF0000;
+    background-color: rgba(0, 80, 206, 0.933333);
 }
