@@ -19,10 +19,14 @@
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #71000087;
+    background: #03183A;
     margin-left: 20px;
     margin-top: 50px;
   }
+
+  .manualM:hover, .manualE:hover, .Fds:hover, .Pls:hover {
+    background: linear-gradient(180deg, #0050ceee 0.01%, #013484 22%, #002D73 50%, #0F3064 77%, #0D213F 100%);
+}
 
 .engrenagens {
     width: 215px;
@@ -75,7 +79,6 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    background: #3737b1;
     color: white;
     height: 100%;
     width: 100%;
@@ -87,7 +90,6 @@
     justify-content: space-between;
     align-items: center;
     height: 6rem;
-    background-color: #25258f 0.01%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
     margin-top: 0px;
