@@ -2,10 +2,19 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
+import PopupMessage from '../components/PopUp/PopUp';
 import { useState } from "react"
 
 function Manutencao() {
     const [selectAll, setSelectAll] = useState(false);
+    const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
+    const [maquina, setMaquina] = useState({
+        numero_de_patrimonioID: '',
+        nome_do_responsavel: '',
+        tipo_de_manutencao: '',
+        descricao: '',
+        data_da_manutencao: '',
+    });
     const [check, setCheck] = useState({
         check1: false,
         check2: false,
@@ -37,11 +46,37 @@ function Manutencao() {
     };
 
     const handleCheck = (e) => {
-        const { name, checked } = e.target;
-        setCheck(prevState => ({
+        const { name, value } = e.target;
+        setMaquina(prevState => ({
             ...prevState,
-            [name]: checked,
-        }));
+            [name]: value
+        }))
+    };
+
+    const handlePost = async () => {
+        try {
+            const response = await fetch('http://10.88.200.139:4000/manutencao/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(maquina),
+            });
+
+            if (response.ok) {
+                setPopup({ visible: true, message: 'Manutenção registrada com sucesso', type: 'success' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                }, 2000);
+            } else {
+                throw new Error('Erro ao registar manutenção');
+            }
+        } catch (error) {
+            setPopup({ visible: true, message: 'Erro ao registar manutenção', type: 'error' });
+            setTimeout(() => {
+                setPopup({ visible: false, message: '', type: '' });
+            }, 2000);
+        }
     };
 
     return (
@@ -53,36 +88,53 @@ function Manutencao() {
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Manutenção</h1>
             </div>
-            
-            <div className={styles.Forms}>
-                <form className={styles.form}>
-                    <label className={styles.label}>
-                        Número de Patrimônio:
-                    </label>
-                    <input type="text" className={styles.input} />
-
-                    <label className={styles.label}>
-                        Nome do responsável:
-                    </label>
-                    <input type="text" className={styles.input} />
-
-                    <label className={styles.label}>
-                        Tipo de Manutenção:
-                    </label>
-                    <input type="text" className={styles.input} />
-
-                    <label className={styles.label}>
-                        Descrição da Manutenção:
-                    </label>
-                    <input type="text" className={styles.input} />
-
-                    <label className={styles.label}>
-                        Data de manutenção:
-                    </label>
-                    <input type="date" className={styles.input} />
-
-                </form>
+            <form className={styles.card}>
+            <div className={styles.inputsContainer}>
+                    
+                    <input 
+                    type="text"
+                    name="numero_de_patrimonioID"
+                    value={maquina.numero_de_patrimonioID}
+                    onChange={handleCheck}
+                    placeholder="Número de Patrimônio"
+                    className={styles.input}
+                    />
+                    <input 
+                    type="text"
+                    name="nome_do_responsavel"
+                    value={maquina.nome_do_responsavel}
+                    onChange={handleCheck}
+                    placeholder="Nome do Responsável"
+                    className={styles.input} 
+                    />
+                    <input 
+                    type="text"
+                    name="tipo_de_manutencao"
+                    value={maquina.tipo_de_manutencao}
+                    onChange={handleCheck}
+                    placeholder="Tipo de Manutenção" 
+                    className={styles.input} 
+                    />
+                    <input 
+                    type="text"
+                    name="descricao"
+                    value={maquina.descricao}
+                    onChange={handleCheck}
+                    placeholder="Descrição"
+                    className={styles.input} 
+                    />
+                    <input 
+                    type="date"
+                    name="data_da_manutencao"
+                    value={maquina.data_da_manutencao}
+                    onChange={handleCheck}
+                    placeholder="Data da Manutenção"
+                    className={styles.input} 
+                    />   
+                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
+                    <button className={styles.button} onClick={handlePost}>Registrar Manutenção</button>             
             </div>
+            </form>
             <div className={styles.Card}>
                 <div className={styles.checklist}>
 
