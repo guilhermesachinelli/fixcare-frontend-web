@@ -14,7 +14,7 @@
 }
 
 .menuButton:hover {
-  color: #710000c5;
+  color: #0F3064;
 }
 
 .sidebar {
@@ -23,7 +23,7 @@
   left: -250px;
   width: 250px;
   height: 100%;
-  background-color: #FF0000;
+  background-color: #013484 ;
   color: #fff;
   transition: left 0.3s;
   display: flex;

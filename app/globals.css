@@ -1,5 +1,5 @@
 :root {
-  --background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, rgb(117, 3, 3) 99.99%, #BC0303 100%);
+  --background: linear-gradient(180deg, rgba(0, 80, 206, 0.933333) 0.01%, #013484 22%, #002D73 50%, #0F3064 77%, #0D213F 100%);
   --primary: rgba(241, 241, 241, 0.603);
   --secondary: rgba(253, 31, 31, 0.4);
   --tertiary: rgba(255, 0, 0, 0.6);
@@ -7,7 +7,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: linear-gradient(180deg, #FF0000 0.01%, #BC0303 41.49%, #BC0303 41.5%, #750202 99.99%, #BC0303 100%);
+    --background: linear-gradient(180deg, rgba(0, 80, 206, 0.933333) 0.01%, #013484 22%, #002D73 50%, #0F3064 75%, #0D213F 100%);
     --foreground: #ededed;
     --primary: rgba(241, 241, 241, 0.603);
     --secondary: rgba(253, 31, 31, 0.4);

@@ -1,8 +1,10 @@
+'use client';
 import styles from "./page.module.css";
 import Header from "./components/header/page.jsx";
 import Footer from "./components/footer/page.jsx";
+  
+const Home = () => {
 
-export default function Home() {
   return (
     <div className={styles.container}>
       <header className={styles.header}>
@@ -18,3 +20,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
