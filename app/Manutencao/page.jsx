@@ -55,7 +55,7 @@ function Manutencao() {
 
     const handlePost = async () => {
         try {
-            const response = await fetch('http://10.88.200.139:4000/manutencao/', {
+            const response = await fetch('http://10.88.200.139:4000/manutencao', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -64,15 +64,15 @@ function Manutencao() {
             });
 
             if (response.ok) {
-                setPopup({ visible: true, message: 'Manutenção registrada com sucesso', type: 'success' });
+                setPopup({ visible: true, message: 'Manutenção cadastrada com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 2000);
             } else {
-                throw new Error('Erro ao registar manutenção');
+                throw new Error('Erro ao cadastrar manutenção');
             }
         } catch (error) {
-            setPopup({ visible: true, message: 'Erro ao registar manutenção', type: 'error' });
+            setPopup({ visible: true, message: 'Erro ao cadastrar uma manutenção', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
             }, 2000);
