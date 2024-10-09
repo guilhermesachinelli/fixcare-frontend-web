@@ -3,22 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
   }
   
-=======
-    height: 100vh;
-  }
-<<<<<<< HEAD
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
-
->>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
 .footer {
-<<<<<<< HEAD
-
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
     display: flex;
     justify-content: end;
     align-items: center;
@@ -59,14 +46,6 @@
     align-items: center;
     display: flex;
     }
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
 .header {
     display: flex;
     justify-content: space-between;
@@ -76,10 +55,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
 
 .titleContainer {
     width: 926px;
