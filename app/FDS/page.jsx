@@ -34,7 +34,7 @@ function Fds() {
                 </div>
 
                 <div className={styles.text3}>
-                    <p className={styles.textos}>
+                    <p className={styles.textos1}>
                         FDS é um documento essencial para quem trabalha ou utiliza produtos químicos, pois fornece todas as informações necessárias para garantir a segurança e o bom uso desses produtos.
                     </p>
                     <Link href='https://www.quimicabrasileira.com.br/fispqs/'>

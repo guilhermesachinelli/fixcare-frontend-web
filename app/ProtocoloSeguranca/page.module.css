@@ -17,7 +17,16 @@
   margin-top: 20px;
   width: 100%;
 }
-
+.checkbox{
+  display: flex;
+  gap: 10px;
+  font-size: 17px;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 10px;
+  margin-top: 5px;
+  width: 100%;
+}
 .check {
   margin-bottom: 20px;
   margin-left: 30px;
@@ -56,13 +65,13 @@
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   color: #FFFFFF;
   margin-bottom: 20px;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  margin-left: 250px;
+  margin-left: 260px;
 }
 
 .titulos {

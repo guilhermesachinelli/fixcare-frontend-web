@@ -3,22 +3,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-<<<<<<< HEAD
   }
-  
-=======
-    height: 100vh;
-  }
-<<<<<<< HEAD
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
-
->>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
 .footer {
-<<<<<<< HEAD
-
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
     display: flex;
     justify-content: end;
     align-items: center;
@@ -40,33 +26,26 @@
     margin-top: 0px;
   }
 .title{
-    font-size: 50px;
+    font-size: 40px;
     width: 100%;
     color: #FFFFFF;
     margin-bottom: 20px;
     justify-content: space-between;
     align-items: center;
     display: flex;
-    margin-left: 100px;
+    margin-left: 160px;
     margin-top: 20px;
     }
 
-.titulos{
-    font-size: 30px;
+.titulos{                                   
+    font-size: 26px;
     color: #FFFFFF;
-    margin-bottom: 20px;
+    margin-bottom: -20px;
     justify-content: space-between;
     align-items: center;
     display: flex;
     }
-<<<<<<< HEAD
-    
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 08f3fe3f1b90cdfc1c9143f33a90d1a5d555cc8e
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
 .header {
     display: flex;
     justify-content: space-between;
@@ -76,10 +55,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> ae01bcf901a2e44f7f15b60ebae506d810e392c2
 
 .titleContainer {
     width: 926px;
@@ -91,11 +66,31 @@
     color: #FFFFFF;
     font-size: 80px;
 }
+.textos1{
+    width: 700px;
+    height: 240px;
+    margin-top: -20px;
+    padding: 10px;
+    margin-right: 20px;
+    opacity: 0px;
+    color: #FFFFFF;
+    font-size: 17px;
+}
+.textos{
+    width: 700px;
+    height: 240px;
+    margin-top: 20px;
+    padding: 10px;
+    margin-right: 20px;
+    opacity: 0px;
+    color: #FFFFFF;
+    font-size: 17px;
+}
 
 .Card {
     width: 750px;
     height: 550px;
-    margin-top: 140px;
+    margin-top: 100px;
     top: 1203.85px;
     left: 160.5px;
     border-radius: 10px 10px 10px 10px;
@@ -164,7 +159,7 @@
     width: 598px;
     height: 76px;
     top: 1498px;
-    margin-top: 7px;
+    margin-top: -137px;
     margin-left: 200px;
     left: 577px;
     opacity: 0px;
@@ -172,7 +167,7 @@
     
 }
 .informacaoText{
-    margin-top: 45px;
-    font-size: 30px;
-    margin-right: 270px;
+    margin-top: 40px;
+    font-size: 25px;
+    margin-right: 330px;
 }

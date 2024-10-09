@@ -57,7 +57,7 @@ function ProtocoloSeguranca() {
             <div className={styles.Card}>
                 <div className={styles.checklist}>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check}
@@ -68,7 +68,7 @@ function ProtocoloSeguranca() {
                         Desligue a chave geral do torno.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input
                         type="checkbox" 
                         className={styles.check} 
@@ -79,7 +79,7 @@ function ProtocoloSeguranca() {
                         Retire as ferramentas e suporte.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}> 
                         <input
                         type="checkbox" 
                         className={styles.check} 
@@ -90,7 +90,7 @@ function ProtocoloSeguranca() {
                         Retire a peça da placa e guarde-a.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check}
@@ -101,7 +101,7 @@ function ProtocoloSeguranca() {
                         Limpe e guarde ferramentas e instrumentos da no suporte e armário.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}> 
                         <input 
                         type="checkbox" 
                         className={styles.check} 
@@ -112,7 +112,7 @@ function ProtocoloSeguranca() {
                         Retire os cavacos do torno com o pincel jogando na bandeja.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check}
@@ -123,7 +123,7 @@ function ProtocoloSeguranca() {
                         Retire a bandeja inferior e jogue o cavaco no coletor de cavacos.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check} 
@@ -134,7 +134,7 @@ function ProtocoloSeguranca() {
                         Limpe o acrílico com pano limpo e seco.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check} 
@@ -145,7 +145,7 @@ function ProtocoloSeguranca() {
                         Limpe o torno com pano e desengraxante nas partes pintadas.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check} 
@@ -156,7 +156,7 @@ function ProtocoloSeguranca() {
                         Lubrifique as partes não pintadas com fina camada de óleo.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check} 
@@ -167,7 +167,7 @@ function ProtocoloSeguranca() {
                         Varra as proximidades do seu local de trabalho.
                     </label>
 
-                    <label>
+                    <label className={styles.checkbox}>
                         <input 
                         type="checkbox" 
                         className={styles.check} 
