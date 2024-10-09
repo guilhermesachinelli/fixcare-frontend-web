@@ -17,13 +17,13 @@
 }
 
 .error{
-    background-color: rgba(253, 31, 31, 0.4);
+    background-color: rgba(0, 80, 206, 0.933333);
     border: 3px solid rgb(215, 19, 19);
     color: #ededed!important;
 }
 
 .success{
-    background-color: rgba(253, 31, 31, 0.4);
+    background-color: rgba(0, 80, 206, 0.933333);
     border: 3px solid rgb(26, 213, 45);
     color: #ededed !important;
 }
