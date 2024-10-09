@@ -22,7 +22,7 @@ const Header = () => {
           <a href="./" className={styles.navItem}>Home</a>
           <a href="./DocGeral" className={styles.navItem}>Documentação</a>
           <a href="./Maquinas" className={styles.navItem}>Máquinas</a> 
-          <a href="./Servico" className={styles.navItem}>Login</a>
+          <a href="./LoginServicos" className={styles.navItem}>Login</a>
           <a href="./Adm" className={styles.navItem}>Administração</a>
         </nav>
       </div>
