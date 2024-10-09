@@ -20,7 +20,7 @@ function Servico() {
                                                                 
                     <div className={styles.lubrificacao}>
                         <img className={styles.oleo} src="/lubrificacao.png" />
-                        <h1 className={styles.titulo2}>Lubrificação</h1>
+                        <h1 className={styles.titulo2}>Manutenção</h1>
                     </div>
                 </a>
         

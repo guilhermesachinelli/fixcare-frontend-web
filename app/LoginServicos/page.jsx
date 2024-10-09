@@ -102,11 +102,6 @@ function LoginServicos() {
                     </div>
                 </div>
             </form>
-            <div className={styles.buttonContainer}>
-                <a href='./Developers'>
-                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
-                </a>
-            </div>
             <footer className={styles.footer}>
                 <Footer />
             </footer>
