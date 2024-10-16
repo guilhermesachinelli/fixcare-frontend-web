@@ -46,11 +46,11 @@ function Manutencao() {
     };
 
     const handleCheck = (e) => {
-        const { name, value } = e.target;
+        const { name, checked } = e.target;
         setMaquina(prevState => ({
             ...prevState,
-            [name]: value
-        }))
+            [name]: checked
+        }));
     };
 
     const handlePost = async (e) => {
