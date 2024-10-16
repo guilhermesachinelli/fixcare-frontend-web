@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import { clear } from 'localforage';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
@@ -78,6 +79,7 @@ function CadastrarMaquinas() {
             });
 
             if (response.ok) {
+                clearInputs();
                 setPopup({ visible: true, message: 'Máquina editada com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
@@ -100,6 +102,18 @@ function CadastrarMaquinas() {
             ...prevState,
             [name]: value
         }))
+    };
+
+    const clearInputs = () => {
+        setMaquina({
+            categoria: '',
+            marca: '',
+            modelo: '',
+            numero_de_patrimonio: '',
+            numero_de_serie: '',
+            numero_do_torno: '',
+            data_de_aquisicao: '',
+        });
     };
 
     return (
