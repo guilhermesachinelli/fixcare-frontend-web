@@ -114,7 +114,6 @@ function Manutencao() {
                         onChange={handleCheck}
                         className={styles.input}
                     >
-                        <option value="null">Selecione uma das opções</option>
                         <option value="Lubrificação">Lubrificação</option>
                         <option value="Preventiva">Preventiva</option>
                         <option value="Corretiva">Corretiva</option>
