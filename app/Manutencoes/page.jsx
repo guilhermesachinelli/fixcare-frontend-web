@@ -17,7 +17,7 @@ function Page() {
 
     const fetchManutencao = async () => {
         try {
-            const response = await fetch('http://10.88.200.139:4000/manutencao', {
+            const response = await fetch('http://10.88.199.223:4000/manutencao', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.200.139:4000/machine/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.199.223:4000/manutencao/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -115,10 +115,10 @@ function Page() {
                     {data.map((maquina) => (
                         <Link
                             key={maquina.id}
-                            href={`/MaquinaCadastrada?id=${maquina.id}`}
+                            href={`/ManutencaoCadastrada?id=${maquina.id}`}
                         >
                             <div className={styles.Corretiva}>
-                                <img className={styles.corretiva} src="/torno.png" />
+                                <img className={styles.corretiva} src="/ferramentas.png" />
                                 <h1 className={styles.titulo}>{maquina.nome_do_responsavel}</h1>
                                 <h1 className={styles.titulo}>{maquina.tipo_de_manutencao}</h1>
                             </div>
