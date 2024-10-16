@@ -13,7 +13,8 @@ function Manutencao() {
         nome_do_responsavel: '',
         tipo_de_manutencao: '',
         descricao: '',
-        data_da_manutencao: '',
+        data_de_manutencao: '',
+        status: '',
     });
     const [check, setCheck] = useState({
         check1: false,
@@ -50,6 +51,14 @@ function Manutencao() {
         setMaquina(prevState => ({
             ...prevState,
             [name]: checked
+        }));
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setMaquina(prevState => ({
+            ...prevState,
+            [name]: value
         }));
     };
 
@@ -96,7 +105,7 @@ function Manutencao() {
                         type="text"
                         name="numero_de_patrimonioID"
                         value={maquina.numero_de_patrimonioID}
-                        onChange={handleCheck}
+                        onChange={handleInputChange}
                         placeholder="Número de Patrimônio"
                         className={styles.input}
                     />
@@ -104,14 +113,14 @@ function Manutencao() {
                         type="text"
                         name="nome_do_responsavel"
                         value={maquina.nome_do_responsavel}
-                        onChange={handleCheck}
+                        onChange={handleInputChange}
                         placeholder="Nome do Responsável"
                         className={styles.input}
                     />
                     <select
                         name="tipo_de_manutencao"
                         value={maquina.tipo_de_manutencao}
-                        onChange={handleCheck}
+                        onChange={handleInputChange}
                         className={styles.input}
                     >
                         <option value="null">Selecione uma das opções</option>
@@ -123,18 +132,28 @@ function Manutencao() {
                         type="text"
                         name="descricao"
                         value={maquina.descricao}
-                        onChange={handleCheck}
+                        onChange={handleInputChange}
                         placeholder="Descrição"
                         className={styles.input}
                     />
                     <input
                         type="date"
-                        name="data_da_manutencao"
-                        value={maquina.data_da_manutencao}
-                        onChange={handleCheck}
+                        name="data_de_manutencao"
+                        value={maquina.data_de_manutencao}
+                        onChange={handleInputChange}
                         placeholder="Data da Manutenção"
                         className={styles.input}
                     />
+                    <select
+                    name="status"
+                    value={maquina.status}
+                    onChange={handleInputChange}
+                    className={styles.input}
+                    >
+                        <option value="null">Selecione uma das opções</option>
+                        <option value="Concluída">Concluída</option>
+                        <option value="Pendente">Pendente</option>
+                    </select>
                     {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                     <button className={styles.button} onClick={handlePost}>Registrar Manutenção</button>
                 </div>
