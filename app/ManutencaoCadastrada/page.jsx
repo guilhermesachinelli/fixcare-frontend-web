@@ -29,37 +29,6 @@ function ManutencaoCadastrada() {
         fetchMaquina();
     }, []);
 
-    const handleDelete = async () => {
-        const id = new URLSearchParams(window.location.search).get('id');
-        try {
-            const response = await fetch(`http://10.88.199.223:4000/manutencao/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
-
-            if (response.ok) {
-                setPopup({ visible: true, message: 'Manutenção excluída com sucesso', type: 'success' });
-                setTimeout(() => {
-                    setPopup({ visible: false, message: '', type: '' });
-                    window.location.href = '/Manutencoes'; // Redirecionar para a página inicial após exclusão
-                }, 2000);
-            } else {
-                throw new Error('Erro ao excluir Manutenção');
-            }
-        } catch (error) {
-            setPopup({ visible: true, message: error.message, type: 'error' });
-            setTimeout(() => {
-                setPopup({ visible: false, message: '', type: '' });
-            }, 2000);
-        }
-    };
-
-    const handleEdit = () => {
-        const id = new URLSearchParams(window.location.search).get('id');
-        window.location.href = `/Manutencao?id=${id}`;
-    };
 
     if (!maquina) {
         return <div>Carregando...</div>;
@@ -83,8 +52,6 @@ function ManutencaoCadastrada() {
                     <p className={styles.subtitulo}>Descrição: {maquina.descricao}</p>
                     <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonioID}</p>
                     <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_da_manutencao}</p>
-                    <button onClick={handleEdit} className={styles.buttonText}>Editar</button>
-                    <button onClick={handleDelete} className={styles.buttonText}>Excluir</button>
                     </div>
                 </div>
             </div>
