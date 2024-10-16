@@ -12,12 +12,12 @@ function Page() {
     const [patrimonioFiltro, setPatrimonioFiltro] = useState('');
 
     useEffect(() => {
-        fetchMaquinas();
+        fetchManutencao();
     }, []);
 
-    const fetchMaquinas = async () => {
+    const fetchManutencao = async () => {
         try {
-            const response = await fetch('http://10.88.200.139:4000/machine', {
+            const response = await fetch('http://10.88.200.139:4000/manutencao', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -31,19 +31,19 @@ function Page() {
             const result = await response.json();
             setData(result);
             if (result.length === 0) {
-                setPopup({ visible: true, message: 'Nenhuma máquina encontrada', type: 'error' });
+                setPopup({ visible: true, message: 'Nenhuma Manutenção encontrada', type: 'error' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             } else {
-                setPopup({ visible: true, message: 'Máquinas carregadas com sucesso', type: 'success' });
+                setPopup({ visible: true, message: 'Manutenções carregadas com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             }
         } catch (error) {
             console.log("Erro ao buscar dados:", error);
-            setPopup({ visible: true, message: 'Erro ao buscar máquinas', type: 'error' });
+            setPopup({ visible: true, message: 'Erro ao buscar Manutenções', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
             }, 4000);
@@ -119,8 +119,8 @@ function Page() {
                         >
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
-                                <h1 className={styles.titulo}>{maquina.marca}</h1>
-                                <h1 className={styles.titulo}>{maquina.modelo}</h1>
+                                <h1 className={styles.titulo}>{maquina.nome_do_responsavel}</h1>
+                                <h1 className={styles.titulo}>{maquina.tipo_de_manutencao}</h1>
                             </div>
                         </Link>
                     ))}

@@ -91,7 +91,7 @@
 }
 
 .input:focus {
-    border-color: rgba(0, 80, 206, 0.933333)0;
+    border-color: rgba(0, 80, 206, 0.933333);
 }
 
 .input::placeholder {
@@ -146,7 +146,8 @@
 }
 
 .buttonText:hover {
-    background-color: #03183A;
+    background-color: #ffffff;
+    color: #25258f;
 }
 
 .buttonText:active {

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .Imgs {
@@ -42,9 +42,8 @@
   align-items: center;
   background: #750202;
   color: white;
-  height: 100px;
+  height: 100%;
   width: 100%;
-  margin-top: 90px;
 }
 
 .header{
@@ -55,5 +54,4 @@
   background-color: #25258f 0.01%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   width: 100%;
-  margin-top: 286px;
 }

@@ -48,7 +48,7 @@
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #71000087;
+    background: #03183A 53%;
     margin-top: 50px;
 }
 
@@ -75,12 +75,12 @@
     font-size: 1em;
     outline: none;
     transition: border-color 0.3s;
-    background-color: #750202;
-    border-bottom: 2px solid #750202;
+    background-color: #013484;
+    border-bottom: 2px solid #013484;
 }
 
 .input:focus {
-    border-color: #FF0000;
+    border-color: #013484;
 }
 
 .input::placeholder {
@@ -113,7 +113,7 @@
 }
 
 .buttonText {
-    background-color: #FF0000;
+    background-color: #013484;
     color: #fff;
     border: none;
     padding: 0.75em 1.5em;
@@ -126,7 +126,7 @@
 }
 
 .buttonText:hover {
-    background-color: #750202;
+    background-color: #03183A;
 }
 
 .buttonText:active {

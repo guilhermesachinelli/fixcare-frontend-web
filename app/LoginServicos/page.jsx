@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import PopupMessage from '../components/PopUp/PopUp';
 
-function Adm() {
+function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
 
     const togglePasswordVisibility = () => {
@@ -20,7 +20,7 @@ function Adm() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response = await fetch('http://10.88.200.139:4000/admin', {
+        const response1 = await fetch('http://10.88.200.139:4000/aluno', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -32,20 +32,32 @@ function Adm() {
             }),
         });
 
-        const data = await response.json();
+        const response2 = await fetch('http://10.88.200.139:4000/funcionario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                senha: password,
+
+            }),
+        });
+
+        const data = await response1.json();
+        const data2 = await response2.json();
         console.log(data.length);
-        if (data.length === 1) {
-            setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
+        console.log(data2.length);
+        if (data.length === undefined && data2.length === undefined) {
             setTimeout(() => {
-                window.location.href = '/AdmPrincipal';
-            }
-                , 2000);
-        } else {
-            setPopup({ visible: true, message: 'Email ou senha incorretos', type: 'error' });
-            setTimeout(() => {
-                setPopup({ visible: false, message: '', type: '' });
-            }
-                , 2000);
+                setPopup({ visible: true, message: 'Usuário ou senha inválidos', type: 'error' });
+            }, 2500);
+        }
+        if (data.length > 0 || data2.length > 0) {
+                setPopup({ visible: true, message: 'Login realizado com sucesso', type: 'success' });
+                setTimeout(() => {
+                    window.location.href = '/Servico';
+                }, 2500)
         }
     } 
 
@@ -90,11 +102,6 @@ function Adm() {
                     </div>
                 </div>
             </form>
-            <div className={styles.buttonContainer}>
-                <a href='./Developers'>
-                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
-                </a>
-            </div>
             <footer className={styles.footer}>
                 <Footer />
             </footer>
@@ -102,4 +109,4 @@ function Adm() {
     )
 }
 
-export default Adm;
+export default LoginServicos;

@@ -1,9 +1,63 @@
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 1em;
-  background-color: #FF0000 0.01%;
+  color: #ffffff;
+}
+
+.menuButton {
+  font-size: 1.5em;
+  cursor: pointer;
+  margin-right: 1em;
+  font-size: 50px;
+}
+
+.menuButton:hover {
+  color: #0F3064;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #013484 ;
+  color: #fff;
+  transition: left 0.3s;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.closeButton {
+  font-size: 1.5em;
+  cursor: pointer;
+  align-self: flex-end;
+  margin: 10px;
+  margin-right: 210px;
+  margin-top: -50px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 1em;
+}
+
+.navItem {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.navItem:hover {
+  color: #ddd;
 }
 
 .title {
@@ -13,29 +67,10 @@
   margin-top: 5px;
 }
 
-.navegar {
-  display: flex;
-  justify-content: space-between;
-  gap: 1em;
-  align-items: center;
-  margin-left: 800px;
-}
-
-.navegar a {
-  text-decoration: none;
-  color: inherit;
-  margin: 0 1em;
-}
-
 .titulo {
   margin: 0;
   font-size: 1.5em;
   color: #ffffff;
   font-size: 30px;
-}
-
-.titulo:hover {
- color: #710000c5;
-  transition: 0.5s;
-  opacity: 0.9;
+  margin-left: 1600px;
 }

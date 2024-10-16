@@ -7,9 +7,9 @@ import PopupMessage from '../components/PopUp/PopUp';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
+        categoria: '',
         marca: '',
         modelo: '',
-        categoria: '',
         numero_de_patrimonio: '',
         numero_de_serie: '',
         numero_do_torno: '',
@@ -18,26 +18,31 @@ function CadastrarMaquinas() {
     const [editMode, setEditMode] = useState(false);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
 
-    useEffect(() => {
+    useEffect(() =>  {
         const id = new URLSearchParams(window.location.search).get('id');
         if (id) {
-            fetch(`http://10.88.199.223:4000/machine/${id}`)
+            fetch(`http://10.88.200.139:4000/machine/${id}`)
             .then(response => response.json())
             .then(data => {
                 const formattedData = {
                     ...data,
-                    data_de_aquisicao: data.data_de_aquisicao ? new Date(data.data_de_aquisicao).toISOString().split('T')[0] : '',
-                    data_da_ultima_troca_de_oleo: data.data_da_ultima_troca_de_oleo ? new Date(data.data_da_ultima_troca_de_oleo).toISOString().split('T')[0] : ''
                 };
                 setMaquina(formattedData);
                 setEditMode(true);
+            }).catch(error => {
+                setPopup({ visible: true, message: `Erro ao buscar dados: ${error.message}`, type: 'error' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                }, 4000);
             });
-            }
+            
+        }
         }, []);
 
-        const handlePost = async () => {
+        const handlePost = async (e) => {
+            e.preventDefault();
             try {
-                const response = await fetch('http://10.88.199.223:4000/machine/', {
+                const response = await fetch('http://10.88.200.139:4000/machine/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -64,7 +69,7 @@ function CadastrarMaquinas() {
     const handleSaveEdit = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
         try {
-            const response = await fetch(`http://10.88.199.223:4000/machine/${id}`, {
+            const response = await fetch(`http://10.88.200.139:4000/machine/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,8 +110,16 @@ function CadastrarMaquinas() {
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>
-                <form className={styles.Card}>
+                <form className={styles.Card} >
                     <div className={styles.inputsContainer}>
+                    <input
+                        type="text"
+                        name="categoria"
+                        value={maquina.categoria}
+                        onChange={handleChange}
+                        placeholder="Categoria"
+                        className={styles.input}
+                    />
                     <input
                         type="text"
                         name="marca"
@@ -121,14 +134,6 @@ function CadastrarMaquinas() {
                         value={maquina.modelo}
                         onChange={handleChange}
                         placeholder="Modelo"
-                        className={styles.input}
-                    />
-                    <input
-                        type="text"
-                        name="categoria"
-                        value={maquina.categoria}
-                        onChange={handleChange}
-                        placeholder="Categoria"
                         className={styles.input}
                     />
                     <input

@@ -9,18 +9,6 @@ function DocGeral() {
                 <Header />
             </header>
             <div className={styles.Cards}>
-                <a href='./ManualMecanico'> 
-                <div className={styles.manualM}>
-                    <img className={styles.engrenagens} src="/engrenagens.png" />
-                    <h1 className={styles.titulo}>Manual Mecânico</h1>
-                </div>
-                </a>
-                <a href='./ManualEletrico'>
-                <div className={styles.manualE}>
-                    <img className={styles.eletrica} src="/eletrico.png" />
-                    <h1 className={styles.titulo}>Manual Elétrico</h1>
-                </div>
-                </a>
                 <a href='./FDS'>
                 <div className={styles.Fds}>
                     <img className={styles.fds} src="/fds.png" />
