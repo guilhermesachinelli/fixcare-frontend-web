@@ -90,51 +90,54 @@ function Manutencao() {
                 <h1 className={styles.title}>Manutenção</h1>
             </div>
             <form className={styles.card}>
-            <div className={styles.inputsContainer}>
-                    
-                    <input 
-                    type="text"
-                    name="numero_de_patrimonioID"
-                    value={maquina.numero_de_patrimonioID}
-                    onChange={handleCheck}
-                    placeholder="Número de Patrimônio"
-                    className={styles.input}
+                <div className={styles.inputsContainer}>
+
+                    <input
+                        type="text"
+                        name="numero_de_patrimonioID"
+                        value={maquina.numero_de_patrimonioID}
+                        onChange={handleCheck}
+                        placeholder="Número de Patrimônio"
+                        className={styles.input}
                     />
-                    <input 
-                    type="text"
-                    name="nome_do_responsavel"
-                    value={maquina.nome_do_responsavel}
-                    onChange={handleCheck}
-                    placeholder="Nome do Responsável"
-                    className={styles.input} 
+                    <input
+                        type="text"
+                        name="nome_do_responsavel"
+                        value={maquina.nome_do_responsavel}
+                        onChange={handleCheck}
+                        placeholder="Nome do Responsável"
+                        className={styles.input}
                     />
-                    <input 
-                    type="text"
-                    name="tipo_de_manutencao"
-                    value={maquina.tipo_de_manutencao}
-                    onChange={handleCheck}
-                    placeholder="Tipo de Manutenção" 
-                    className={styles.input} 
+                    <select
+                        name="tipo_de_manutencao"
+                        value={maquina.tipo_de_manutencao}
+                        onChange={handleCheck}
+                        className={styles.input}
+                    >
+                        <option value="null">Selecione uma das opções</option>
+                        <option value="Lubrificação">Lubrificação</option>
+                        <option value="Preventiva">Preventiva</option>
+                        <option value="Corretiva">Corretiva</option>
+                    </select>
+                    <input
+                        type="text"
+                        name="descricao"
+                        value={maquina.descricao}
+                        onChange={handleCheck}
+                        placeholder="Descrição"
+                        className={styles.input}
                     />
-                    <input 
-                    type="text"
-                    name="descricao"
-                    value={maquina.descricao}
-                    onChange={handleCheck}
-                    placeholder="Descrição"
-                    className={styles.input} 
+                    <input
+                        type="date"
+                        name="data_da_manutencao"
+                        value={maquina.data_da_manutencao}
+                        onChange={handleCheck}
+                        placeholder="Data da Manutenção"
+                        className={styles.input}
                     />
-                    <input 
-                    type="date"
-                    name="data_da_manutencao"
-                    value={maquina.data_da_manutencao}
-                    onChange={handleCheck}
-                    placeholder="Data da Manutenção"
-                    className={styles.input} 
-                    />   
                     {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                    <button className={styles.button} onClick={handlePost}>Registrar Manutenção</button>             
-            </div>
+                    <button className={styles.button} onClick={handlePost}>Registrar Manutenção</button>
+                </div>
             </form>
             <div className={styles.Card}>
                 <div className={styles.checklist}>
