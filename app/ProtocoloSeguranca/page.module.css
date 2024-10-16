@@ -17,19 +17,26 @@
   margin-top: 20px;
   width: 100%;
 }
-.checkbox{
+
+.checkbox {
   display: flex;
+  align-items: center; 
   gap: 10px;
   font-size: 17px;
-  flex-direction: row;
-  align-items: baseline;
   margin-left: 10px;
-  margin-top: 5px;
+  margin-top: 2px;
   width: 100%;
 }
+
 .check {
   margin-bottom: 20px;
-  margin-left: 30px;
+  margin-left: 0; 
+  width: 30px; 
+  height: 30px; 
+}
+
+.checkbox label {
+  margin-top: -5px; 
 }
 
 .footer {
@@ -104,7 +111,7 @@
 
 .Card {
   width: 750px;
-  height: 500px;
+  height: 600px;
   margin-top: 50px;
   top: 1203.85px;
   left: 160.5px;
