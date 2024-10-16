@@ -8,7 +8,6 @@ import PopupMessage from '../components/PopUp/PopUp';
 
 function ManutencaoCadastrada() {
     const [maquina, setMaquina] = useState(null);
-    const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
 
     useEffect(() => {
         const fetchMaquina = async () => {
@@ -40,7 +39,6 @@ function ManutencaoCadastrada() {
                 <Header />
             </header>
             <div className={styles.content}>
-                {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>
 
                 <div className={styles.CardsRow}>

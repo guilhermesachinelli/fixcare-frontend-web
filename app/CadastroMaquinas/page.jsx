@@ -4,7 +4,6 @@ import styles from "./page.module.css";
 import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
-import { clear } from 'localforage';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
