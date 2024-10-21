@@ -1,62 +1,72 @@
+/* Estilo para o contêiner principal */
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
+  display: flex; /* Utiliza flexbox para layout */
+  flex-direction: column; /* Alinha os itens em coluna */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  height: 100%; /* Define a altura como 100% */
+  background-color: var(--background); /* Define a cor de fundo usando uma variável CSS */
+  color: var(--foreground); /* Define a cor do texto usando uma variável CSS */
+  transition: background-color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor de fundo */
 }
 
+/* Estilo para a div que contém as imagens */
 .Imgs {
-  display: flex;
-  justify-content: space-between;
-  width: 100%; 
-  padding: 0 20px; 
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: space-between; /* Espaça os itens igualmente */
+  width: 100%; /* Define a largura como 100% */
+  padding: 0 20px; /* Adiciona padding horizontal */
 }
 
+/* Estilo para a imagem do logo do Senai */
 .logoSenai {
-  width: 100vh;
-  height: 40vh;
-  margin-left: 20px;
-  margin-top: 200px; /* Ajuste para ficar mais próximo do cabeçalho */
+  width: 100vh; /* Define a largura da imagem */
+  height: 40vh; /* Define a altura da imagem */
+  margin-left: 20px; /* Adiciona margem à esquerda */
+  margin-top: 200px; /* Adiciona margem ao topo para ajustar a posição */
 }
 
+/* Estilo para a imagem do torno */
 .tornoImg {
-  width: 110vh;
-  height: 90vh;
-  margin-right: -200px;
-  margin-top: 20px; /* Ajuste para ficar mais próximo do cabeçalho */
+  width: 110vh; /* Define a largura da imagem */
+  height: 90vh; /* Define a altura da imagem */
+  margin-right: -200px; /* Adiciona margem negativa à direita para ajustar a posição */
+  margin-top: 20px; /* Adiciona margem ao topo para ajustar a posição */
 }
 
+/* Estilo para o botão */
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100px;
-  margin-top: 50px;
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  width: 100%; /* Define a largura como 100% */
+  height: 100px; /* Define a altura do botão */
+  margin-top: 50px; /* Adiciona margem ao topo */
 }
 
+/* Estilo para o rodapé */
 .footer {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  background: #750202;
-  color: white;
-  height: 100%;
-  width: 100%;
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: end; /* Alinha os itens ao final do contêiner */
+  align-items: center; /* Centraliza os itens verticalmente */
+  color: white; /* Define a cor do texto como branco */
+  height: 100%; /* Define a altura como 100% */
+  width: 100%; /* Define a largura como 100% */
 }
 
+/* Estilo para o cabeçalho */
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 6rem;
-  background-color: rgba(37, 37, 143, 0.01);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  padding: 0 20px; /* Adiciona um pouco de padding */
+  display: flex; /* Utiliza flexbox para layout */
+  justify-content: space-between; /* Espaça os itens igualmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  height: 6rem; /* Define a altura do cabeçalho */
+  background-color: rgba(37, 37, 143, 0.01); /* Define a cor de fundo com transparência */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
+  width: 100%; /* Define a largura como 100% */
+  padding: 0 20px; /* Adiciona padding horizontal */
 }
 
+/* Estilos para telas menores que 768px */
 @media (max-width: 768px) {
   .Imgs {
     flex-direction: column; /* Muda a direção das imagens para coluna em telas menores */
@@ -75,13 +85,13 @@
     margin: 20px 0; /* Ajusta as margens */
   }
 
-
   .footer {
     flex-direction: column; /* Muda a direção do rodapé para coluna em telas menores */
     align-items: center; /* Centraliza os itens no rodapé */
   }
 }
 
+/* Estilos para telas menores que 480px */
 @media (max-width: 480px) {
   .logoSenai {
     width: 90vw; /* Ajusta ainda mais a largura para dispositivos muito pequenos */
