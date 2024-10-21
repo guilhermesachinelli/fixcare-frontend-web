@@ -29,7 +29,7 @@ function AdmPrincipal() {
                 </a>
                 <a href="./MaquinasAdm">
                 <div className={styles.Romi}>
-                    <img className={styles.romi} src="/cadastroM.png" />
+                    <img className={styles.romi} src="/pesq.png" />
                     <h1 className={styles.tituloMaquinas}>Máquinas</h1>
                 </div>
                 </a>
