@@ -55,18 +55,18 @@ Componentização: Utilizada nos elementos: Cards da página de regras, Footer, 
 
 | Cores Degrade             | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
-| Cor Vermelha 1       | ![##FF0000](https://via.placeholder.com/10/FF0000?text=+) #FF0000 |
-| Cor  Vermelha 2      | ![#BC0303](https://via.placeholder.com/10/BC0303?text=+) #BC0303 |
-| Cor Vermelha 3       | ![#750202](https://via.placeholder.com/10/750202?text=+) #750202 |
+| Cor Azul 1       | ![#0050CEEE](https://via.placeholder.com/10/0050CEEE?text=+) #0050CEEE |
+| Cor Azul 2       | ![#013484](https://via.placeholder.com/10/013484?text=+) #013484 |
+| Cor Azul 3       | ![#002D73](https://via.placeholder.com/10/002D73?text=+) #002D73 |
+| Cor Azul 4       | ![#0F3064](https://via.placeholder.com/10/0F3064?text=+) #0F3064 |
+| Cor Azul 5       | ![#0D213F](https://via.placeholder.com/10/002D73?text=+) #0D213F |
 
 
-| Cor               | Hexadecimal                                                |
+| Cores               | Hexadecimal                                                |
 | ----------------- | ---------------------------------------------------------------- |
 | Cor Branca       | ![#F1F1F19A](https://via.placeholder.com/10/F1F1F19A?text=+) #F1F1F19A |
-| Cor Vermelho Rosa     | ![#FD1F1F66](https://via.placeholder.com/10/FD1F1F66?text=+) #FD1F1F66 |
-| Cor Vermelho Claro 1       | ![#FF000099](https://via.placeholder.com/10/FF000099?text=+) #FF000099 |
-| Cor Vermelho Escuro     | ![#71000087](https://via.placeholder.com/10/71000087?text=+) #71000087 |
-| Cor Vermelho Claro 2     | ![#BC0303](https://via.placeholder.com/10/BC0303?text=+) #BC0303 |
+| Cor Azul Claro 1       | ![#1F23FD7A](https://via.placeholder.com/10/1F23FD7A?text=+) #1F23FD7A |
+| Cor Azul     | ![#001AFF99](https://via.placeholder.com/10/001AFF99?text=+) #001AFF99 |
 
 
 # Equipe
