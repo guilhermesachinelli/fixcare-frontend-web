@@ -43,7 +43,7 @@ function MaquinaCadastrada() {
                 setPopup({ visible: true, message: 'Máquina excluída com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
-                    window.location.href = '/Maquinas'; 
+                    window.location.href = '/Maquinas'; // Redirecionar para a página inicial após exclusão
                 }, 2000);
             } else {
                 throw new Error('Erro ao excluir máquina');
@@ -85,6 +85,8 @@ function MaquinaCadastrada() {
                     <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
                     <p className={styles.subtitulo}>Número do Torno: {maquina.numero_do_torno}</p>
                     <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_aquisicao}</p>
+                    <button onClick={handleEdit} className={styles.buttonText}>Editar</button>
+                    <button onClick={handleDelete} className={styles.buttonText}>Excluir</button>
                     </div>
                 </div>
             </div>

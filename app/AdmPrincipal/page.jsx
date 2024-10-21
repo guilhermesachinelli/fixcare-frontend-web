@@ -21,11 +21,16 @@ function AdmPrincipal() {
                     <h1 className={styles.tituloManutencao}>Manutenções Cadastradas</h1>
                 </div>
                 </a>
-
                 <a href="./CadastroMaquinas">
                 <div className={styles.Romi}>
                     <img className={styles.romi} src="/cadastroM.png" />
                     <h1 className={styles.titulo}>Cadastro de Máquinas</h1>
+                </div>
+                </a>
+                <a href="./MaquinasAdm">
+                <div className={styles.Romi}>
+                    <img className={styles.romi} src="/cadastroM.png" />
+                    <h1 className={styles.tituloMaquinas}>Máquinas</h1>
                 </div>
                 </a>
             </div>
