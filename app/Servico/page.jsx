@@ -17,7 +17,7 @@ function Servico() {
                     </div>
                 </a>
 
-                <a href='./Manutencoes'>
+                <a href='./Manutencao'>
                     <div className={styles.lubrificacao}>
                         <img className={styles.oleo} src="/lubrificacao.png" />
                         <h1 className={styles.titulo2}>Manutenção</h1>

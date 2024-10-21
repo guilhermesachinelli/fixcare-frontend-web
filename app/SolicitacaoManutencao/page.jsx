@@ -35,7 +35,7 @@ function Manutencao() {
             });
 
             if (response.ok) {
-                setPopup({ visible: true, message: 'Manutenção cadastrada com sucesso', type: 'success' });
+                setPopup({ visible: true, message: 'Solicitação enviada com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 2000);
@@ -43,7 +43,7 @@ function Manutencao() {
                 throw new Error('Erro ao cadastrar manutenção');
             }
         } catch (error) {
-            setPopup({ visible: true, message: 'Erro ao cadastrar uma manutenção', type: 'error' });
+            setPopup({ visible: true, message: 'Erro ao enviar solicitação', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
             }, 2000);

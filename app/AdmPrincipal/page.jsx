@@ -9,7 +9,7 @@ function AdmPrincipal() {
                 <Header />
             </header>
             <div className={styles.Cards}>
-                <a href="./Manutencao">
+                <a href="./Manutencoes">
                 <div className={styles.Nardini}>
                     <img className={styles.nardini} src="/ferramentas.png" />
                     <h1 className={styles.tituloManutencao}>Manutenções</h1>
