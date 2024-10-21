@@ -15,10 +15,10 @@ function AdmPrincipal() {
                     <h1 className={styles.tituloManutencao}>Manutenções</h1>
                 </div>
                 </a>
-                <a href="./Manutencoes">
+                <a href="./ExibiSolideManutencao">
                 <div className={styles.Nardini}>
                     <img className={styles.nardini} src="/engrenagens.png" />
-                    <h1 className={styles.tituloManutencao}>Manutenções Cadastradas</h1>
+                    <h1 className={styles.tituloManutencao}>Solicitações de Manutenção</h1>
                 </div>
                 </a>
                 <a href="./CadastroMaquinas">
