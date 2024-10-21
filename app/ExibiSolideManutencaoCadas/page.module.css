@@ -1,0 +1,90 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  
+  .footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background: #3737b1;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin-top: 200px;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    background-color: #25258f 0.01%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    margin-top: 0px;
+  }
+
+.titulo {
+    font-size: 40px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.subtitulo {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 3px;
+}
+
+.CardsRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    justify-items: center;
+    max-width: 100%;
+}
+
+.Card {
+    width: 50%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+    opacity: 0px;
+    background: #03183A 53%;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.ImgTorno {
+    width: 60%;
+    height: 60%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+.buttonText {
+    background-color: #013484;
+    color: #fff;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-left: 10px;
+}
+
+.buttonText:hover {
+    background-color: #03183A;
+}
+
+.buttonText:active {
+    transform: scale(0.95);
+}

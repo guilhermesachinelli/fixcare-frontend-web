@@ -16,7 +16,12 @@ function Servico() {
                         <h1 className={styles.titulo1}>Solicitações de Manutenção</h1>
                     </div>
                 </a>
+<<<<<<< HEAD
                 <a href='./Manutencao'>                                           
+=======
+                <a href='./Manutencoes'>
+                                                                
+>>>>>>> a63233e8a38bc69036f8d4fd379305eb4afa9dfe
                     <div className={styles.lubrificacao}>
                         <img className={styles.oleo} src="/lubrificacao.png" />
                         <h1 className={styles.titulo2}>Manutenção</h1>

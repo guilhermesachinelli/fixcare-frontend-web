@@ -17,7 +17,7 @@ function AdmPrincipal() {
                 </a>
                 <a href="./Manutencoes">
                 <div className={styles.Nardini}>
-                    <img className={styles.nardini} src="/ferramentas.png" />
+                    <img className={styles.nardini} src="/engrenagens.png" />
                     <h1 className={styles.tituloManutencao}>Manutenções Cadastradas</h1>
                 </div>
                 </a>
