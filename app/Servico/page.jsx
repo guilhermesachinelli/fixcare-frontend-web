@@ -10,14 +10,13 @@ function Servico() {
             </header>
 
             <div className={styles.Cards}>
-                <a href='./Manutencao'>
+                <a href='./SolicitacaoManutencao'>
                     <div className={styles.manutencao}>
                         <img className={styles.ferramentas} src="/ferramentas.png" />
                         <h1 className={styles.titulo1}>Solicitações de Manutenção</h1>
                     </div>
                 </a>
-                <a href='./Manutencao'>
-                                                                
+                <a href='./Manutencao'>                                           
                     <div className={styles.lubrificacao}>
                         <img className={styles.oleo} src="/lubrificacao.png" />
                         <h1 className={styles.titulo2}>Manutenção</h1>
