@@ -1,10 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
 import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
-import PopupMessage from '../components/PopUp/PopUp';
-
 
 function ManutencaoCadastrada() {
     const [maquina, setMaquina] = useState(null);
@@ -21,6 +19,7 @@ function ManutencaoCadastrada() {
                 });
 
                 const result = await response.json();
+                console.log('Dados da máquina:', result);
                 setMaquina(result);
             }
         };
@@ -48,8 +47,8 @@ function ManutencaoCadastrada() {
                     <div className={styles.Card}>
                     <h2 className={styles.titulo}>{maquina.nome_do_responsavel} - {maquina.tipo_de_manutencao}</h2>
                     <p className={styles.subtitulo}>Descrição: {maquina.descricao}</p>
-                    <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonioID}</p>
-                    <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_da_manutencao}</p>
+                    <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonioid}</p>
+                    <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_manutencao}</p>
                     </div>
                 </div>
             </div>
