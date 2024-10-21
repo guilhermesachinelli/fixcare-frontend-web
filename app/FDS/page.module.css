@@ -45,6 +45,7 @@
     justify-content: space-between;
     align-items: center;
     display: flex;
+    margin-top: 25px;
     }
 
 .header {
@@ -74,22 +75,22 @@
     margin-right: 20px;
     opacity: 0px;
     color: #FFFFFF;
-    font-size: 17px;
+    font-size: 19px;
 }
 .textos{
     width: 700px;
     height: 240px;
-    margin-top: 20px;
+    margin-top: 25px;
     padding: 10px;
     margin-right: 20px;
     opacity: 0px;
     color: #FFFFFF;
-    font-size: 17px;
+    font-size: 23px;
 }
 
 .Card {
     width: 750px;
-    height: 550px;
+    height: 750px;
     margin-top: 100px;
     top: 1203.85px;
     left: 160.5px;
@@ -115,7 +116,7 @@
 .text2 {
     width: 700px;
     height: 240px;
-    margin-top: -90px;
+    margin-top: -30px;
     padding: 10px;
     margin-right: 20px;
     margin-bottom: 50px;
@@ -130,7 +131,7 @@
 .text3 {
     width: 700px;
     height: 240px;
-    margin-top: -150px;
+    margin-top: -70px;
     padding: 10px;
     margin-right: 20px;
     font-weight: bold;
@@ -139,7 +140,7 @@
     gap: 0px;
     opacity: 0px;
     color: #FFFFFF; 
-    font-size: 20px;
+    font-size: 30px;
     
 }
 
@@ -159,7 +160,7 @@
     width: 598px;
     height: 76px;
     top: 1498px;
-    margin-top: -137px;
+    margin-top: -100px;
     margin-left: 200px;
     left: 577px;
     opacity: 0px;
