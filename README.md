@@ -19,22 +19,61 @@ Para começar a utilizar esse software e entender melhor o projeto, siga os pass
 2. Em seguida, utilize o comando "npm run dev" no terminal para poder abri-lo em seu navegador.
 
 ## Esquema de classes:
+Tabela machine:
 | ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
 |---------------|----------|------------------------------------------|
-| question            | string   | Pergunta principal                                |
-| category          | string   | Definem a categoria da pergunta                             |
-| difficulty         | string   | Define a dificuldade da pergunta                           |
-| response1         | string   | Primeira alternativa  
-| response2         | string   | Segunda alternativa  
-| response3        | string   | Terceira alternativa 
-| response4         | string   | Quarta alternativa
-| correct         | string   | Opção de alternativa correta 
+| categoria            | string   | Categoria da maquina                                |
+| marca          | string   | Define a marca da maquina                             |
+| modelo          | string   | Define o modelo da maquina                           |
+| numero_de_patrimonio         | string   | Número de patrimonio da maquina (UNICO) 
+| numero_de_serie         | string   | Número de serie da maquina  (UNICO)
+| numero_do_torno        | number   | Número do torno (UNICO)
+| data_de_aquisicao         | date   | Data de aquisição da maquina
+
+Tabela adm:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Administrador (UNICO)                                |
+| senha          | string   | Define a senha do Administrados                            |
+
+
+Tabela aluno:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Aluno (UNICO)                                |
+| senha          | string   | Define a senha do Aluno                            |
+
+Tabela funcionario:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Funcionario (UNICO)                                |
+| senha          | string   | Define a senha do Funcionario                            |
+
+Tabela requestmaintenance:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| numero_de_patrimonioID            | string   | Define o número de patrimonido pegando o número da maquina                                |
+| nome          | string   | Nome da pessoa que fez o requerimento de manutenção                             |
+| causa_do_problema         | string   | Causa do problema que esta na maquina  
+| descricao         | string   | Descrição do problema  
+| data_de_solicitacao        | date   | Data que foi feita a requisição
+| status         | boolean   | Status que define se a requição ainda esta de pé ou não
+
+Tabela maintenance:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| numero_de_patrimonioID            | string   | Define o número de patrimonido pegando o número da maquina                                |
+| nome_do_responsavel          | string   | Nome do responsavel que fez a manutenção                             |
+| tipo_de_manutencao          | string   | Define o tipo da manutenção feita                           |
+| descricao         | string   | Descrição da manutenção 
+| data_da_manutenção        | date   | Data que foi feita a manutenção
+| status         | boolean   | Status que define se a manutenção ja foi feita ou não
 
 ## Boas práticas em nosso código:
 
 Clean code: Estruturação de pastas organizada, dentação de código, versionamento de branchs.
 
-Componentização: Utilizada nos elementos: Cards da página de regras, Footer, Header, Input members, Member, Navegação por imagem, PopUp e SubContainers da index.
+Componentização: Utilizada nos elementos: Cards, Footer, Header, Navegação por imagem, PopUp.
 
 
 
