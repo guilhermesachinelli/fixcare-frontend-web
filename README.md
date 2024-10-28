@@ -16,40 +16,65 @@ Esse software de código aberto  utiliza  uma API criada pelos alunos para doc
 Para começar a utilizar esse software e entender melhor o projeto, siga os passos abaixo:
 
 1. Em seu projeto, utilize o comando "npm i" no terminal para fazer a instalação de todas as bibliotecas utilizadas no projeto.
-2. Em seguida, utileze o comando "npm run dev" no terminal para poder abri-lo em seu navegadro.
+2. Em seguida, utilize o comando "npm run dev" no terminal para poder abri-lo em seu navegador.
 
 ## Esquema de classes:
+Tabela machine:
 | ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
 |---------------|----------|------------------------------------------|
-| question            | string   | Pergunta principal                                |
-| category          | string   | Definem a categoria da pergunta                             |
-| difficulty         | string   | Define a dificuldade da pergunta                           |
-| response1         | string   | Primeira alternativa  
-| response2         | string   | Segunda alternativa  
-| response3        | string   | Terceira alternativa 
-| response4         | string   | Quarta alternativa
-| correct         | string   | Opção de alternativa correta 
+| categoria            | string   | Categoria da maquina                                |
+| marca          | string   | Define a marca da maquina                             |
+| modelo          | string   | Define o modelo da maquina                           |
+| numero_de_patrimonio         | string   | Número de patrimonio da maquina (UNICO) 
+| numero_de_serie         | string   | Número de serie da maquina  (UNICO)
+| numero_do_torno        | number   | Número do torno (UNICO)
+| data_de_aquisicao         | date   | Data de aquisição da maquina
+
+Tabela adm:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Administrador (UNICO)                                |
+| senha          | string   | Define a senha do Administrados                            |
+
+
+Tabela aluno:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Aluno (UNICO)                                |
+| senha          | string   | Define a senha do Aluno                            |
+
+Tabela funcionario:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| email             | string   | Define um email para o Funcionario (UNICO)                                |
+| senha          | string   | Define a senha do Funcionario                            |
+
+Tabela requestmaintenance:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| numero_de_patrimonioID            | string   | Define o número de patrimonido pegando o número da maquina                                |
+| nome          | string   | Nome da pessoa que fez o requerimento de manutenção                             |
+| causa_do_problema         | string   | Causa do problema que esta na maquina  
+| descricao         | string   | Descrição do problema  
+| data_de_solicitacao        | date   | Data que foi feita a requisição
+| status         | boolean   | Status que define se a requição ainda esta de pé ou não
+
+Tabela maintenance:
+| ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
+|---------------|----------|------------------------------------------|
+| numero_de_patrimonioID            | string   | Define o número de patrimonido pegando o número da maquina                                |
+| nome_do_responsavel          | string   | Nome do responsavel que fez a manutenção                             |
+| tipo_de_manutencao          | string   | Define o tipo da manutenção feita                           |
+| descricao         | string   | Descrição da manutenção 
+| data_da_manutenção        | date   | Data que foi feita a manutenção
+| status         | boolean   | Status que define se a manutenção ja foi feita ou não
 
 ## Boas práticas em nosso código:
 
 Clean code: Estruturação de pastas organizada, dentação de código, versionamento de branchs.
 
-Componentização: Utilizada nos elementos: Cards da página de regras, Footer, Header, Input members, Member, Navegação por imagem, PopUp e SubContainers da index.
+Componentização: Utilizada nos elementos: Cards, Footer, Header, Navegação por imagem, PopUp.
 
-
-
-## Regras de negócio
-
-| Regra | Descrição                                            |
-|-------|------------------------------------------------------|
-| Regra 1 | Não pode existir campos vazios em envios de formulários. |
-| Regra 2 | O tamanho mínimo para cadastrar um membro é de 3 caracteres. |
-| Regra 3 | Idade para cadastrar membro entre 15-100 anos.       |
-| Regra 4 | Verificação de URL de imagens.                       |                                       |
-| Regra 5 | Verificação de URL com caracteres especiais. |
-| Regra 6 | Verificação de e-mail na página de contato. |
-| Regra 7 | Verificação da contabilidade de erros       |
-| Regra 8 | Verificação de perguntas cadastradas.                      |
 
 ## Documentação de cores oficiais do site
 
