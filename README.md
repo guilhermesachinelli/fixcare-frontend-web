@@ -76,20 +76,6 @@ Clean code: Estruturação de pastas organizada, dentação de código, versiona
 Componentização: Utilizada nos elementos: Cards, Footer, Header, Navegação por imagem, PopUp.
 
 
-
-## Regras de negócio
-
-| Regra | Descrição                                            |
-|-------|------------------------------------------------------|
-| Regra 1 | Não pode existir campos vazios em envios de formulários. |
-| Regra 2 | O tamanho mínimo para cadastrar um membro é de 3 caracteres. |
-| Regra 3 | Idade para cadastrar membro entre 15-100 anos.       |
-| Regra 4 | Verificação de URL de imagens.                       |                                       |
-| Regra 5 | Verificação de URL com caracteres especiais. |
-| Regra 6 | Verificação de e-mail na página de contato. |
-| Regra 7 | Verificação da contabilidade de erros       |
-| Regra 8 | Verificação de perguntas cadastradas.                      |
-
 ## Documentação de cores oficiais do site
 
 | Cores Degrade             | Hexadecimal                                                |
