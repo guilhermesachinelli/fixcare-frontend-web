@@ -16,7 +16,7 @@ Esse software de código aberto  utiliza  uma API criada pelos alunos para doc
 Para começar a utilizar esse software e entender melhor o projeto, siga os passos abaixo:
 
 1. Em seu projeto, utilize o comando "npm i" no terminal para fazer a instalação de todas as bibliotecas utilizadas no projeto.
-2. Em seguida, utileze o comando "npm run dev" no terminal para poder abri-lo em seu navegadro.
+2. Em seguida, utilize o comando "npm run dev" no terminal para poder abri-lo em seu navegador.
 
 ## Esquema de classes:
 | ATRIBUTO      | TIPO     | DESCRIÇÃO                                |
