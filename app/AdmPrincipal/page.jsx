@@ -8,6 +8,7 @@ function AdmPrincipal() {
             <header className={styles.header}>
                 <Header />
             </header>
+            <div className={styles.colum}>
             <div className={styles.Cards}>
                 <a href="./Manutencoes">
                 <div className={styles.Nardini}>
@@ -21,6 +22,8 @@ function AdmPrincipal() {
                     <h1 className={styles.tituloManutencao}>Solicitações de Manutenção</h1>
                 </div>
                 </a>
+                </div>
+                <div className={styles.Cards}>
                 <a href="./CadastroMaquinas">
                 <div className={styles.Romi}>
                     <img className={styles.romi} src="/cadastroM.png" />
@@ -33,6 +36,7 @@ function AdmPrincipal() {
                     <h1 className={styles.tituloMaquinas}>Máquinas</h1>
                 </div>
                 </a>
+                </div>
             </div>
             <footer className={styles.footer}>
                 <Footer />
