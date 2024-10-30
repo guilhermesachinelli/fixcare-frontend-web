@@ -14,7 +14,7 @@ function MaquinaCadastrada() {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.200.139:4000/machine/${id}`, {
+                const response = await fetch(`http://10.88.199.223:4000/machine/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
