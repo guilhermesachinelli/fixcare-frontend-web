@@ -18,6 +18,7 @@ Para começar a utilizar esse software e entender melhor o projeto, siga os pass
 1. Em seu projeto, utilize o comando "npm i" no terminal para fazer a instalação de todas as bibliotecas utilizadas no projeto.
 2. Em seguida, utilize o comando "npm run dev" no terminal para poder abri-lo em seu navegador.
 3. Para que esse software funcione, entre no link a baixo e clone o repositorio do Back.
+
    [![Github Badge](https://img.shields.io/badge/-Github-000?style=flat-square&logo=Github&logoColor=white&link=LINK_GIT)](https://github.com/guilhermesachinelli/fixcareBack)
 
 ## Esquema de classes:
