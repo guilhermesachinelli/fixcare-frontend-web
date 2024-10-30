@@ -105,7 +105,7 @@ function Page() {
                             type="text"
                             value={patrimonioFiltro}
                             onChange={handleFilterChange}
-                            placeholder="Pesquisar máquinas por número de patrimônio"
+                            placeholder="Pesquisar manutenção por número de patrimônio"
                             className={styles.searchInput}
                         />
                         <button type="submit" className={styles.searchButton}>Buscar</button>

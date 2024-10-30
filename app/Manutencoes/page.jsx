@@ -66,19 +66,19 @@ function Page() {
             const result = await response.json();
             setData(result);
             if (result.length === 0) {
-                setPopup({ visible: true, message: 'Máquina não encontrada', type: 'error' });
+                setPopup({ visible: true, message: 'Manutenção não encontrada', type: 'error' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             } else {
-                setPopup({ visible: true, message: 'Máquina encontrada com sucesso', type: 'success' });
+                setPopup({ visible: true, message: 'Manutenção encontrada com sucesso', type: 'success' });
                 setTimeout(() => {
                     setPopup({ visible: false, message: '', type: '' });
                 }, 4000);
             }
         } catch (error) {
             console.log("Erro ao buscar dados:", error);
-            setPopup({ visible: true, message: 'Erro ao buscar máquina', type: 'error' });
+            setPopup({ visible: true, message: 'Erro ao buscar manutenção', type: 'error' });
             setTimeout(() => {
                 setPopup({ visible: false, message: '', type: '' });
             }, 4000);
@@ -105,7 +105,7 @@ function Page() {
                             type="text"
                             value={patrimonioFiltro}
                             onChange={handleFilterChange}
-                            placeholder="Pesquisar máquinas por número de patrimônio"
+                            placeholder="Pesquisar manutenção por número de patrimônio"
                             className={styles.searchInput}
                         />
                         <button type="submit" className={styles.searchButton}>Buscar</button>
