@@ -3,11 +3,23 @@ import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 function Manutencao() {
     const [selectAll, setSelectAll] = useState(false);
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
+    
+    useEffect(() => {
+        // Recuperar o nome do responsável do localStorage
+        const nomeDoResponsavel = localStorage.getItem('userEmail');
+        if (nomeDoResponsavel) {
+            setMaquina(prevState => ({
+                ...prevState,
+                nome_do_responsavel: nomeDoResponsavel
+            }));
+        }
+    }, []);
+
     const [maquina, setMaquina] = useState({
         numero_de_patrimonioID: '',
         nome_do_responsavel: '',
@@ -48,7 +60,7 @@ function Manutencao() {
 
     const handleCheck = (e) => {
         const { name, checked } = e.target;
-        setMaquina(prevState => ({
+        setCheck(prevState => ({
             ...prevState,
             [name]: checked
         }));

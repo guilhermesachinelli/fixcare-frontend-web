@@ -54,6 +54,8 @@ function LoginServicos() {
             }, 2500);
         }
         if (data.length > 0 || data2.length > 0) {
+            localStorage.setItem('userEmail', email);
+            console.log(localStorage.getItem('userEmail'));
                 setPopup({ visible: true, message: 'Login realizado com sucesso', type: 'success' });
                 setTimeout(() => {
                     window.location.href = '/Servico';
