@@ -187,8 +187,8 @@ function Manutencao() {
                         />
                         Selecionar Tudo
                     </label>
-                    <h4 classname={styles.info}> (1)- Lubrificar manualmente pontos que não estiverem ligados á central de lubrificação.</h4>
-                    <h4 classname={styles.info}> (2)- Não misturar marcas. Caso seja necessário substituir o óleo lubrificante e drenar completamente o óleo usado antes de colocar o novo.</h4>
+                    <h4 className={styles.info}> (1)- Lubrificar manualmente pontos que não estiverem ligados á central de lubrificação.</h4>
+                    <h4 className={styles.info}> (2)- Não misturar marcas. Caso seja necessário substituir o óleo lubrificante e drenar completamente o óleo usado antes de colocar o novo.</h4>
                 </div>
                 </div>
             <form className={styles.card}>
