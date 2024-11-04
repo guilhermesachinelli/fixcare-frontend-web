@@ -46,9 +46,9 @@ function ProtocoloSeguranca() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+           
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Protocolo de Segurança</h1>

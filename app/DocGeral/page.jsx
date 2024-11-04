@@ -5,9 +5,9 @@ import Header from "../components/header/page.jsx"
 function DocGeral() {
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <div className={styles.Cards}>
                 <a href='./FDS'>
                 <div className={styles.Fds}>

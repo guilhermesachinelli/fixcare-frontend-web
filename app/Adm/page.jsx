@@ -51,9 +51,9 @@ function Adm() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <form onSubmit={fetchLogin}>
                 <div className={styles.Card}>
                     <img className={styles.logoSenai} src="/senaiLogo.png" />

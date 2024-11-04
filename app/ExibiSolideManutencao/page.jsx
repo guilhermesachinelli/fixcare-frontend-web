@@ -96,9 +96,9 @@ function Page() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <div className={styles.Cards}>
             <form onSubmit={handleFilter} className={styles.searchForm}>
                         <input

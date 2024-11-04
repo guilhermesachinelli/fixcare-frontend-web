@@ -6,9 +6,9 @@ function page() {
     return (
         <div className={styles.container}>
                                     
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <h1 className={styles.titulo}>1° Geração</h1>
             <div className={styles.Cards}>
                 <a href='https://github.com/GuiHJLima'>

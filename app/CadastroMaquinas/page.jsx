@@ -117,9 +117,9 @@ function CadastrarMaquinas() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>

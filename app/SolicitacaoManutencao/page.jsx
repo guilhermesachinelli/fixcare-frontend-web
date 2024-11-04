@@ -52,9 +52,9 @@ function Manutencao() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Solicitação de Manutenção</h1>

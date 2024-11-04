@@ -34,9 +34,9 @@ function ManutencaoCadastrada() {
 
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
             <div className={styles.content}>
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>
 

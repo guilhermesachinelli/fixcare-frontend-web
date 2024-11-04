@@ -6,9 +6,9 @@ import Link from "next/link";
 function NardiniMecanico() {
     return (
         <div className={styles.container}>
-            <header className={styles.header}>
+            
                 <Header />
-            </header>
+            
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Manual Mecânico: Torno Nardini.</h1>
