@@ -11,6 +11,21 @@
     justify-content: space-around; 
     align-items: center; 
 }
+
+.titleContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 10px 10px;
+  opacity: 0px;
+  background: rgba(0, 57, 150, 0.93) 53%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
   
   .manualM, .manualE , .Fds, .Pls {
     width: 413px;
@@ -19,15 +34,10 @@
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #03183A;
+    background: rgba(0, 57, 150, 0.93);
     margin-left: 20px;
     margin-top: 50px;
   }
-
-  .manualM:hover, .manualE:hover, .Fds:hover, .Pls:hover {
-    background: linear-gradient(180deg, #0050ceee 0.01%, #013484 22%, #002D73 50%, #0F3064 77%, #0D213F 100%);
-    box-shadow: #03183A 20px 0px 20px 0px;
-}
 
 .engrenagens {
     width: 220px;
@@ -43,7 +53,6 @@
 .titulo {
     width: 100%;
     height: 100px;
-    margin-top: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -95,3 +104,4 @@
     width: 100%;
     margin-top: 0px;
   }
+
