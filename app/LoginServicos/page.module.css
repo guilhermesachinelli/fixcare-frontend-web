@@ -54,9 +54,6 @@
     gap: 1em;
 }
 
-.inputWrapper {
-    position: relative;
-}
 
 .input {
     width: 400px;
@@ -172,4 +169,12 @@
 
 .buttonText2:hover {
     background-color: rgba(0, 80, 206, 0.933333);
+}
+
+@media (max-width: 768px) {
+   
+    .icon {
+        margin-top: 47px;
+    }
+    
 }
