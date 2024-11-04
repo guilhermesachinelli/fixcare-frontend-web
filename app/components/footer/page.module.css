@@ -24,7 +24,7 @@
 }
 
 .footerContent {
-    background: linear-gradient(#0F3064 10%, #0D213F 100%);
+    background: #0050ceee;
     color: white;
     display: flex;
     flex-direction: column;

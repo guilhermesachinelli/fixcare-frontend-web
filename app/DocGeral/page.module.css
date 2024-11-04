@@ -22,7 +22,7 @@
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #03183A 53%;
+    background: rgba(0, 57, 150, 0.93);
     margin-right: 100px;
     margin-left: 90px;
     margin-top: 109px;
@@ -117,25 +117,25 @@
 }
 
 .manualM:hover {
-    background-color: #013484;
+    background-color: rgba(0, 57, 150, 0.603);
     transition: 0.5s;
     opacity: 0.7;
 }
 
 .manualE:hover {
-    background-color: #013484;
+    background-color: rgba(0, 57, 150, 0.603);
     transition: 0.5s;
     opacity: 0.7;
 }
 
 .Fds:hover {
-    background-color: #013484;
+    background-color: rgba(0, 57, 150, 0.603);
     transition: 0.5s;
     opacity: 0.7;
 }
 
 .Pls:hover {
-    background-color: #013484;
+    background-color: rgba(0, 57, 150, 0.603);
     transition: 0.5s;
     opacity: 0.7;
 }

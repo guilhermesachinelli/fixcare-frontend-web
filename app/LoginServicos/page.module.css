@@ -36,7 +36,7 @@
     left: 450px;
     gap: 0px;
     opacity: 0px;
-    background: #03183A;
+    background: rgba(0, 57, 150, 0.93);
     margin-top: 80px;
     border-radius: 10px;
 }

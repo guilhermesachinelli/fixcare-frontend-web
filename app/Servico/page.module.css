@@ -44,14 +44,14 @@
   gap: 0px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #03183A;
+  background: rgba(0, 57, 150, 0.93);
   margin-left: 50px;
   margin-top: 100px;
 }
 
 .manutencao:hover,
 .lubrificacao:hover {
-  background-color: #013484;
+  background-color: rgba(0, 57, 150, 0.603);
   transition: 0.5s;
   opacity: 0.7;
 }
