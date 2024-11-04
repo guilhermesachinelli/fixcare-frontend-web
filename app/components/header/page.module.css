@@ -1,9 +1,11 @@
 .header {
+  background: linear-gradient(180deg, #0050ceee 0.01%, #013484 22%, #002D73 50%, #0F3064 77%, #0D213F 100%);
+  width: 100%;
   display: flex;
   align-items: center;
   padding: 1rem;
   color: #ffffff;
-  gap: 470%;
+  gap: 83%;
 }
 
 .menuButton {
