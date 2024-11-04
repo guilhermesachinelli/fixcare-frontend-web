@@ -36,4 +36,4 @@ const Home = () => {
 }
 
 // Exporta o componente Home como padrão.
-export default Home;
+export default Home; 
