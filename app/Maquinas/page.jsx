@@ -99,7 +99,8 @@ function Page() {
             <header className={styles.header}>
                 <Header />
             </header>
-            <div className={styles.Cards}>
+            
+                <div className={styles.Center}>
             <form onSubmit={handleFilter} className={styles.searchForm}>
                         <input
                             type="text"
@@ -110,6 +111,8 @@ function Page() {
                         />
                         <button type="submit" className={styles.searchButton}>Buscar</button>
                     </form>
+                </div>
+                <div className={styles.Cards}>
                 <div className={styles.CardsRow}>
                     
                     {data.map((maquina) => (
