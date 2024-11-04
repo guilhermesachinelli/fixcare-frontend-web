@@ -5,11 +5,13 @@ import styles from "./page.module.css"
 function page() {
     return (
         <div className={styles.container}>
-                                    
-            
-                <Header />
-            
-            <h1 className={styles.titulo}>1° Geração</h1>
+
+
+            <Header />
+
+            <div className={styles.titleContainer}>
+                <h1 className={styles.titulo}>1° Geração</h1>
+            </div>
             <div className={styles.Cards}>
                 <a href='https://github.com/GuiHJLima'>
                     <div className={styles.manualM}>

@@ -74,11 +74,9 @@
 .title {
   font-size: 35px;
   color: #FFFFFF;
-  margin-bottom: 20px;
   justify-content: space-between;
   align-items: center;
   display: flex;
-  margin-left: 260px;
 }
 
 .titulos {
@@ -99,14 +97,19 @@
   width: 100%;
 }
 
-.titleContainer {
-  width: 926px;
-  margin-top: 35px;
-  height: 37px;
-  top: 210px;
-  left: 288px;
+.titleContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  color: #FFFFFF;
+  background: rgba(0, 57, 150, 0.93) 53%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+
 }
 
 .Card {
@@ -117,7 +120,7 @@
   left: 160.5px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #03183A 53%;
+  background: rgba(0, 57, 150, 0.93) 53%;
 }
 
 .imagem {
