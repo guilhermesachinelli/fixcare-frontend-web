@@ -14,7 +14,7 @@ function MaquinaCadastrada() {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.199.223:4000/machine/${id}`, {
+                const response = await fetch(`http://10.88.200.152:4000/machine/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -32,7 +32,7 @@ function MaquinaCadastrada() {
     const handleDelete = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
         try {
-            const response = await fetch(`http://10.88.199.223:4000/machine/${id}`, {
+            const response = await fetch(`http://10.88.200.152:4000/machine/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -69,7 +69,11 @@ function MaquinaCadastrada() {
         <div className={styles.container}>
             
                 <Header />
-           
+                <a href='./MaquinaCadastradaAdm'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.titulo}>Detalhes da Máquina</h1>

@@ -21,7 +21,7 @@ function CadastrarMaquinas() {
     useEffect(() =>  {
         const id = new URLSearchParams(window.location.search).get('id');
         if (id) {
-            fetch(`http://10.88.199.223:4000/machine/${id}`)
+            fetch(`http://10.88.200.152:4000/machine/${id}`)
             .then(response => response.json())
             .then(data => {
                 const formattedData = {
@@ -42,7 +42,7 @@ function CadastrarMaquinas() {
         const handlePost = async (e) => {
             e.preventDefault();
             try {
-                const response = await fetch('http://10.88.199.223:4000/machine/', {
+                const response = await fetch('http://10.88.200.152:4000/machine/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -69,7 +69,7 @@ function CadastrarMaquinas() {
     const handleSaveEdit = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
         try {
-            const response = await fetch(`http://10.88.199.223:4000//machine/${id}`, {
+            const response = await fetch(`http://10.88.200.152:4000//machine/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -119,7 +119,11 @@ function CadastrarMaquinas() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./AdmPrincipal'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>

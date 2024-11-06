@@ -17,7 +17,7 @@ function Page() {
 
     const fetchManutencao = async () => {
         try {
-            const response = await fetch('http://10.88.199.223:4000/requestmaintenance', {
+            const response = await fetch('http://10.88.200.152:4000/requestmaintenance', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.200.152:4000/requestmaintenance/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -98,6 +98,11 @@ function Page() {
         <div className={styles.container}>
             
                 <Header />
+                <a href='./AdmPrincipal'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             
             <div className={styles.Cards}>
             <form onSubmit={handleFilter} className={styles.searchForm}>

@@ -17,7 +17,7 @@ function Page() {
 
     const fetchMaquinas = async () => {
         try {
-            const response = await fetch('http://10.88.200.139:4000/machine', {
+            const response = await fetch('http://10.88.200.152:4000/machine', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.200.139:4000/machine/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.200.152:4000/machine/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

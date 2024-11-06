@@ -12,11 +12,25 @@ export default function LoginServicos() {
   const [showPassword, setShowPassword] = useState(false);
   const [erro, setErro] = useState('');
 
+<<<<<<< HEAD
   useEffect(() => {
     if (localStorage.getItem('token')) {
       router.push('/servicos');
     }
   }, []);
+=======
+    const fetchLogin = async (e) => {
+        e.preventDefault();
+        
+        const response1 = await fetch('http://10.88.200.152:4000/aluno', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                senha: password,
+>>>>>>> c34e3fe2b4fb8c0e57783d288fcc39d7601fd88a
 
   async function login() {
     setErro('');
@@ -39,9 +53,20 @@ export default function LoginServicos() {
     }
   }
 
+<<<<<<< HEAD
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+=======
+        const response2 = await fetch('http://10.88.200.152:4000/funcionario', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                email,
+                senha: password,
+>>>>>>> c34e3fe2b4fb8c0e57783d288fcc39d7601fd88a
 
   return (
     <div className={style.all}>

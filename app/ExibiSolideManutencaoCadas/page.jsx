@@ -11,7 +11,7 @@ function ExibiSolideManutencaoCadas() {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
+                const response = await fetch(`http://10.88.199.152:4000/requestmaintenance/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -36,7 +36,11 @@ function ExibiSolideManutencaoCadas() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./ExibiSolideManutencao'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>
 
