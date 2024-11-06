@@ -1,13 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './page.module.css';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
 
   return (
     <header className={styles.header}>
@@ -18,13 +13,15 @@ const Header = () => {
         </a>
       </div>
 
-      <div className={styles.lins}>
+      <div className={styles.links}>
         <a href='./LoginServicos'>
-        <p>login</p>
+        <p>Login</p>
         </a>
+        <div className={styles.link}>
         <a href='./Adm'>
         <p>Adiministração</p>
         </a>
+        </div>
       </div>
     </header>
   );
