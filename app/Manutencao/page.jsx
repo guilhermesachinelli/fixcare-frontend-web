@@ -77,7 +77,7 @@ function Manutencao() {
     const handlePost = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://10.88.199.223:4000/manutencao', {
+            const response = await fetch('http://10.88.199.152:4000/manutencao', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
