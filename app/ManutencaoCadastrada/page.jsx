@@ -11,7 +11,7 @@ function ManutencaoCadastrada() {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.199.223:4000/manutencao/${id}`, {
+                const response = await fetch(`http://10.88.200.139:4000/manutencao/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -38,11 +38,14 @@ function ManutencaoCadastrada() {
                 <Header />
             
             <div className={styles.content}>
+            <div className={styles.Cards}>
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>
-
+</div>
                 <div className={styles.CardsRow}>
                     <div>
+                    <div className={styles.Cards}>
                     <img src="/ferramentas.png" className={styles.ImgTorno}/>
+                    </div>
                     </div>
                     <div className={styles.Card}>
                     <h2 className={styles.titulo}>{maquina.nome_do_responsavel} - {maquina.tipo_de_manutencao}</h2>
