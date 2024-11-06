@@ -5,6 +5,7 @@ import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useState } from "react"
 
+
 function Manutencao() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
     const [maquina, setMaquina] = useState({
@@ -14,6 +15,8 @@ function Manutencao() {
         descricao: '',
         data_de_solicitacao: '',
     });
+
+
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -55,7 +58,11 @@ function Manutencao() {
             
                 <Header />
             
-
+                <a href='./Servico'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Solicitação de Manutenção</h1>
             </div>

@@ -119,7 +119,11 @@ function CadastrarMaquinas() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./AdmPrincipal'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>

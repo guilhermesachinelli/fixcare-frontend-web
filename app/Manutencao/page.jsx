@@ -105,7 +105,11 @@ function Manutencao() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./Servico'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Manutenção</h1>

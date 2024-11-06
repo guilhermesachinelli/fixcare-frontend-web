@@ -69,7 +69,11 @@ function MaquinaCadastrada() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./Maquinas'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <div className={styles.Cards}>

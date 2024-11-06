@@ -82,6 +82,20 @@
     margin-top: 0px;
 }
 
+.backbutton{
+    background-color: #013484;
+    color: #fff;
+    border: none;
+    font-size: 1em;
+    border-radius: 100%;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .Cards {
     display: flex;
     flex-direction: column;

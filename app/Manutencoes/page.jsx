@@ -98,7 +98,11 @@ function Page() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./AdmPrincipal'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.Cards}>
             <form onSubmit={handleFilter} className={styles.searchForm}>
                         <input

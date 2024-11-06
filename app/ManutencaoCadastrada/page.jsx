@@ -36,7 +36,11 @@ function ManutencaoCadastrada() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./Manutencoes'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
             <div className={styles.Cards}>
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>

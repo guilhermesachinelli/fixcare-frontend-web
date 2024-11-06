@@ -36,7 +36,11 @@ function ExibiSolideManutencaoCadas() {
         <div className={styles.container}>
             
                 <Header />
-            
+                <a href='./ExibiSolideManutencao'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
             <div className={styles.content}>
                 <h1 className={styles.titulo}>Detalhes da Manutenção</h1>
 
