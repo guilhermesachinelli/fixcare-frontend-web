@@ -58,15 +58,8 @@ function Manutencao() {
             
                 <Header />
             
-                <a href='./Servico'>
-                    <div className={styles.backbutton}>
-                        <p>⬅</p>
-                    </div>
-                </a>
-            <div className={styles.titleContainer}>
-                <h1 className={styles.title}>Solicitação de Manutenção</h1>
-            </div>
             <form className={styles.card}>
+            <h1 className={styles.title}>Solicitação de Manutenção</h1>
                 <div className={styles.inputsContainer}>
 
                     <input
@@ -114,6 +107,12 @@ function Manutencao() {
                     <button className={styles.button} onClick={handlePost}>Enviar Solicitação</button>
                 </div>
             </form>
+
+            <a href='./Servico'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
 
             <footer className={styles.footer}>
                 <Footer />
