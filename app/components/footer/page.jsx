@@ -27,7 +27,7 @@ function Footer() {
               <p>FDS</p>
             </a>
             <a href="./ProtocoloSeguranca">
-              <p>Home</p>
+              <p>Protocolo de Segurança</p>
             </a>
           </div>
           <div className={styles.sbFooterLinksDiv}>
