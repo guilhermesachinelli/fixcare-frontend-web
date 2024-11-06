@@ -113,6 +113,7 @@ function Page() {
                             className={styles.searchInput}
                         />
                         <button type="submit" className={styles.searchButton}>Buscar</button>
+                       < button type="submit" className={styles.searchMaintenanceButton}>Download Manutenções</button>
                     </form>
                 <div className={styles.CardsRow}>
                     

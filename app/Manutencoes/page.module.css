@@ -59,7 +59,29 @@
 .searchButton:active {
     transform: scale(0.95);
 }
+.searchMaintenanceButton {
+    width: 250px;
+    height: 40px;
+    background-color: rgba(0, 57, 150, 0.93);
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #bab8b8;
+}
 
+.searchMaintenanceButton:hover {
+    background-color: #013484;
+    color: white;
+}
+
+.searchMaintenanceButton:active {
+    transform: scale(0.95);
+}
 .footer {
     display: flex;
     justify-content: end;
