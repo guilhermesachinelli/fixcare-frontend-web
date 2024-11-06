@@ -133,7 +133,7 @@ function Manutencao() {
 
             <a href='./Servico'>
                     <div className={styles.backbutton}>
-                        <p>⬅</p>
+                        <p>Voltar para Serviços</p>
                     </div>
                 </a>
 
