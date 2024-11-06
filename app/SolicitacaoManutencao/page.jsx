@@ -3,11 +3,34 @@ import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 
 function Manutencao() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
+
+    useEffect(() => {
+        // Recuperar o nome do responsável do localStorage
+        const nomeDoResponsavel = localStorage.getItem('email');
+        const numeroDePatrimonio = localStorage.getItem('numero_de_patrimonio');
+        const today = new Date();
+        if (nomeDoResponsavel) {
+            setMaquina(prevState => ({
+                ...prevState,
+                nome: nomeDoResponsavel
+            }));
+        }
+        if (numeroDePatrimonio) {
+            setMaquina(prevState => ({
+                ...prevState,
+                numero_de_patrimonioID: numeroDePatrimonio
+            }));
+        }
+        setMaquina(prevState => ({
+            ...prevState,
+            data_de_solicitacao: today.toISOString().split('T')[0]
+        }));
+    }, []);
     const [maquina, setMaquina] = useState({
         numero_de_patrimonioID: '',
         nome: '',

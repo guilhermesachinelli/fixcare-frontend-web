@@ -14,11 +14,11 @@ function LoginServicos() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
-    
+
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response1 = await fetch('http://10.88.200.139:4000/aluno', {
+        const response1 = await fetch('http://10.88.200.152:4000/aluno', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +28,7 @@ function LoginServicos() {
                 senha: password,
             }),
         });
-        const response2 = await fetch('http://10.88.200.139:4000/funcionario', {
+        const response2 = await fetch('http://10.88.200.152:4000/funcionario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -43,6 +43,7 @@ function LoginServicos() {
         if (data.length === 1) {
             setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
             setTimeout(() => {
+              localStorage.setItem('email', email);
                 window.location.href = '/Servico';
             }
                 , 2000);

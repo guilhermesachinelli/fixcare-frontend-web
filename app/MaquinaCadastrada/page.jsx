@@ -30,7 +30,8 @@ function MaquinaCadastrada() {
     }, []);
 
     const handleSaveAndRedirect = () => {
-        localStorage.setItem('numero_de_patrimonio', maquina.numero_de_patrimonioID);
+        localStorage.setItem('numero_de_patrimonio', maquina.numero_de_patrimonio);
+        console.log('Número de patrimônio:', maquina.numero_de_patrimonio);
         window.location.href = '/LoginServicos';
     };
 
