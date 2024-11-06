@@ -29,36 +29,9 @@ function MaquinaCadastrada() {
         fetchMaquina();
     }, []);
 
-    const handleDelete = async () => {
-        const id = new URLSearchParams(window.location.search).get('id');
-        try {
-            const response = await fetch(`http://10.88.200.152:4000/machine/${id}`, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                }
-            });
-
-            if (response.ok) {
-                setPopup({ visible: true, message: 'Máquina excluída com sucesso', type: 'success' });
-                setTimeout(() => {
-                    setPopup({ visible: false, message: '', type: '' });
-                    window.location.href = '/Maquinas'; 
-                }, 2000);
-            } else {
-                throw new Error('Erro ao excluir máquina');
-            }
-        } catch (error) {
-            setPopup({ visible: true, message: error.message, type: 'error' });
-            setTimeout(() => {
-                setPopup({ visible: false, message: '', type: '' });
-            }, 2000);
-        }
-    };
-
-    const handleEdit = () => {
-        const id = new URLSearchParams(window.location.search).get('id');
-        window.location.href = `/CadastroMaquinas?id=${id}`;
+    const handleSaveAndRedirect = () => {
+        localStorage.setItem('numero_de_patrimonio', maquina.numero_de_patrimonioID);
+        window.location.href = '/LoginServicos';
     };
 
     if (!maquina) {
@@ -91,6 +64,7 @@ function MaquinaCadastrada() {
                     <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
                     <p className={styles.subtitulo}>Número do Torno: {maquina.numero_do_torno}</p>
                     <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_aquisicao}</p>
+                    <button className={styles.button} onClick={handleSaveAndRedirect}>Solicitar Manutenção</button>
                     </div>
                 </div>
             </div>
