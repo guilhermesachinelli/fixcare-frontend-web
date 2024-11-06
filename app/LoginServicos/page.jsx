@@ -1,114 +1,98 @@
-'use client'
-import React, { useState } from 'react';
-import styles from "./page.module.css"
-import Header from "../components/header/page.jsx"
-import Footer from "../components/footer/page.jsx"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import PopupMessage from '../components/PopUp/PopUp';
+'use client';
 
-function LoginServicos() {
-    const [showPassword, setShowPassword] = useState(false);
+import { useState, useEffect } from 'react';
+import style from './page.module.css';
+import { useRouter } from 'next/navigation';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
-    const togglePasswordVisibility = () => {
-        setShowPassword(!showPassword);
-    };
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
+export default function LoginServicos() {
+  const router = useRouter();
+  const [email, setEmail] = useState('');
+  const [senha, setSenha] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [erro, setErro] = useState('');
 
-    const fetchLogin = async (e) => {
-        e.preventDefault();
-        
-        const response1 = await fetch('http://10.88.200.139:4000/aluno', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email,
-                senha: password,
+  useEffect(() => {
+    if (localStorage.getItem('token')) {
+      router.push('/servicos');
+    }
+  }, []);
 
-            }),
-        });
+  async function login() {
+    setErro('');
+    const resposta = await fetch('http://localhost:3001/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email,
+        senha
+      })
+    });
+    const dados = await resposta.json();
+    if (dados.token) {
+      localStorage.setItem('token', dados.token);
+      router.push('/servicos');
+    } else {
+      setErro(dados);
+    }
+  }
 
-        const response2 = await fetch('http://10.88.200.139:4000/funcionario', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                email,
-                senha: password,
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
-            }),
-        });
+  return (
+    <div className={style.all}>
+    <div className={style.container}>
+      <div className={style.wrapLogin}>
+        <form className={style.loginForm}>
 
-        const data = await response1.json();
-        const data2 = await response2.json();
-        console.log(data.length);
-        console.log(data2.length);
-        if (data.length === undefined && data2.length === undefined) {
-            setTimeout(() => {
-                setPopup({ visible: true, message: 'Usuário ou senha inválidos', type: 'error' });
-            }, 2500);
-        }
-        if (data.length > 0 || data2.length > 0) {
-            localStorage.setItem('userEmail', email);
-            console.log(localStorage.getItem('userEmail'));
-                setPopup({ visible: true, message: 'Login realizado com sucesso', type: 'success' });
-                setTimeout(() => {
-                    window.location.href = '/Servico';
-                }, 2500)
-        }
-    } 
+        <span className={style.loginFormImage}>
+            <img src="/senaiLogo.png" className={style.img} />
+          </span>
 
-    return (
-        <div className={styles.container}>
-            
-                <Header />
-            
-            <form onSubmit={fetchLogin}>
-                <div className={styles.Card}>
-                    <img className={styles.logoSenai} src="/senaiLogo.png" />
-                    <div className={styles.inputsContainer}>
-                        <div className={styles.inputWrapper}>
-                            <input
-                                className={styles.input}
-                                type="text"
-                                value={email}
-                                placeholder="E-mail"
-                                onChange={(event) => setEmail(event.target.value)}
-                            />
-                        </div>
-                        <div className={styles.inputWrapper}>
-                            <input
-                                className={styles.input2}
-                                value={password}
-                                type={showPassword ? "text" : "password"}
-                                placeholder='Senha'
-                                onChange={(event) => setPassword(event.target.value)}
-                            />
-                            <button
-                                type="button"
-                                className={styles.toggleButton}
-                                onClick={togglePasswordVisibility}
-                            >
-                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
-                            </button>
-                        </div>
-                    </div>
-                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                    <div className={styles.buttonContainer}>
-                        <button className={styles.buttonText}>Entrar</button>
-                    </div>
-                </div>
-            </form>
-            <footer className={styles.footer}>
-                <Footer />
-            </footer>
-        </div>
-    )
+          <span className={style.loginFormTitle}> Alunos e Funcionários </span>
+
+         
+
+          <div className={style.wrapInput}>
+            <input
+              className={email !== "" ? `${style.hasVal} ${style.input}` : style.input}
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <span className={style.focusInput} data-placeholder="E-mail"></span>
+          </div>
+
+          <div className={style.wrapInput}>
+            <input
+              className={senha !== "" ? `${style.hasVal} ${style.input}` : style.input}
+              type={showPassword ? "text" : "password"}
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
+            <span className={style.focusInput} data-placeholder="Senha"></span>
+            <button
+              type="button"
+              className={style.toggleButton}
+              onClick={togglePasswordVisibility}
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
+
+          <div className={style.containerLoginFormBtn}>
+            <button className={style.loginFormBtn} onClick={login}>Entrar</button>
+          </div>
+
+
+          {erro && <p>{erro}</p>}
+        </form>
+      </div>
+    </div>
+    </div>
+  );
 }
-
-export default LoginServicos;

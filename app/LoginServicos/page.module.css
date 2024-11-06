@@ -1,180 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
+
+
+
 .container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #024177;
+  display: flex;
+  justify-content: center;
+}
+
+.all {
+  width: 100%;
+  height: 100vh;
+  background-color: #0f3246;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100%;
+    align-items: center;   
+}
+ 
+
+.form {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  background-color: #111;
 }
 
-.footer {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    background: #3737b1;
-    color: white;
-    height: 100%;
+.wrapLogin {
+  width: 500px;
+  background-color: #0f3246;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 77px 55px 33px 55px;
+  height: 50vh;
+  margin-top: 200px;
+  
+}
+
+.loginForm {
+  width: 100%;
+}
+
+.loginFormTitle {
+    font-family: Nunito, sans-serif;
+    font-size: 25px;
+    color: azure;
+    text-align: center;
     width: 100%;
-    margin-top: 200px;
-}
-
-.header {
+    margin: 0 auto;
+    margin-left: 75px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
-    background-color: #25258f 0.01%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    margin-top: 0px;
+    margin-top: 3px;
 }
 
-
-.Card {
-    width: 539px;
-    height: 549px;
-    top: 215px;
-    left: 450px;
-    gap: 0px;
-    opacity: 0px;
-    background: rgba(0, 57, 150, 0.93);
-    margin-top: 80px;
-    border-radius: 10px;
+.loginFormTitle img {
+  width: 90px;
 }
 
-.logoSenai {
-    width: 300px;
-    height: 100px;
-    margin-left: 120px;
-    margin-top: 50px;
+.wrapInput {
+  width: 100%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+  margin-top: 3px;
 }
-
-.inputsContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-}
-
 
 .input {
-    width: 400px;
-    height: 50px;
-    margin-left: 70px;
-    margin-top: 70px;
-    padding: 0.75em;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    font-size: 1em;
-    outline: none;
-    transition: border-color 0.3s;
-    background-color: #013484;
-    border-bottom: 2px solid #013484;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  border: none;
+  display: block;
+  width: 100%;
+  height: 45px;
+  background-color: transparent;
+  padding: 0 5px;
+  font-family: Nunito, sans-serif;
 }
 
-.input2 {
-    width: 400px;
-    height: 50px;
-    margin-left: 70px;
-    margin-top: 40px;
-    padding: 0.75em;
-    border: none;
-    color: white;
-    border-radius: 4px;
-    font-size: 1em;
-    outline: none;
-    transition: border-color 0.3s;
-    background-color: #013484;
-    border-bottom: 2px solid #013484;
+.focusInput {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  color: #adadad;
+  font-family: Nunito, sans-serif;
+}
+
+.focusInput::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: all 0.4s;
+  background: #6a7dfe;
+  background: linear-gradient(to left, #21d4fd, #024177);
+}
+
+.focusInput::after {
+  font-family: Nunito, sans-serif;
+  font-size: 15px;
+  color: #999999;
+  line-height: 1.2;
+  content: attr(data-placeholder);
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 16px;
+  left: 0px;
+  padding-left: 5px;
+  transition: all 0.4s;
 }
 
 .input:focus {
-    border-color: rgba(0, 80, 206, 0.933333);
+  outline: 0;
 }
 
-.input::placeholder {
-    color: #999;
+.input:focus + .focusInput::after {
+  top: -15px;
 }
 
-.input2:focus {
-    border-color: rgba(0, 80, 206, 0.933333);
+.input:focus + .focusInput::before {
+  width: 100%;
 }
 
-.input2::placeholder {
-    color: #999;
+.hasVal + .focusInput::after {
+  top: -15px;
+}
+
+.hasVal + .focusInput::before {
+  width: 100%;
+}
+
+.containerLoginFormBtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 13px;
+}
+
+.loginFormBtn {
+  font-size: 15px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  line-height: 1.2;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background: #6a7dfe;
+  background: linear-gradient(to left, #21d4fd, #024177);
+}
+
+.loginFormBtn:hover {
+  cursor: pointer;
+}
+
+.textCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.txt1 {
+  font-size: 14px;
+  color: #adadad;
+  line-height: 1.5;
+  padding-right: 5px;
+}
+
+.txt2 {
+  font-size: 14px;
+  color: #6a7dfe;
+  line-height: 1.5;
+  text-decoration: none;
 }
 
 .toggleButton {
-    position: absolute;
-    top: 50%;
     background: none;
     border: none;
-    color: black;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     cursor: pointer;
-    font-size: 1.2em;
-    padding: 0.5em;
-    outline: none;
-    margin-left: -50px;
-    margin-top: 2px;
-}
-
-.toggleButton:hover {
-    color: rgba(0, 80, 206, 0.933333);
-}
-
-.buttonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.buttonText {
-    width: 300px;
-    background-color: rgba(0, 80, 206, 0.933333);
-    color: #fff;
-    border: none;
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    margin-top: 30px;
-    font-size: 18px;
-}
-
-.buttonText:hover {
-    background-color: #ffffff;
-    color: #25258f;
-}
-
-.buttonText:active {
-    transform: scale(0.95);
-}
-
-.buttonText2 {
-    width: 380px;
-    height: 50px;
-    background-color: #03183A;
-    color: #fff;
-    border: none;
-    padding: 0.75em 1.5em;
-    font-size: 1em;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 20px;
-    transition: background-color 0.3s, transform 0.3s;
-
-}
-
-.buttonText2:hover {
-    background-color: rgba(0, 80, 206, 0.933333);
-}
-
-@media (max-width: 768px) {
-   
-    .icon {
-        margin-top: 47px;
-    }
-    
-}
+    color: #adadad;
+  }
+  
+  .toggleButton:hover {
+    color: #ffffff;
+  }
+  
+  .img {
+    width: 180px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: -50px;
+    margin-left: 105px;
+  }
