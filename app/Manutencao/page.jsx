@@ -11,11 +11,18 @@ function Manutencao() {
     
     useEffect(() => {
         // Recuperar o nome do responsável do localStorage
-        const nomeDoResponsavel = localStorage.getItem('userEmail');
+        const nomeDoResponsavel = localStorage.getItem('email');
+        const numeroDePatrimonio = localStorage.getItem('numero_de_patrimonio');
         if (nomeDoResponsavel) {
             setMaquina(prevState => ({
                 ...prevState,
                 nome_do_responsavel: nomeDoResponsavel
+            }));
+        }
+        if (numeroDePatrimonio) {
+            setMaquina(prevState => ({
+                ...prevState,
+                numero_de_patrimonioID: numeroDePatrimonio
             }));
         }
     }, []);
