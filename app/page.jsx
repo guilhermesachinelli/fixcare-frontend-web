@@ -1,19 +1,15 @@
 'use client';
 
+import SideBar from "./components/SideBar/page";
 import styles from "./page.module.css";
-import Header from "./components/header/page.jsx";
-import Footer from "./components/footer/page.jsx";
-import Body from "./components/Body/page";
+import Footer from "./components/footer/page";
 
 const Home = () => {
-  return (
-    <div className={styles.container}>
 
-      
-        <Header />
-      <Body />
-        <Footer />
-      
+  return (
+    <div>
+     <SideBar />
+      <Footer />
     </div>
   );
 }
