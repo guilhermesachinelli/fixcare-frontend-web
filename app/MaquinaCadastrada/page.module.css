@@ -57,7 +57,7 @@
     justify-content: center;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: rgba(0, 57, 150, 0.93) 53%;
+    background: #0f3246;
     margin-top: 50px;
     padding: 20px;
 }
@@ -68,7 +68,7 @@
     justify-content: center;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: rgba(0, 57, 150, 0.93) 53%;
+    background: #0f3246;
     margin-top: 50px;
     margin-bottom: 50px;
 }
@@ -80,22 +80,31 @@
 }
 
 .backbutton{
-    background-color: #013484;
+    background-color: #0f3246;
     color: #fff;
-    border: none;
     font-size: 1em;
-    border-radius: 100%;
     cursor: pointer;
-    width: 50px;
+    width: 200px;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 10px;
   }
-
+.button {
+    border-color: #0f3246;
+    border: none;
+    padding: 0.75em 1.5em;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 8px;
+    margin-right: 5px;
+}
 
 .buttonText {
-    background-color: #013484;
+    background-color: #0f3246;
     color: #fff;
     border: none;
     padding: 0.75em 1.5em;

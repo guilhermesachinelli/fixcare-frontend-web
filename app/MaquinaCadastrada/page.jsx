@@ -44,7 +44,7 @@ function MaquinaCadastrada() {
                 <SideBar />
                 <a href='./Maquinas'>
                     <div className={styles.backbutton}>
-                        <p>⬅</p>
+                        <p>Voltar para Home</p>
                     </div>
                 </a>
             <div className={styles.content}>
