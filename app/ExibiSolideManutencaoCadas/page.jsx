@@ -28,27 +28,20 @@ function ExibiSolideManutencaoCadas() {
     }, []);
 
     const fetchChangeStatus = async () => {
-        const id = maquina.id;
-        console.log('Alterando status da máquina:', id);
-        console.log('Status atual:', maquina.status);
-        try {
-            const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
-                method: 'PUT',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({
-                    status: !maquina.status,
-                }),
-            });
+        const id = new URLSearchParams(window.location.search).get('id');
+        console.log('ID:', id);
 
-            console.log('Status alterado:', response);  
-            console.log('Status alterado:', response.json());
+         await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                status: !maquina.status,
+            }),
+        });
 
-        }
-        catch (error) {
-            console.log('Erro ao alterar status:', error);
-        }
+        window.location.reload();
     }
 
     return (
@@ -75,9 +68,8 @@ function ExibiSolideManutencaoCadas() {
                     <p className={styles.subtitulo}>
                         Status: {maquina.status ? '✔️' : '❌'}
                     </p>
-                    <button onClick={fetchChangeStatus}>
-                        Alterar Status
-                    </button>
+                   
+                   {maquina.status ? null : <button className={styles.button} onClick={fetchChangeStatus}>Concluir Manutenção</button>}
                     </div>
                 </div>
             </div>
