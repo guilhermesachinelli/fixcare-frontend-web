@@ -13,6 +13,7 @@ function Manutencao() {
         // Recuperar o nome do responsável do localStorage
         const nomeDoResponsavel = localStorage.getItem('email');
         const numeroDePatrimonio = localStorage.getItem('numero_de_patrimonio');
+        const today = new Date();
         if (nomeDoResponsavel) {
             setMaquina(prevState => ({
                 ...prevState,
@@ -25,6 +26,10 @@ function Manutencao() {
                 numero_de_patrimonioID: numeroDePatrimonio
             }));
         }
+        setMaquina(prevState => ({
+            ...prevState,
+            data_de_manutencao: today.toISOString().split('T')[0]
+        }));
     }, []);
 
     const [maquina, setMaquina] = useState({
