@@ -5,13 +5,13 @@ import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 
 function ExibiSolideManutencaoCadas() {
-    const [maquina, setMaquina] = useState(null);
+    const [maquina, setMaquina] = useState([]);
 
     useEffect(() => {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.199.152:4000/requestmaintenance/${id}`, {
+                const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -27,9 +27,28 @@ function ExibiSolideManutencaoCadas() {
         fetchMaquina();
     }, []);
 
+    const fetchChangeStatus = async () => {
+        const id = maquina.id;
+        console.log('Alterando status da máquina:', id);
+        console.log('Status atual:', maquina.status);
+        try {
+            const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    status: !maquina.status,
+                }),
+            });
 
-    if (!maquina) {
-        return <div>Carregando...</div>;
+            console.log('Status alterado:', response);  
+            console.log('Status alterado:', response.json());
+
+        }
+        catch (error) {
+            console.log('Erro ao alterar status:', error);
+        }
     }
 
     return (
@@ -56,6 +75,9 @@ function ExibiSolideManutencaoCadas() {
                     <p className={styles.subtitulo}>
                         Status: {maquina.status ? '✔️' : '❌'}
                     </p>
+                    <button onClick={fetchChangeStatus}>
+                        Alterar Status
+                    </button>
                     </div>
                 </div>
             </div>
