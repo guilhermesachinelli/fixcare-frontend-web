@@ -67,6 +67,88 @@ a {
   background-color: var(--tertiary);
 }
 
+.sidebar {
+  color: #fff;
+  background-color: #0f3246;
+}
+
+.header {
+background-color: #0f3246;
+height: 8rem;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.toggle {
+color: #fff;
+}
+
+.title {
+margin-right: 30px;
+margin-top: 20px;
+}
+
+.titulo {
+margin: 0;
+}
+
+.links {
+display: flex;
+gap: 20px;
+margin-right: 50px;
+color: #fff;
+font-size: 20px;
+}
+
+.link {
+margin: 0;
+}
+
+.togglethemebtn {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.toggle {
+  margin-left: 15px;
+}
+
+.menubar{
+  height: 90vh;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  font-size: 1rem;
+  position: relative;
+  background-color: #0f3246;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 10px;
+}
+
+.logoicon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  background-color: #0f3246;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

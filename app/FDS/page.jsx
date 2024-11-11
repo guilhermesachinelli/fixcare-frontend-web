@@ -1,14 +1,12 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Link from "next/link";
-import SideBar from "../components/SideBar/page";
+import SideBar from "../components/SideBar/page.jsx";
 
 function Fds() {
     return (
         <div className={styles.container}>
-            
-                <SideBar />
-            
+            <SideBar />
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
             </div>
@@ -44,11 +42,7 @@ function Fds() {
                     </Link>
                 </div>
             </div>
-
-
-            <footer className={styles.footer}>
-                <Footer />
-            </footer>
+            <Footer />
         </div>
     )
 }
