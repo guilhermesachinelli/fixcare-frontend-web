@@ -123,7 +123,7 @@ function Page() {
                             href={`/MaquinaCadastradaAdm?id=${maquina.id}`}
                         >
                             <div className={styles.Corretiva}>
-                                <img className={styles.corretiva} src="/torno.png" />
+                                <img className={styles.corretiva} src="/tornoNardini.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
                                 <h1 className={styles.titulo}>{maquina.modelo}</h1>
                             </div>
