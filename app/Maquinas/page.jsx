@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 import SideBar from '../components/SideBar/page';
+import { SearchOutlined } from '@ant-design/icons';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -108,7 +109,7 @@ function Page() {
                             placeholder="Pesquisar máquinas por número de patrimônio"
                             className={styles.searchInput}
                         />
-                        <button type="submit" className={styles.searchButton}>Buscar</button>
+                        <button type="submit" className={styles.searchButton} > {<SearchOutlined />}</button>
                     </form>
                 </div>
                 <div className={styles.Cards}>
@@ -121,7 +122,7 @@ function Page() {
                         >
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
-                                <h1 className={styles.titulo}>{maquina.marca}</h1>
+                                <h1 className={styles.titulom}>{maquina.marca}</h1>
                                 <h1 className={styles.titulo}>{maquina.modelo}</h1>
                             </div>
                         </Link>
