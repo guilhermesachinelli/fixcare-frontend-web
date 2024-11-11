@@ -1,17 +1,17 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
+import SideBar from '../components/SideBar/page';
 
 function ExibiSolideManutencaoCadas() {
-    const [maquina, setMaquina] = useState(null);
+    const [maquina, setMaquina] = useState([]);
 
     useEffect(() => {
         const fetchMaquina = async () => {
             const id = new URLSearchParams(window.location.search).get('id');
             if (id) {
-                const response = await fetch(`http://10.88.199.152:4000/requestmaintenance/${id}`, {
+                const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -27,15 +27,27 @@ function ExibiSolideManutencaoCadas() {
         fetchMaquina();
     }, []);
 
+    const fetchChangeStatus = async () => {
+        const id = new URLSearchParams(window.location.search).get('id');
+        console.log('ID:', id);
 
-    if (!maquina) {
-        return <div>Carregando...</div>;
+         await fetch(`http://10.88.199.223:4000/requestmaintenance/${id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                status: !maquina.status,
+            }),
+        });
+
+        window.location.reload();
     }
 
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./ExibiSolideManutencao'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
@@ -56,6 +68,8 @@ function ExibiSolideManutencaoCadas() {
                     <p className={styles.subtitulo}>
                         Status: {maquina.status ? '✔️' : '❌'}
                     </p>
+                   
+                   {maquina.status ? null : <button className={styles.button} onClick={fetchChangeStatus}>Concluir Manutenção</button>}
                     </div>
                 </div>
             </div>

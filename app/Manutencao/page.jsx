@@ -1,9 +1,9 @@
 'use client';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useState, useEffect } from "react"
+import SideBar from "../components/SideBar/page";
 
 function Manutencao() {
     const [selectAll, setSelectAll] = useState(false);
@@ -116,7 +116,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./Servico'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>

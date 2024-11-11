@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
-import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import SideBar from '../components/SideBar/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -17,7 +17,7 @@ function Page() {
 
     const fetchManutencao = async () => {
         try {
-            const response = await fetch('http://10.88.200.152:4000/requestmaintenance', {
+            const response = await fetch('http://10.88.199.223:4000/requestmaintenance', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.200.152:4000/requestmaintenance/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.199.223:4000/requestmaintenance/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -97,7 +97,7 @@ function Page() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>

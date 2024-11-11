@@ -2,7 +2,7 @@
 
 
 
-.container {
+.styles_container {
   width: 100%;
   height: 100%;
   margin: 0 auto;
@@ -11,17 +11,7 @@
   justify-content: center;
 }
 
-.all {
-  width: 100%;
-  height: 100vh;
-  background-color: #0f3246;
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-}
- 
-
-.form {
+.styles_containerlogin {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -32,43 +22,37 @@
   background-color: #111;
 }
 
-.wrapLogin {
-  width: 500px;
-  background-color: #0f3246;
+.styles_wraplogin {
+  width: 390px;
+  background-color: #333;
   border-radius: 10px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
-  height: 50vh;
-  margin-top: 200px;
-  
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
 }
 
-.loginForm {
+.styles_loginform {
   width: 100%;
 }
 
-.loginFormTitle {
-    font-family: Nunito, sans-serif;
-    font-size: 25px;
-    color: azure;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
-    margin-left: 75px;
-    display: flex;
-    margin-top: 3px;
+.styles_loginformtitle {
+  font-family: Nunito, sans-serif;
+  display: block;
+  font-size: 30px;
+  color: azure;
+  line-height: 1.2;
+  text-align: center;
 }
 
-.loginFormTitle img {
+.styles_loginformtitle img {
   width: 90px;
 }
 
-.wrapInput {
+.styles_wrapinput {
   width: 100%;
   position: relative;
   border-bottom: 2px solid #adadad;
   margin-bottom: 37px;
-  margin-top: 3px;
 }
 
 .input {
@@ -84,7 +68,7 @@
   font-family: Nunito, sans-serif;
 }
 
-.focusInput {
+.styles_focusinput {
   position: absolute;
   display: block;
   width: 100%;
@@ -96,7 +80,7 @@
   font-family: Nunito, sans-serif;
 }
 
-.focusInput::before {
+.styles_focusinput::before {
   content: "";
   display: block;
   position: absolute;
@@ -106,10 +90,10 @@
   height: 2px;
   transition: all 0.4s;
   background: #6a7dfe;
-  background: linear-gradient(to left, #21d4fd, #024177);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
-.focusInput::after {
+.styles_focusinput::after {
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
@@ -128,30 +112,30 @@
   outline: 0;
 }
 
-.input:focus + .focusInput::after {
+.input:focus + .styles_focusinput::after {
   top: -15px;
 }
 
-.input:focus + .focusInput::before {
+.input:focus + .styles_focusinput::before {
   width: 100%;
 }
 
-.hasVal + .focusInput::after {
+.has-val + .styles_focusinput::after {
   top: -15px;
 }
 
-.hasVal + .focusInput::before {
+.has-val + .styles_focusinput::before {
   width: 100%;
 }
 
-.containerLoginFormBtn {
+.styles_containerloginformbtn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 13px;
 }
 
-.loginFormBtn {
+.styles_loginformbtn {
   font-size: 15px;
   border: none;
   border-radius: 10px;
@@ -164,14 +148,14 @@
   width: 100%;
   height: 50px;
   background: #6a7dfe;
-  background: linear-gradient(to left, #21d4fd, #024177);
+  background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
-.loginFormBtn:hover {
+.styles_loginformbtn:hover {
   cursor: pointer;
 }
 
-.textCenter {
+.text-center {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,24 +177,31 @@
 }
 
 .toggleButton {
-    background: none;
-    border: none;
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #adadad;
-  }
-  
-  .toggleButton:hover {
-    color: #ffffff;
-  }
-  
-  .img {
-    width: 180px;
-    height: 100px;
-    margin: 0 auto;
-    margin-top: -50px;
-    margin-left: 105px;
-  }
+  background: none;
+  border: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #adadad;
+}
+
+.toggleButton:hover {
+  color: #ffffff;
+}
+
+.img {
+  width: 180px;
+  height: 100px;
+  margin: 0 auto;
+  margin-top: -50px;
+  margin-left: 105px;
+}
+
+.card {
+  background-color: #001f3f; /* Azul marinho */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
