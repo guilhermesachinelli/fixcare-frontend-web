@@ -3,8 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
-import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import SideBar from '../components/SideBar/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -97,7 +97,7 @@ function Page() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>

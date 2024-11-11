@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
-import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import PopupMessage from '../components/PopUp/PopUp';
+import SideBar from '../components/SideBar/page';
+
 function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
     const togglePasswordVisibility = () => {
@@ -58,7 +58,7 @@ function LoginServicos() {
     return (
         <div className="styles.container">
            
-                <Header />
+                <SideBar />
             
             <div className={styles.containerlogin}>
                 <div className={styles.wraplogin}>

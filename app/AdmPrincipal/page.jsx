@@ -1,12 +1,12 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
+import SideBar from "../components/SideBar/page";
 
 function AdmPrincipal() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
             
             <div className={styles.colum}>
             <div className={styles.Cards}>

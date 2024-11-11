@@ -1,10 +1,9 @@
 'use client';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useEffect, useState } from "react"
-
+import SideBar from "../components/SideBar/page";
 
 function Manutencao() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -79,7 +78,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
             
             <form className={styles.card}>
             <h1 className={styles.title}>Solicitação de Manutenção</h1>

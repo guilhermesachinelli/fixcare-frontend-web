@@ -1,13 +1,13 @@
 import Footer from "../components/footer/page";
-import Header from "../components/header/page";
+import SideBar from "../components/SideBar/page";
+
 import styles from "./page.module.css"
 
 function page() {
     return (
         <div className={styles.container}>
 
-
-            <Header />
+            <SideBar />
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.titulo}>1° Geração</h1>

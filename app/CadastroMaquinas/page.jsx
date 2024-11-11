@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import SideBar from '../components/SideBar/page';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
@@ -118,7 +118,7 @@ function CadastrarMaquinas() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>

@@ -1,8 +1,8 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
+import SideBar from '../components/SideBar/page';
 
 function ExibiSolideManutencaoCadas() {
     const [maquina, setMaquina] = useState([]);
@@ -47,7 +47,7 @@ function ExibiSolideManutencaoCadas() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
                 <a href='./ExibiSolideManutencao'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>

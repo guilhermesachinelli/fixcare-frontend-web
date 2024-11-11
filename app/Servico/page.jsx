@@ -1,14 +1,13 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
+import SideBar from "../components/SideBar/page";
 
 function Servico() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <SideBar />
             
-
             <div className={styles.Cards}>
                 <a href='./SolicitacaoManutencao'>
                     <div className={styles.manutencao}>
