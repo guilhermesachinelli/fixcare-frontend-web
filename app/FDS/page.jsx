@@ -6,15 +6,19 @@ import SideBar from "../components/SideBar/page";
 function Fds() {
     return (
         <div className={styles.container}>
-            
-                <SideBar />
-            
-            <div className={styles.titleContainer}>
-                <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
-            </div>
+
+            <SideBar />
+
+
 
             <div className={styles.Card}>
+
+                <div className={styles.titleContainer}>
+                    <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
+                </div>
+
                 <div className={styles.text1}>
+
                     <h1 className={styles.titulos}>
                         O que é a FDS?
                     </h1>
