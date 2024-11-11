@@ -10,7 +10,7 @@ function page() {
             <SideBar />
 
             <div className={styles.titleContainer}>
-                <h1 className={styles.titulo}>1° Geração</h1>
+                <h1 className={styles.titulo}>Desenvolvedores</h1>
             </div>
             <div className={styles.Cards}>
                 <a href='https://github.com/GuiHJLima'>
