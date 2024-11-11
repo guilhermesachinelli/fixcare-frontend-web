@@ -1,17 +1,16 @@
 :root {
-  --background:#e7e9e8;
+  --background:#0f3246;
   --primary: rgba(241, 241, 241, 0.603);
-  --secondary: rgba(31, 35, 253, 0.479);
-  --tertiary: rgba(0, 26, 255, 0.6);
+  --secondary: #0a1b38;
+  --tertiary: #0F3064;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: rgba(226, 226, 226, 0.589);
-    --foreground: #ededed;
-    --primary: rgba(241, 241, 241, 0.603);
-    --secondary: rgba(31, 35, 253, 0.479);
-  --tertiary: rgba(0, 26, 255, 0.6);
+    --background: #0f3246;
+    --foreground: #0f3246;
+    --secondary: #0F3064;
+  --tertiary: #0F3064;
   }
 }
 
