@@ -3,8 +3,9 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
+import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
-import SideBar from '../components/SideBar/page';
+import HeaderIB from '../components/HeaderIB/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -97,7 +98,7 @@ function Page() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <HeaderIB />
                 <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
@@ -123,7 +124,7 @@ function Page() {
                             href={`/MaquinaCadastradaAdm?id=${maquina.id}`}
                         >
                             <div className={styles.Corretiva}>
-                                <img className={styles.corretiva} src="/tornoNardini.png" />
+                                <img className={styles.corretiva} src="/torno.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
                                 <h1 className={styles.titulo}>{maquina.modelo}</h1>
                             </div>

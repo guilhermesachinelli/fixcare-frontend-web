@@ -1,8 +1,9 @@
 'use client';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
+import Header from "../components/header/page.jsx"
 import { useState } from "react"
-import SideBar from "../components/SideBar/page";
+import HeaderIB from "../components/HeaderIB/page";
 
 function ProtocoloSeguranca() {
     const [selectAll, setSelectAll] = useState(false);
@@ -47,15 +48,14 @@ function ProtocoloSeguranca() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <HeaderIB/>
            
-            
-        <div className={styles.Card}>
 
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Protocolo de Segurança</h1>
             </div>
 
+            <div className={styles.Card}>
                 <div className={styles.checklist}>
 
                     <label className={styles.checkbox}>

@@ -1,6 +1,10 @@
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
+  color: #FFFFFF;
 }
 
 .checklist {
@@ -20,9 +24,8 @@
   gap: 10px;
   font-size: 17px;
   margin-left: 10px;
-  margin-top: 6px;
+  margin-top: 2px;
   width: 100%;
-  
 }
 
 .check {
@@ -30,11 +33,10 @@
   margin-left: 0; 
   width: 30px; 
   height: 30px; 
-  color: #FFFFFF;
 }
 
 .checkbox label {
-  margin-top: -4px; 
+  margin-top: -5px; 
 }
 
 .footer {
@@ -101,7 +103,7 @@
   justify-content: center;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #0f3246;
+  background: rgba(0, 57, 150, 0.93) 53%;
   margin-top: 50px;
   margin-bottom: 50px;
   padding: 10px;
@@ -111,15 +113,14 @@
 }
 
 .Card {
-  width: 950px;
-  height: 800px;
+  width: 750px;
+  height: 600px;
   margin-top: 50px;
   top: 1203.85px;
   left: 160.5px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #0f3246;
-  color: #FFFFFF
+  background: rgba(0, 57, 150, 0.93) 53%;
 }
 
 .imagem {

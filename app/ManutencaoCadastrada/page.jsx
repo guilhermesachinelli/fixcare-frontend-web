@@ -1,8 +1,9 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
+import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
-import SideBar from '../components/SideBar/page';
+import HeaderIB from '../components/HeaderIB/page';
 
 function ManutencaoCadastrada() {
     const [maquina, setMaquina] = useState(null);
@@ -35,7 +36,7 @@ function ManutencaoCadastrada() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <HeaderIB />
                 <a href='./Manutencoes'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
