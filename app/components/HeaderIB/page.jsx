@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from './page.module.css';
 
-const Header = () => {
+const HeaderIB = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -35,4 +35,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderIB;
