@@ -47,7 +47,7 @@ function ProtocoloSeguranca() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <HeaderIB />
            
 
             <div className={styles.titleContainer}>
