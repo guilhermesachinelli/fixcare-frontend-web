@@ -2,7 +2,7 @@
 
 .container {
   width: 100%;
-    height: 100%;
+  height: 100%;
 }
 
 .containerlogin {
@@ -13,16 +13,18 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: #111;
+  background-color: #F5F5F5;
 }
 
 .wraplogin {
   width: 390px;
-  background-color: #333;
-  border-radius: 10px;
+  margin-top: -50px; /* Move o quadro mais para cima */
+  margin-bottom: 3000px;
+  background-color: #0f3246;
+  border-radius: 8px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0px rgba(109, 83, 83, 0.2);
 }
 
 .loginform {
@@ -31,22 +33,34 @@
 
 .loginformtitle {
   font-family: Nunito, sans-serif;
-  display: block;
-  font-size: 30px;
+  display: inline-block;
+  font-size: 30px; 
   color: azure;
   line-height: 1.2;
   text-align: center;
+  margin-top: 10px;
+  white-space: nowrap; 
 }
 
+
 .loginformtitle img {
-  width: 90px;
+  width: 200px;
+  margin-top: -90px;
 }
 
 .wrapinput {
   width: 100%;
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, gray, #09455f) 1;
   margin-bottom: 37px;
+  margin-top: 10px;
+  background-color: #0f3246;
+  /* Cor do card */
+  padding: 10px;
+  /* Ajuste de padding conforme necessário */
+  border-radius: 5px;
+  /* Ajuste de borda arredondada conforme necessário */
 }
 
 .input {
@@ -70,7 +84,7 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  color: #adadad;
+  color: #0f3246;
   font-family: Nunito, sans-serif;
 }
 
@@ -106,19 +120,19 @@
   outline: 0;
 }
 
-.input:focus + .styles_focusinput::after {
+.input:focus+.focusinput::after {
   top: -15px;
 }
 
-.input:focus + .styles_focusinput::before {
+.input:focus+.focusinput::before {
   width: 100%;
 }
 
-.has-val + .styles_focusinput::after {
+.has-val+.focusinput::after {
   top: -15px;
 }
 
-.has-val + .styles_focusinput::before {
+.has-val+.focusinput::before {
   width: 100%;
 }
 
@@ -141,8 +155,8 @@
   align-items: center;
   width: 100%;
   height: 50px;
-  background: #6a7dfe;
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  background: #2014bd;
+  background: linear-gradient(to right, rgb(106, 102, 102), #0a3c51);
 }
 
 .loginformbtn:hover {
@@ -178,7 +192,8 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #adadad;
+  color: #dee1e4;
+  margin-left: 90px;
 }
 
 .toggleButton:hover {
@@ -194,7 +209,8 @@
 }
 
 .card {
-  background-color: #001f3f; /* Azul marinho */
+  background-color: #0f3246;
+  /* Azul marinho */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);

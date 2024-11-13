@@ -63,10 +63,11 @@ function LoginServicos() {
             <div className={styles.containerlogin}>
                 <div className={styles.wraplogin}>
                     <form className={styles.loginform} onSubmit={fetchLogin}>
-                        <span className={styles.loginformtitle}> Alunos e Funcionários </span>
-                        <span className={styles.loginformtitle}>
+                    <span className={styles.loginformtitle}>
                             <img src="/senaiLogo.png" alt="Senai Logo" />
-                        </span>
+                    </span>
+                        <span className={styles.loginformtitle}> Alunos e Funcionários </span>
+                        
                         <div className={styles.wrapinput}>
                             <input
                                 className={email !== "" ? "has-val input" : "input"}
@@ -86,14 +87,14 @@ function LoginServicos() {
                             <span className={styles.focusinput} data-placeholder="Password"></span>
                             <button
                                 type="button"
-                                className="toggleButton"
+                                className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
                                 <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                             </button>
                         </div>
                         <div className={styles.containerloginformbtn}>
-                            <button className={styles.loginformbtn}>Login</button>
+                            <button className={styles.loginformbtn}>Acessar</button>
                         </div>
                         
                     </form>
