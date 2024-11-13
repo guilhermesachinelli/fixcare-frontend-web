@@ -1,9 +1,10 @@
 'use client';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
+import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useState, useEffect } from "react"
-import SideBar from "../components/SideBar/page";
+import HeaderIB from "../components/HeaderIB/page";
 
 function Manutencao() {
     const [selectAll, setSelectAll] = useState(false);
@@ -11,25 +12,13 @@ function Manutencao() {
     
     useEffect(() => {
         // Recuperar o nome do responsável do localStorage
-        const nomeDoResponsavel = localStorage.getItem('email');
-        const numeroDePatrimonio = localStorage.getItem('numero_de_patrimonio');
-        const today = new Date();
+        const nomeDoResponsavel = localStorage.getItem('userEmail');
         if (nomeDoResponsavel) {
             setMaquina(prevState => ({
                 ...prevState,
                 nome_do_responsavel: nomeDoResponsavel
             }));
         }
-        if (numeroDePatrimonio) {
-            setMaquina(prevState => ({
-                ...prevState,
-                numero_de_patrimonioID: numeroDePatrimonio
-            }));
-        }
-        setMaquina(prevState => ({
-            ...prevState,
-            data_de_manutencao: today.toISOString().split('T')[0]
-        }));
     }, []);
 
     const [maquina, setMaquina] = useState({
@@ -116,7 +105,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <HeaderIB />
                 <a href='./Servico'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
