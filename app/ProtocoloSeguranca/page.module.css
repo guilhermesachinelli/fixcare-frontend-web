@@ -22,6 +22,7 @@
   margin-left: 10px;
   margin-top: 6px;
   width: 100%;
+  
 }
 
 .check {
@@ -29,6 +30,7 @@
   margin-left: 0; 
   width: 30px; 
   height: 30px; 
+  color: #FFFFFF;
 }
 
 .checkbox label {
@@ -117,6 +119,7 @@
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
   background: #0f3246;
+  color: #FFFFFF
 }
 
 .imagem {
