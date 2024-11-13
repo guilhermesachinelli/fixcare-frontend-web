@@ -14,15 +14,8 @@ const SideBar = () => {
 
 
     return (
-        <Layout>
-            <Sider
-                collapsed={collapsed}
-                collapsible
-                trigger={null}
-                className={styles.sidebar}>
-                <Logo />
-                <MenuList darkTheme={darkTheme} />
-            </Sider>
+        
+            
             <Layout>
                 <Header style={{ padding: 0, background: "#0f3246" }} className={styles.header}>
                 <div className={styles.divbutton}>
@@ -53,8 +46,18 @@ const SideBar = () => {
                     </div>
                     
                 </Header>
+                <Layout>
+                <Sider
+                collapsed={collapsed}
+                collapsible
+                trigger={null}
+                className={styles.sidebar}>
+                <Logo />
+                <MenuList darkTheme={darkTheme} />
+            </Sider>
             </Layout>
-        </Layout>
+            </Layout>
+        
     );
 }
 
