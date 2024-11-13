@@ -1,4 +1,5 @@
 /* Estilo para o contêiner principal */
+
 .container {
   display: flex; /* Utiliza flexbox para layout */
   flex-direction: column; /* Alinha os itens em coluna */

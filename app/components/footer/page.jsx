@@ -37,7 +37,7 @@ function Footer() {
             </a>
           </div>
           <div className={styles.sbFooterLinksDiv}>
-            <h4>Coming soon on</h4>
+            <h4>Em Breve...</h4>
             <div className={styles.socialMidia}>
               
             </div>

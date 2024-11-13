@@ -7,7 +7,7 @@ import Footer from "./components/footer/page";
 const Home = () => {
 
   return (
-    <div>
+    <div className={styles.main}>
      <SideBar />
       <Footer />
     </div>
