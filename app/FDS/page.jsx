@@ -1,22 +1,21 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
+import Header from "../components/header/page.jsx"
 import Link from "next/link";
-import SideBar from "../components/SideBar/page.jsx";
 
 function Fds() {
     return (
         <div className={styles.container}>
+            
+                <HeaderIB />
+            
 
-            <SideBar />
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
+            </div>
 
             <div className={styles.Card}>
-
-                <div className={styles.titleContainer}>
-                    <h1 className={styles.title}>Ficha de Dados de Segurança</h1>
-                </div>
-
                 <div className={styles.text1}>
-
                     <h1 className={styles.titulos}>
                         O que é a FDS?
                     </h1>
@@ -47,8 +46,10 @@ function Fds() {
                 </div>
             </div>
 
-            <Footer />
 
+            <footer className={styles.footer}>
+                <Footer />
+            </footer>
         </div>
     )
 }
