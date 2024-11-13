@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Knewave&family=Nunito:wght@400;600;700&display=swap');
 
-.styles_container {
+.container {
   width: 100%;
-    height: 100%;
 }
 
-.styles_containerlogin {
+.containerlogin {
   width: 100%;
   min-height: 100vh;
   display: flex;
@@ -13,56 +12,71 @@
   align-items: center;
   justify-content: center;
   padding: 15px;
-  background-color: #111;
+  background-color: #F5F5F5;
 }
 
-.styles_wraplogin {
-  width: 390px;
-  background-color: #333;
-  border-radius: 10px;
+.wraplogin {
+  width: 750px;
+  height: 650px;
+  margin-top: -800px; 
+  margin-bottom: 3000px;
+  background-color: #0f3246;
+  border-radius: 8px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
-  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px 0px rgba(109, 83, 83, 0.2);
 }
 
-.styles_loginform {
+.loginform {
   width: 100%;
 }
 
-.styles_loginformtitle {
+.loginformtitle {
   font-family: Nunito, sans-serif;
   display: block;
-  font-size: 30px;
+  font-size: 35px; 
   color: azure;
   line-height: 1.2;
   text-align: center;
+  margin-top: 10px;
+  white-space: nowrap; 
 }
 
-.styles_loginformtitle img {
-  width: 90px;
+
+.loginformtitle img {
+  display: block;
+  margin: 0 auto 10px; 
+  width: 200px; 
 }
 
-.styles_wrapinput {
-  width: 100%;
+.wrapinput {
+  width: 600px;
   position: relative;
-  border-bottom: 2px solid #adadad;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(to right, gray, #09455f) 1;
   margin-bottom: 37px;
+  margin-top: 20px;
+  background-color: #0f3246;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 0px;
+  color: #0f3246;
 }
 
 .input {
-  font-size: 15px;
-  color: #fff;
+  font-size: 95px;
+  color: #0f3246;
   line-height: 1.2;
   border: none;
   display: block;
   width: 100%;
-  height: 45px;
-  background-color: transparent;
+  height: 50px;
+  background-color: #0f3246;
   padding: 0 5px;
   font-family: Nunito, sans-serif;
 }
 
-.styles_focusinput {
+.focusinput {
   position: absolute;
   display: block;
   width: 100%;
@@ -70,11 +84,12 @@
   top: 0;
   left: 0;
   pointer-events: none;
-  color: #adadad;
+  color: #0f3246;
   font-family: Nunito, sans-serif;
+  font-size: 50px;
 }
 
-.styles_focusinput::before {
+.focusinput::before {
   content: "";
   display: block;
   position: absolute;
@@ -87,7 +102,7 @@
   background: linear-gradient(to left, #21d4fd, #b721ff);
 }
 
-.styles_focusinput::after {
+.focusinput::after {
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
@@ -106,31 +121,31 @@
   outline: 0;
 }
 
-.input:focus + .styles_focusinput::after {
+.input:focus+.focusinput::after {
   top: -15px;
 }
 
-.input:focus + .styles_focusinput::before {
+.input:focus+.focusinput::before {
   width: 100%;
 }
 
-.has-val + .styles_focusinput::after {
+.has-val+.focusinput::after {
   top: -15px;
 }
 
-.has-val + .styles_focusinput::before {
+.has-val+.focusinput::before {
   width: 100%;
 }
 
-.styles_containerloginformbtn {
+.containerloginformbtn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   padding-bottom: 13px;
 }
 
-.styles_loginformbtn {
-  font-size: 15px;
+.loginformbtn {
+  font-size: 20px;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -140,12 +155,13 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50px;
-  background: #6a7dfe;
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  height: 60px;
+  background: #2014bd;
+  background: linear-gradient(to right, rgb(106, 102, 102), #0a3c51);
+  margin-top: 15px;
 }
 
-.styles_loginformbtn:hover {
+.loginformbtn:hover {
   cursor: pointer;
 }
 
@@ -178,7 +194,8 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #adadad;
+  color: #dee1e4;
+  margin-left: 90px;
 }
 
 .toggleButton:hover {
@@ -194,8 +211,20 @@
 }
 
 .card {
-  background-color: #001f3f; /* Azul marinho */
+  background-color: #0f3246;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  position: relative; /* Ajuste a posição conforme necessário */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0f3246;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: -100px; /* Move o footer para cima */
 }
