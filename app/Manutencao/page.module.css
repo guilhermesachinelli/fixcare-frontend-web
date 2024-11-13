@@ -21,10 +21,11 @@
 }
 
   .card{
-    width: 800px;
+    width: 80px;
     height: 680px;
     top: 2463.31px;
     left: 265.17px;
+    margin-left: 450px;
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
@@ -171,10 +172,12 @@
     justify-content: center;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
+    margin-left: 700px;
     background: rgba(0, 57, 150, 0.93) 53%;
-    margin-top: 50px;
+    margin-top: -500px;
     margin-bottom: 50px;
     padding: 10px;
+    width: 500px;
     padding-left: 30px;
     padding-right: 30px;
   }
