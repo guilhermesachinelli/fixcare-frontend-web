@@ -49,11 +49,13 @@ function ProtocoloSeguranca() {
             
                 <SideBar />
            
+            
+        <div className={styles.Card}>
+
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Protocolo de Segurança</h1>
             </div>
 
-            <div className={styles.Card}>
                 <div className={styles.checklist}>
 
                     <label className={styles.checkbox}>

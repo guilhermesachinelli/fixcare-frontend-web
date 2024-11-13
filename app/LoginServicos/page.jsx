@@ -4,7 +4,7 @@ import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import SideBar from '../components/SideBar/page';
+import SideBar from '../components/SideBar/page.jsx';
 
 function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
@@ -56,7 +56,7 @@ function LoginServicos() {
         }
     } 
     return (
-        <div className="styles.container">
+        <div className={styles.container}>
            
                 <SideBar />
             

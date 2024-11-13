@@ -44,7 +44,7 @@ function MaquinaCadastrada() {
                 <SideBar />
                 <a href='./Maquinas'>
                     <div className={styles.backbutton}>
-                        <p>⬅</p>
+                        <p>Voltar para Home</p>
                     </div>
                 </a>
             <div className={styles.content}>
@@ -58,7 +58,7 @@ function MaquinaCadastrada() {
                     <img src="/tornoNardini.png" className={styles.ImgTorno}/>
                     </div>
                     <div className={styles.Card}>
-                    <h2 className={styles.titulo}>{maquina.marca} - {maquina.modelo}</h2>
+                    <h2 className={styles.titulo1}>{maquina.marca} - {maquina.modelo}</h2>
                     <p className={styles.subtitulo}>Categoria: {maquina.categoria}</p>
                     <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonio}</p>
                     <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
