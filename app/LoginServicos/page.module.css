@@ -2,7 +2,6 @@
 
 .container {
   width: 100%;
-  height: 100%;
 }
 
 .containerlogin {
@@ -18,7 +17,7 @@
 
 .wraplogin {
   width: 750px;
-  height: 500px;
+  height: 650px;
   margin-top: -800px; 
   margin-bottom: 3000px;
   background-color: #0f3246;
@@ -60,18 +59,19 @@
   background-color: #0f3246;
   padding: 10px;
   border-radius: 5px;
-  font-size: 20px;
+  font-size: 0px;
+  color: #0f3246;
 }
 
 .input {
-  font-size: 15px;
-  color: #fff;
+  font-size: 95px;
+  color: #0f3246;
   line-height: 1.2;
   border: none;
   display: block;
   width: 100%;
-  height: 45px;
-  background-color: transparent;
+  height: 50px;
+  background-color: #0f3246;
   padding: 0 5px;
   font-family: Nunito, sans-serif;
 }
@@ -86,6 +86,7 @@
   pointer-events: none;
   color: #0f3246;
   font-family: Nunito, sans-serif;
+  font-size: 50px;
 }
 
 .focusinput::before {
@@ -144,7 +145,7 @@
 }
 
 .loginformbtn {
-  font-size: 15px;
+  font-size: 20px;
   border: none;
   border-radius: 10px;
   color: #fff;
@@ -154,9 +155,10 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50px;
+  height: 60px;
   background: #2014bd;
   background: linear-gradient(to right, rgb(106, 102, 102), #0a3c51);
+  margin-top: 15px;
 }
 
 .loginformbtn:hover {
@@ -213,4 +215,16 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+  position: relative; /* Ajuste a posição conforme necessário */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0f3246;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: -100px; /* Move o footer para cima */
 }

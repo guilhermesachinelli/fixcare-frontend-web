@@ -70,7 +70,7 @@ function LoginServicos() {
                         
                         <div className={styles.wrapinput}>
                             <input
-                                className={email !== "" ? "has-val input" : "input"}
+                                className={styles.input}
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
@@ -79,7 +79,7 @@ function LoginServicos() {
                         </div>
                         <div className={styles.wrapinput}>
                             <input
-                                className={password !== "" ? "has-val input" : "input"}
+                                className={styles.input}
                                 type={showPassword ? "text" : "password"}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
@@ -100,7 +100,9 @@ function LoginServicos() {
                     </form>
                 </div>
             </div>
-            <Footer className={styles.footer} />
+            <footer className={styles.footer}>
+            <Footer />
+            </footer>
         </div>
         
     );
