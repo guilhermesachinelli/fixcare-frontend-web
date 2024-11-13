@@ -3,6 +3,7 @@ import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 import { useState } from "react"
+import HeaderIB from "../components/HeaderIB/page";
 
 function ProtocoloSeguranca() {
     const [selectAll, setSelectAll] = useState(false);
@@ -47,7 +48,7 @@ function ProtocoloSeguranca() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
+                <HeaderIB/>
            
 
             <div className={styles.titleContainer}>

@@ -1,9 +1,9 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import HeaderIB from '../components/HeaderIB/page';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
