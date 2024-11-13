@@ -100,7 +100,7 @@ function LoginServicos() {
                     </form>
                 </div>
             </div>
-            <Footer />
+            <Footer className={styles.footer} />
         </div>
         
     );
