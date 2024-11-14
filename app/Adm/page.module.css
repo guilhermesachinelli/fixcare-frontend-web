@@ -172,4 +172,10 @@
     margin: 0 auto;
     margin-top: -50px;
     margin-left: 105px;
+  }
+  .card {
+    background-color: #0f3246;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }    
