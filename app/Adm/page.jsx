@@ -83,6 +83,11 @@ function Adm() {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
             <span className={styles.focusinput} data-placeholder="Password"></span>
+            <button
+                                type="button"
+                                className={styles.toggleButton}
+                                onClick={togglePasswordVisibility}
+                            ></button>
             </div>
             
             
