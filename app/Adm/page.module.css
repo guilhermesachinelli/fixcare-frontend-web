@@ -131,4 +131,20 @@
     flex-wrap: wrap;
     justify-content: center;
     padding-bottom: 13px;
+  }
+  .loginformbtn {
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    line-height: 1.2;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    background: #2014bd;
+    background: linear-gradient(to right, rgb(106, 102, 102), #0a3c51);
+    margin-top: 15px;
   }    
