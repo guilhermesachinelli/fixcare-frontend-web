@@ -125,4 +125,10 @@
   }
   .has-val+.focusinput::before {
     width: 100%;
+  }
+  .containerloginformbtn {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 13px;
   }    
