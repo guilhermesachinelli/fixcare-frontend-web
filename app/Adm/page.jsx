@@ -72,6 +72,7 @@ function Adm() {
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
+            <span className={styles.focusinput} data-placeholder="Email"></span>
             </div>
             
             
