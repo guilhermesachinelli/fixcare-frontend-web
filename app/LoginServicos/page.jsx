@@ -57,8 +57,10 @@ function LoginServicos() {
     } 
     return (
         <div className={styles.container}>
-           
-                <SideBar />
+
+<SideBar className={styles.sidebar}>
+  <SideBar />
+</SideBar>
             
             <div className={styles.containerlogin}>
                 <div className={styles.wraplogin}>

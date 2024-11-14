@@ -5,19 +5,21 @@
 }
 
 .containerlogin {
-  width: 100%;
-  min-height: 100vh;
+  width: 40%;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 15px;
   background-color: #F5F5F5;
+  margin-left: 400px;
+  margin-top: 200px;
 }
 
 .wraplogin {
   width: 750px;
-  height: 650px;
+  height: 90vh;
   margin-top: -800px; 
   margin-bottom: 3000px;
   background-color: #0f3246;
@@ -38,7 +40,7 @@
   color: azure;
   line-height: 1.2;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -10px;
   white-space: nowrap; 
 }
 
@@ -46,11 +48,11 @@
 .loginformtitle img {
   display: block;
   margin: 0 auto 10px; 
-  width: 200px; 
+  width: 200px;
 }
 
 .wrapinput {
-  width: 600px;
+  width: 420px;
   position: relative;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, gray, #09455f) 1;
@@ -59,18 +61,17 @@
   background-color: #0f3246;
   padding: 10px;
   border-radius: 5px;
-  font-size: 0px;
   color: #0f3246;
 }
 
 .input {
-  font-size: 95px;
+  width: 100%;
+  height: 50px;
+  font-size: 300px;
   color: #0f3246;
   line-height: 1.2;
   border: none;
   display: block;
-  width: 100%;
-  height: 50px;
   background-color: #0f3246;
   padding: 0 5px;
   font-family: Nunito, sans-serif;
@@ -86,7 +87,7 @@
   pointer-events: none;
   color: #0f3246;
   font-family: Nunito, sans-serif;
-  font-size: 50px;
+  font-size: 500px;
 }
 
 .focusinput::before {
@@ -165,26 +166,6 @@
   cursor: pointer;
 }
 
-.text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.txt1 {
-  font-size: 14px;
-  color: #adadad;
-  line-height: 1.5;
-  padding-right: 5px;
-}
-
-.txt2 {
-  font-size: 14px;
-  color: #6a7dfe;
-  line-height: 1.5;
-  text-decoration: none;
-}
 
 .toggleButton {
   background: none;
@@ -196,6 +177,7 @@
   cursor: pointer;
   color: #dee1e4;
   margin-left: 90px;
+  font-size: 20px;
 }
 
 .toggleButton:hover {
@@ -218,13 +200,16 @@
 }
 
 .footer {
-  position: relative; /* Ajuste a posição conforme necessário */
-  left: 0;
+  position: relative; 
   bottom: 0;
   width: 100%;
   background-color: #0f3246;
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: -100px; /* Move o footer para cima */
+  margin-top: -263px; 
+}
+
+.sidebar {
+  height: 1000vh;
 }
