@@ -64,6 +64,10 @@ function Adm() {
             </span>
             <span className={styles.loginformtitle}> Administração </span>
             </div>
+
+            <div className={styles.wrapinput}>
+                
+            </div>
             
             
 export default Adm;
