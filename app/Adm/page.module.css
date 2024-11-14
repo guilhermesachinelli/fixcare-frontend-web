@@ -96,4 +96,18 @@
     transition: all 0.4s;
     background: #6a7dfe;
     background: linear-gradient(to left, #21d4fd, #b721ff);
+  }
+  .focusinput::after {
+    font-family: Nunito, sans-serif;
+    font-size: 15px;
+    color: #999999;
+    line-height: 1.2;
+    content: attr(data-placeholder);
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+    padding-left: 5px;
+    transition: all 0.4s;
   }    
