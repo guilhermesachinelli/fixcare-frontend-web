@@ -76,7 +76,12 @@ function Adm() {
             </div>
 
             <div className={styles.wrapinput}>
-                
+            <input
+                                className={styles.input}
+                                type={showPassword ? "text" : "password"}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
+                            />
             </div>
             
             
