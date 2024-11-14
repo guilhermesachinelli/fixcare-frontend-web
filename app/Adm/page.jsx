@@ -1,12 +1,11 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
-import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import PopupMessage from '../components/PopUp/PopUp';
-import HeaderIB from '../components/HeaderIB/page';
+import SideBar from '../components/SideBar/page.jsx';
 
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
@@ -52,55 +51,55 @@ function Adm() {
 
     return (
         <div className={styles.container}>
-            
-                <HeaderIB />
-            
-            <form onSubmit={fetchLogin}>
-                <div className={styles.Card}>
-                    <img className={styles.logoSenai} src="/senaiLogo.png" />
-                    <div className={styles.inputsContainer}>
-                        <div className={styles.inputWrapper}>
+            <SideBar className={styles.sidebar} />
+    
+            <div className={styles.containerlogin}>
+                <div className={styles.wraplogin}>
+                    <form className={styles.loginform} onSubmit={fetchLogin}>
+                        <span className={styles.loginformtitle}>
+                            <img src="/senaiLogo.png" alt="Senai Logo" />
+                        </span>
+                        <span className={styles.loginformtitle}> Administração </span>
+    
+                        <div className={styles.wrapinput}>
                             <input
                                 className={styles.input}
-                                type="text"
+                                type="email"
                                 value={email}
-                                placeholder="E-mail"
-                                onChange={(event) => setEmail(event.target.value)}
+                                onChange={(e) => setEmail(e.target.value)}
                             />
+                            <span className={styles.focusinput} data-placeholder="Email"></span>
                         </div>
-                        <div className={styles.inputWrapper}>
+    
+                        <div className={styles.wrapinput}>
                             <input
-                                className={styles.input2}
-                                value={password}
+                                className={styles.input}
                                 type={showPassword ? "text" : "password"}
-                                placeholder='Senha'
-                                onChange={(event) => setPassword(event.target.value)}
+                                value={password}
+                                onChange={(e) => setPassword(e.target.value)}
                             />
+                            <span className={styles.focusinput} data-placeholder="Password"></span>
                             <button
                                 type="button"
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
-                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
+                                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
                             </button>
                         </div>
-                    </div>
-                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                    <div className={styles.buttonContainer}>
-                        <button className={styles.buttonText}>Entrar</button>
-                    </div>
+    
+                        <div className={styles.containerloginformbtn}>
+                            <button className={styles.loginformbtn}>Acessar</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
-            <div className={styles.buttonContainer}>
-                <a href='./Developers'>
-                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
-                </a>
             </div>
+    
             <footer className={styles.footer}>
                 <Footer />
             </footer>
         </div>
-    )
-}
-
-export default Adm;
+    );
+    }
+    
+    export default Adm;
