@@ -178,4 +178,14 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .footer {
+    position: relative; 
+    bottom: 0;
+    width: 100%;
+    background-color: #0f3246;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: -263px; 
   }    
