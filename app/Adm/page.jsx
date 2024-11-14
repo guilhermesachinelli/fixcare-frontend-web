@@ -87,7 +87,9 @@ function Adm() {
                                 type="button"
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
-                            ></button>
+                            >
+            <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                            </button>
             </div>
             
             
