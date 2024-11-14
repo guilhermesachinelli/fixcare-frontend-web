@@ -53,7 +53,9 @@ function Adm() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
+            <SideBar className={styles.sidebar}>
+                <SideBar />
+            </SideBar>
             
             <form onSubmit={fetchLogin}>
                 <div className={styles.Card}>
