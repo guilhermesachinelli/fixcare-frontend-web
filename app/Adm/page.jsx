@@ -74,6 +74,10 @@ function Adm() {
                             />
             <span className={styles.focusinput} data-placeholder="Email"></span>
             </div>
+
+            <div className={styles.wrapinput}>
+                
+            </div>
             
             
 export default Adm;
