@@ -95,7 +95,7 @@
     height: 2px;
     transition: all 0.4s;
     background: #6a7dfe;
-    background: linear-gradient(to left, #21d4fd, #b721ff);
+    background: linear-gradient(to left, #0e3a44, #290348);
   }
   .focusinput::after {
     font-family: Nunito, sans-serif;
