@@ -101,7 +101,11 @@ function Adm() {
             <footer className={styles.footer}>
             <Footer />
             </footer>
+
             
+        
+    );
+}
             
             
 export default Adm;
