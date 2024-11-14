@@ -162,4 +162,7 @@
     color: #dee1e4;
     margin-left: 90px;
     font-size: 20px;
+  }
+  .toggleButton:hover {
+    color: #ffffff;
   }    
