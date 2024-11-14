@@ -66,7 +66,12 @@ function Adm() {
             </div>
 
             <div className={styles.wrapinput}>
-                
+            <input
+                                className={styles.input}
+                                type="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                            />
             </div>
             
             
