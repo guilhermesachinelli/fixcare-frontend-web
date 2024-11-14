@@ -85,4 +85,15 @@
     font-family: Nunito, sans-serif;
     font-size: 500px;
   }
-    
+  .focusinput::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.4s;
+    background: #6a7dfe;
+    background: linear-gradient(to left, #21d4fd, #b721ff);
+  }    
