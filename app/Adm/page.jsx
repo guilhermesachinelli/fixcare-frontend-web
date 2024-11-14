@@ -88,9 +88,14 @@ function Adm() {
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
-            <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-                            </button>
+                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+            </button>
+
+            <div className={styles.containerloginformbtn}>
+                
             </div>
+            </div>
+            
             
             
 export default Adm;
