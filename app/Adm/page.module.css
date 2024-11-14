@@ -119,4 +119,7 @@
   }
   .input:focus+.focusinput::before {
     width: 100%;
+  }
+  .has-val+.focusinput::after {
+    top: -15px;
   }    
