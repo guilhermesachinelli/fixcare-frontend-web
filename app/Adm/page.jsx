@@ -57,55 +57,12 @@ function Adm() {
             </SideBar>
 
             <div className={styles.containerlogin}>
-                
+            <div className={styles.wraplogin}>
+            <form className={styles.loginform} onSubmit={fetchLogin}>
+            <span className={styles.loginformtitle}>
+                    <img src="/senaiLogo.png" alt="Senai Logo" />
+            </span>
             </div>
             
-            <form onSubmit={fetchLogin}>
-                <div className={styles.Card}>
-                    <img className={styles.logoSenai} src="/senaiLogo.png" />
-                    <div className={styles.inputsContainer}>
-                        <div className={styles.inputWrapper}>
-                            <input
-                                className={styles.input}
-                                type="text"
-                                value={email}
-                                placeholder="E-mail"
-                                onChange={(event) => setEmail(event.target.value)}
-                            />
-                        </div>
-                        <div className={styles.inputWrapper}>
-                            <input
-                                className={styles.input2}
-                                value={password}
-                                type={showPassword ? "text" : "password"}
-                                placeholder='Senha'
-                                onChange={(event) => setPassword(event.target.value)}
-                            />
-                            <button
-                                type="button"
-                                className={styles.toggleButton}
-                                onClick={togglePasswordVisibility}
-                            >
-                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
-                            </button>
-                        </div>
-                    </div>
-                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
-                    <div className={styles.buttonContainer}>
-                        <button className={styles.buttonText}>Entrar</button>
-                    </div>
-                </div>
-            </form>
-            <div className={styles.buttonContainer}>
-                <a href='./Developers'>
-                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
-                </a>
-            </div>
-            <footer className={styles.footer}>
-                <Footer />
-            </footer>
-        </div>
-    )
-}
-
+            
 export default Adm;
