@@ -147,4 +147,7 @@
     background: #2014bd;
     background: linear-gradient(to right, rgb(106, 102, 102), #0a3c51);
     margin-top: 15px;
+  }
+  .loginformbtn:hover {
+    cursor: pointer;
   }    
