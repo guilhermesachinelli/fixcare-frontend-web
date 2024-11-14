@@ -32,3 +32,14 @@
   .loginform {
     width: 100%;
   }
+
+  .loginformtitle {
+    font-family: Nunito, sans-serif;
+    display: block;
+    font-size: 35px; 
+    color: azure;
+    line-height: 1.2;
+    text-align: center;
+    margin-top: -10px;
+    white-space: nowrap; 
+  }
