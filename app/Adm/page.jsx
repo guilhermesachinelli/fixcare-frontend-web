@@ -51,61 +51,55 @@ function Adm() {
 
     return (
         <div className={styles.container}>
-            
-            <SideBar className={styles.sidebar}>
-                <SideBar />
-            </SideBar>
-
+            <SideBar className={styles.sidebar} />
+    
             <div className={styles.containerlogin}>
-            <div className={styles.wraplogin}>
-            <form className={styles.loginform} onSubmit={fetchLogin}>
-            <span className={styles.loginformtitle}>
-                    <img src="/senaiLogo.png" alt="Senai Logo" />
-            </span>
-            <span className={styles.loginformtitle}> Administração </span>
-            </div>
-
-            <div className={styles.wrapinput}>
-            <input
+                <div className={styles.wraplogin}>
+                    <form className={styles.loginform} onSubmit={fetchLogin}>
+                        <span className={styles.loginformtitle}>
+                            <img src="/senaiLogo.png" alt="Senai Logo" />
+                        </span>
+                        <span className={styles.loginformtitle}> Administração </span>
+    
+                        <div className={styles.wrapinput}>
+                            <input
                                 className={styles.input}
                                 type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />
-            <span className={styles.focusinput} data-placeholder="Email"></span>
-            </div>
-
-            <div className={styles.wrapinput}>
-            <input
+                            <span className={styles.focusinput} data-placeholder="Email"></span>
+                        </div>
+    
+                        <div className={styles.wrapinput}>
+                            <input
                                 className={styles.input}
                                 type={showPassword ? "text" : "password"}
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
-            <span className={styles.focusinput} data-placeholder="Password"></span>
-            <button
+                            <span className={styles.focusinput} data-placeholder="Password"></span>
+                            <button
                                 type="button"
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
-                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
-            </button>
-
-            <div className={styles.containerloginformbtn}>
-            <button className={styles.loginformbtn}>Acessar</button>
+                                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                            </button>
+                        </div>
+    
+                        <div className={styles.containerloginformbtn}>
+                            <button className={styles.loginformbtn}>Acessar</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            </form>
-            </div>
-            </div>
-
+    
             <footer className={styles.footer}>
-            <Footer />
+                <Footer />
             </footer>
-
-            
-        
+        </div>
     );
-}
-            
-            
-export default Adm;
+    }
+    
+    export default Adm;
