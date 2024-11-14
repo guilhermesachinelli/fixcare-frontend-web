@@ -49,3 +49,15 @@
     margin: 0 auto 10px; 
     width: 200px;
   }
+  .wrapinput {
+    width: 420px;
+    position: relative;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, gray, #09455f) 1;
+    margin-bottom: 37px;
+    margin-top: 20px;
+    background-color: #0f3246;
+    padding: 10px;
+    border-radius: 5px;
+    color: #0f3246;
+  }
