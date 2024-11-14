@@ -16,14 +16,14 @@
   justify-content: center;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #0f3246;
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin-top: -580px;
   padding: 10px;
   padding-left: 30px;
   padding-right: 30px;
-
+  background: #fff;
 }
+
+
   
   .manualM, .manualE , .Fds, .Pls {
     width: 413px;
@@ -54,12 +54,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
-    color: #fff;
-    background-color: #0f3246;
+    color: #0f3246;
+    background-color: #F5F5F5;
 }
-
 
 .pls {
     width: 207px;
