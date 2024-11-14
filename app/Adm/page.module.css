@@ -16,3 +16,15 @@
     margin-left: 400px;
     margin-top: 200px;
   }
+
+  .wraplogin {
+    width: 750px;
+    height: 90vh;
+    margin-top: -800px; 
+    margin-bottom: 3000px;
+    background-color: #0f3246;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 77px 55px 33px 55px;
+    box-shadow: 0 5px 10px 0px rgba(109, 83, 83, 0.2);
+  }
