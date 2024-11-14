@@ -62,6 +62,7 @@ function Adm() {
             <span className={styles.loginformtitle}>
                     <img src="/senaiLogo.png" alt="Senai Logo" />
             </span>
+            <span className={styles.loginformtitle}> Administração </span>
             </div>
             
             
