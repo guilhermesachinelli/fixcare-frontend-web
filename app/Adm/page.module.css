@@ -3,3 +3,16 @@
 .container {
     width: 100%;
 }
+
+.containerlogin {
+    width: 40%;
+    height: 10vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    background-color: #F5F5F5;
+    margin-left: 400px;
+    margin-top: 200px;
+  }
