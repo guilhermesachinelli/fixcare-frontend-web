@@ -82,6 +82,7 @@ function Adm() {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                             />
+            <span className={styles.focusinput} data-placeholder="Password"></span>
             </div>
             
             
