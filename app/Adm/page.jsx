@@ -92,7 +92,7 @@ function Adm() {
             </button>
 
             <div className={styles.containerloginformbtn}>
-                
+            <button className={styles.loginformbtn}>Acessar</button>
             </div>
             </div>
             
