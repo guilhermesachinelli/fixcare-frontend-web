@@ -97,6 +97,10 @@ function Adm() {
             </form>
             </div>
             </div>
+
+            <footer className={styles.footer}>
+            <Footer />
+            </footer>
             
             
             
