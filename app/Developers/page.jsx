@@ -10,40 +10,39 @@ function page() {
             <SideBar />
 
             <div className={styles.titleContainer}>
-                <h1 className={styles.titulo1}>Desenvolvedores</h1>
+                <h1 className={styles.titulo}>Desenvolvedores</h1>
             </div>
-
             <div className={styles.Cards}>
                 <a href='https://github.com/GuiHJLima'>
-                    <div className={styles.manualM}>
-                        <img className={styles.engrenagens} src="/lima.jpeg" />
-                        <h1 className={styles.nomes}>Guilherme Lima</h1>
+                    <div className={styles.cardpessoas}>
+                        <img className={styles.imagens} src="/lima.jpeg" />
+                        <h1 className={styles.nome}>Guilherme Lima</h1>
                     </div>
                 </a>
                 <a href='https://github.com/richardmsiqueira'>
-                    <div className={styles.manualE}>
-                        <img className={styles.engrenagens} src="/richard.jpeg" />
-                        <h1 className={styles.nomes}>Richard Macedo</h1>
+                    <div className={styles.cardpessoas}>
+                        <img className={styles.imagens} src="/richard.jpeg" />
+                        <h1 className={styles.nome}>Richard Macedo</h1>
                     </div>
                 </a>
                 <a href='https://github.com/IsaBarquilia'>
-                    <div className={styles.Fds}>
-                        <img className={styles.engrenagens} src="/isa.jpeg" />
-                        <h1 className={styles.nomes}>Isabelle Barquilia</h1>
+                    <div className={styles.cardpessoas}>
+                        <img className={styles.imagens} src="/isa.jpeg" />
+                        <h1 className={styles.nome}>Isabelle Barquilia</h1>
                     </div>
                 </a>
             </div>
             <div className={styles.Cards}>
                 <a href='https://github.com/LuFassini'>
-                    <div className={styles.manualM}>
-                        <img className={styles.engrenagens} src="/luana.jpeg" />
-                        <h1 className={styles.nomes}>Luana Fassini</h1>
+                    <div className={styles.cardpessoas}>
+                        <img className={styles.imagens} src="/luana.jpeg" />
+                        <h1 className={styles.nome}>Luana Fassini</h1>
                     </div>
                 </a>
                 <a href='https://github.com/guilhermesachinelli'>
-                    <div className={styles.manualE}>
-                        <img className={styles.engrenagens} src="/godoy.jpg" />
-                        <h1 className={styles.nomes}>Guilherme Godoy</h1>
+                    <div className={styles.cardpessoas}>
+                        <img className={styles.imagens} src="/godoy.jpg" />
+                        <h1 className={styles.nome}>Guilherme Godoy</h1>
                     </div>
                 </a>
             </div>
