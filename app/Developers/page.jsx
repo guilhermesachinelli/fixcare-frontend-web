@@ -12,7 +12,7 @@ function page() {
             <div className={styles.titleContainer}>
                 <h1 className={styles.titulo}>Desenvolvedores</h1>
             </div>
-            <div className={styles.Cards}>
+            <div className={styles.Cards1}>
                 <a href='https://github.com/GuiHJLima'>
                     <div className={styles.cardpessoas}>
                         <img className={styles.imagens} src="/lima.jpeg" />
@@ -32,7 +32,7 @@ function page() {
                     </div>
                 </a>
             </div>
-            <div className={styles.Cards}>
+            <div className={styles.Cards2}>
                 <a href='https://github.com/LuFassini'>
                     <div className={styles.cardpessoas}>
                         <img className={styles.imagens} src="/luana.jpeg" />
