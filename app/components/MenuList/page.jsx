@@ -1,6 +1,6 @@
 import React from 'react';
 import { Menu } from 'antd';
-import { HomeOutlined, UserOutlined, TeamOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, TeamOutlined, ContainerOutlined, SettingOutlined } from '@ant-design/icons';
 import styles from './page.module.css';
 
 const MenuList = ({ darkTheme }) => {

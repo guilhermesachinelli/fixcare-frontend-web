@@ -8,7 +8,7 @@ const Home = () => {
 
   return (
     <div className={styles.main}>
-     {/* <SideBar /> */}
+      <SideBar />
       <Footer />
     </div>
   );
