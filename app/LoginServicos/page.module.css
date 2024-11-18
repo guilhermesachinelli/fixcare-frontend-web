@@ -13,20 +13,21 @@
   justify-content: center;
   padding: 15px;
   background-color: #F5F5F5;
-  margin-left: 400px;
+  margin-left: 550px;
   margin-top: 200px;
 }
 
 .wraplogin {
   width: 750px;
-  height: 90vh;
-  margin-top: -800px; 
+  height: 60vh;
+  margin-top: -1000px; 
   margin-bottom: 3000px;
   background-color: #0f3246;
   border-radius: 8px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
   box-shadow: 0 5px 10px 0px rgba(109, 83, 83, 0.2);
+  margin-left: 60px;
 }
 
 .loginform {
@@ -52,7 +53,7 @@
 }
 
 .wrapinput {
-  width: 420px;
+  width: 520px;
   position: relative;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, gray, #09455f) 1;
@@ -62,6 +63,7 @@
   padding: 10px;
   border-radius: 5px;
   color: #0f3246;
+  
 }
 
 .input {
@@ -207,7 +209,7 @@
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: -263px; 
+  margin-top: -300px; 
 }
 
 .sidebar {
