@@ -19,7 +19,7 @@ const Header = () => {
         </a>
         <div className={styles.link}>
         <a href='./Adm'>
-        <p>Adiministração</p>
+        <p>Administração</p>
         </a>
         </div>
       </div>

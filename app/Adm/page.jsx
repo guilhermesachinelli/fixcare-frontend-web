@@ -6,6 +6,7 @@ import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import PopupMessage from '../components/PopUp/PopUp';
+import HeaderIB from '../components/HeaderIB/page';
 
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
@@ -52,7 +53,7 @@ function Adm() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <HeaderIB />
             
             <form onSubmit={fetchLogin}>
                 <div className={styles.Card}>
