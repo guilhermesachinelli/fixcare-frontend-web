@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
-import HeaderIB from '../components/HeaderIB/page';
+import SideBar from '../components/SideBar/page';
 
 function CadastrarMaquinas() {
     const [maquina, setMaquina] = useState({
@@ -21,9 +21,7 @@ function CadastrarMaquinas() {
     useEffect(() =>  {
         const id = new URLSearchParams(window.location.search).get('id');
         if (id) {
-
-            fetch(`http://10.88.199.223:4000/machine/${id}`)
-
+            fetch(`http://10.88.200.152:4000/machine/${id}`)
             .then(response => response.json())
             .then(data => {
                 const formattedData = {
@@ -44,10 +42,7 @@ function CadastrarMaquinas() {
         const handlePost = async (e) => {
             e.preventDefault();
             try {
-
-
-                const response = await fetch('http://10.88.199.223:4000/machine/', {
-
+                const response = await fetch('http://10.88.200.152:4000/machine/', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -74,8 +69,7 @@ function CadastrarMaquinas() {
     const handleSaveEdit = async () => {
         const id = new URLSearchParams(window.location.search).get('id');
         try {
-
-            const response = await fetch(`http://10.88.199.223:4000//machine/${id}`, {
+            const response = await fetch(`http://10.88.200.152:4000//machine/${id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -124,7 +118,7 @@ function CadastrarMaquinas() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
+                <SideBar />
                 <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
