@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
+import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import PopupMessage from '../components/PopUp/PopUp';
-import SideBar from '../components/SideBar/page.jsx';
 
 function Adm() {
     const [showPassword, setShowPassword] = useState(false);
@@ -20,7 +20,7 @@ function Adm() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response = await fetch('http://10.88.199.223:4000/admin', {
+        const response = await fetch('http://10.88.200.139:4000/admin', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -51,55 +51,55 @@ function Adm() {
 
     return (
         <div className={styles.container}>
-            <SideBar className={styles.sidebar} />
-    
-            <div className={styles.containerlogin}>
-                <div className={styles.wraplogin}>
-                    <form className={styles.loginform} onSubmit={fetchLogin}>
-                        <span className={styles.loginformtitle}>
-                            <img src="/senaiLogo.png" alt="Senai Logo" />
-                        </span>
-                        <span className={styles.loginformtitle}> Administração </span>
-    
-                        <div className={styles.wrapinput}>
+            
+                <Header />
+            
+            <form onSubmit={fetchLogin}>
+                <div className={styles.Card}>
+                    <img className={styles.logoSenai} src="/senaiLogo.png" />
+                    <div className={styles.inputsContainer}>
+                        <div className={styles.inputWrapper}>
                             <input
                                 className={styles.input}
-                                type="email"
+                                type="text"
                                 value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="E-mail"
+                                onChange={(event) => setEmail(event.target.value)}
                             />
-                            <span className={styles.focusinput} data-placeholder="Email"></span>
                         </div>
-    
-                        <div className={styles.wrapinput}>
+                        <div className={styles.inputWrapper}>
                             <input
-                                className={styles.input}
-                                type={showPassword ? "text" : "password"}
+                                className={styles.input2}
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                type={showPassword ? "text" : "password"}
+                                placeholder='Senha'
+                                onChange={(event) => setPassword(event.target.value)}
                             />
-                            <span className={styles.focusinput} data-placeholder="Password"></span>
                             <button
                                 type="button"
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
-                                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
                             </button>
                         </div>
-    
-                        <div className={styles.containerloginformbtn}>
-                            <button className={styles.loginformbtn}>Acessar</button>
-                        </div>
-                    </form>
+                    </div>
+                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.buttonText}>Entrar</button>
+                    </div>
                 </div>
+            </form>
+            <div className={styles.buttonContainer}>
+                <a href='./Developers'>
+                    <button className={styles.buttonText2}>Conhecer os Desenvolvedores</button>
+                </a>
             </div>
-    
             <footer className={styles.footer}>
                 <Footer />
             </footer>
         </div>
-    );
-    }
-    
-    export default Adm;
+    )
+}
+
+export default Adm;
