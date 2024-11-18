@@ -63,7 +63,6 @@
   padding: 10px;
   border-radius: 5px;
   color: #0f3246;
-  
 }
 
 .input {
@@ -77,6 +76,7 @@
   background-color: #0f3246;
   padding: 0 5px;
   font-family: Nunito, sans-serif;
+  margin-left: 70px;
 }
 
 .focusinput {
@@ -125,7 +125,7 @@
 }
 
 .input:focus+.focusinput::after {
-  top: -15px;
+  top: -35px;
 }
 
 .input:focus+.focusinput::before {
@@ -133,7 +133,7 @@
 }
 
 .has-val+.focusinput::after {
-  top: -15px;
+  top: -35px;
 }
 
 .has-val+.focusinput::before {
