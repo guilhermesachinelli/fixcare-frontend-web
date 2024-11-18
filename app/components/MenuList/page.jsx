@@ -11,6 +11,23 @@ const MenuList = ({ darkTheme }) => {
           Home
         </a>
       </Menu.Item>
+      <Menu.SubMenu
+                key="subtasks"
+                icon={<ContainerOutlined />}
+                title="Documentação"
+            >
+                <a href='./FDS'>
+                    <Menu.Item key="task-1">FDS</Menu.Item>
+                </a>
+                <a href='./ProtocoloSeguranca'>
+                    <Menu.Item key="task-2">Protocolo de Segurança</Menu.Item>
+                </a>
+            </Menu.SubMenu>
+            <Menu.Item key="machine" icon={<SettingOutlined />}>
+                <a href='./Maquinas'>
+                    Máquinas
+                </a>
+            </Menu.Item>
       <Menu.Item key="login" icon={<UserOutlined />}>
         <a href='./LoginServicos'>
           Login
