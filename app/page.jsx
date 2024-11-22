@@ -17,7 +17,7 @@ const Home = () => {
         <div className={styles.section}>
           <h2>Bem-vindo ao Sistema de Manutenção</h2>
           <p>Aqui você pode visualizar o histórico de manutenção das máquinas, consultar dados e muito mais.</p>
-          <button className={styles.button}>Consultar Manutenções</button>
+          <button className={styles.button}>Consultar Documentação</button>
         </div>
 
         <div className={styles.section}>
