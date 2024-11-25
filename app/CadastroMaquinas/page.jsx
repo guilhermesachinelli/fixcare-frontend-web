@@ -129,6 +129,7 @@ function CadastrarMaquinas() {
                 {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
                 <h1 className={styles.title}>{editMode ? 'Editar Máquina' : 'Cadastrar Máquina'}</h1>
                 <form className={styles.Card} >
+                       
                     <div className={styles.inputsContainer}>
                     <input
                         type="text"
