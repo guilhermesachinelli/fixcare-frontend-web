@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 import SideBar from '../components/SideBar/page';
+import HeaderIB from '../components/HeaderIB/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
