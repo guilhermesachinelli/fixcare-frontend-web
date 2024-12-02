@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
-import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import SideBar from '../components/SideBar/page.jsx';
+import HeaderIB from '../components/HeaderIB/page';
+
 
 function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
@@ -65,10 +65,7 @@ function LoginServicos() {
     return (
         <div className={styles.container}>
 
-        <SideBar className={styles.sidebar}>
-            <SideBar />
-        </SideBar>
-            
+        <HeaderIB/>
             <form onSubmit={fetchLogin}>
                 <div className={styles.Card}>
                     <img className={styles.logoSenai} src="/senaiLogo.png" />

@@ -1,6 +1,5 @@
 import Footer from "../components/footer/page";
 import HeaderIB from "../components/HeaderIB/page";
-import SideBar from "../components/sidebar/page"; // Corrigido para "sidebar"
 
 import styles from "./page.module.css";
 

@@ -1,6 +1,5 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import Header from "../components/header/page.jsx"
 import Link from "next/link";
 import HeaderIB from "../components/HeaderIB/page";
 

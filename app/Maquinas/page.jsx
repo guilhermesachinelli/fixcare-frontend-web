@@ -97,23 +97,23 @@ function Page() {
 
     return (
         <div className={styles.container}>
-
-<HeaderIB />
-
-            <div className={styles.Center}>
-                <form onSubmit={handleFilter} className={styles.searchForm}>
-                    <input
-                        type="text"
-                        value={patrimonioFiltro}
-                        onChange={handleFilterChange}
-                        placeholder="Pesquisar máquinas por número de patrimônio"
-                        className={styles.searchInput}
-                    />
-                    <button type="submit" className={styles.searchButton} > {<SearchOutlined />}</button>
-                </form>
-            </div>
-            <div className={styles.Cards}>
-
+            
+                <HeaderIB />
+            
+            
+                <div className={styles.Center}>
+            <form onSubmit={handleFilter} className={styles.searchForm}>
+                        <input
+                            type="text"
+                            value={patrimonioFiltro}
+                            onChange={handleFilterChange}
+                            placeholder="Pesquisar máquinas por número de patrimônio"
+                            className={styles.searchInput}
+                        />
+                        <button type="submit" className={styles.searchButton}>Buscar</button>
+                    </form>
+                </div>
+                <div className={styles.Cards}>
                 <div className={styles.CardsRow}>
                     
                     {data.map((maquina) => (
@@ -124,7 +124,7 @@ function Page() {
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
-                                <h3 className={styles.titulo}>{maquina.modelo}</h3>
+                                <h1 className={styles.titulo}>{maquina.modelo}</h1>
                             </div>
                         </Link>
                     ))}

@@ -1,7 +1,6 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 
