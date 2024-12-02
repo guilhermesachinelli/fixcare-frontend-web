@@ -53,7 +53,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.199.223:4000/machine/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.200.152:4000/machine/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

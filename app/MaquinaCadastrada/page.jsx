@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 import SideBar from '../components/SideBar/page';
+import HeaderIB from '../components/HeaderIB/page';
 
 function MaquinaCadastrada() {
     const [maquina, setMaquina] = useState(null);
@@ -41,7 +42,7 @@ function MaquinaCadastrada() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+            <HeaderIB />
                 <a href='./Maquinas'>
                     <div className={styles.backbutton}>
                         <p>Voltar para Home</p>

@@ -3,13 +3,12 @@
 import SideBar from "./components/SideBar/page";
 import styles from "./page.module.css";
 import Footer from "./components/footer/page";
+import HeaderIB from "./components/HeaderIB/page";
 
 const Home = () => {
   return (
     <div className={styles.main}>
-      <SideBar className={styles.sidebar}>
-            <SideBar />
-        </SideBar>
+      <HeaderIB />
 
       <div className={styles.content}>
         <div className={styles.header}>

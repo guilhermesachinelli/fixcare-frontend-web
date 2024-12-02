@@ -5,6 +5,7 @@ import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import SideBar from '../components/SideBar/page.jsx';
+import HeaderIB from '../components/HeaderIB/page';
 
 function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
@@ -18,7 +19,7 @@ function LoginServicos() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response1 = await fetch('http://10.88.199.220:4000/aluno', {
+        const response1 = await fetch('http://10.88.200.152:4000/aluno', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -28,7 +29,7 @@ function LoginServicos() {
                 senha: password,
             }),
         });
-        const response2 = await fetch('http://10.88.199.223:4000/funcionario', {
+        const response2 = await fetch('http://10.88.200.152:4000/funcionario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -58,9 +59,7 @@ function LoginServicos() {
     return (
         <div className={styles.container}>
 
-        <SideBar className={styles.sidebar}>
-            <SideBar />
-        </SideBar>
+<HeaderIB/>
             
             <div className={styles.containerlogin}>
                 <div className={styles.wraplogin}>

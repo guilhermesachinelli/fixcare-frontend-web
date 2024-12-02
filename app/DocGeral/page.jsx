@@ -1,12 +1,13 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import SideBar from "../components/SideBar/page";
+import HeaderIB from "../components/HeaderIB/page";
 
 function DocGeral() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <HeaderIB />
             
             <div className={styles.Cards}>
                 <a href='./FDS'>

@@ -4,6 +4,7 @@ import Footer from "../components/footer/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useEffect, useState } from "react"
 import SideBar from "../components/SideBar/page";
+import HeaderIB from "../components/HeaderIB/page";
 
 function Manutencao() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -51,7 +52,7 @@ function Manutencao() {
     const handlePost = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://10.88.199.152:4000/requestmaintenance', {
+            const response = await fetch('http://10.88.200.152:4000/requestmaintenance', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -78,7 +79,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+            <HeaderIB />
             
             <form className={styles.card}>
             <h1 className={styles.title}>Solicitação de Manutenção</h1>

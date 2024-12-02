@@ -6,6 +6,7 @@ import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
 import SideBar from '../components/SideBar/page';
 import { SearchOutlined } from '@ant-design/icons';
+import HeaderIB from '../components/HeaderIB/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -53,7 +54,7 @@ function Page() {
 
     const fetchMaquinaByPatrimonio = async (numeroDePatrimonio) => {
         try {
-            const response = await fetch(`http://10.88.199.223:4000/machine/patrimonio/${numeroDePatrimonio}`, {
+            const response = await fetch(`http://10.88.200.152:4000/machine/patrimonio/${numeroDePatrimonio}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -98,7 +99,7 @@ function Page() {
     return (
         <div className={styles.container}>
 
-            <SideBar />
+<HeaderIB />
 
             <div className={styles.Center}>
                 <form onSubmit={handleFilter} className={styles.searchForm}>
