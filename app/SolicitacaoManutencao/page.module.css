@@ -1,8 +1,11 @@
 .container {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100%;
+  color: #FFFFFF;
 }
-
 .checklist {
   display: flex;
   flex-direction: column;
@@ -21,20 +24,18 @@
   margin-left: 80px;
 }
 
-.card {
+.card{
   width: 800px;
-  height: 700px;
+  height: 600px;
   top: 2463.31px;
   left: 265.17px;
   gap: 0px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #0f3246;
-  margin-top: 100px;
-  box-shadow: #03183A 0px 0px 40px;
+  background: rgba(0, 57, 150, 0.93) 53%;
+  margin-top: 50px;
 }
-
-.input {
+.input{
   width: 400px;
   margin-left: 120px;
   margin-top: 40px;
@@ -45,7 +46,7 @@
   font-size: 1em;
   outline: none;
   transition: border-color 0.3s;
-  background-color: #024d8f;
+  background-color: #013484;
   border-bottom: 2px solid #013484;
 }
 
@@ -57,44 +58,42 @@
   color: #999;
 }
 
-.backbutton {
-  background-color: #013484;
-  color: #fff;
-  border: none;
-  font-size: 1em;
-  cursor: pointer;
-  width: 180px;
-  height: 50px;
-  border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
+.backbutton{
+background-color: #013484;
+color: #fff;
+border: none;
+font-size: 1em;
+border-radius: 100%;
+cursor: pointer;
+width: 50px;
+height: 50px;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .button {
-  background-color: #013484;
-  color: #fff;
-  border: none;
-  padding: 0.75em 1.5em;
-  font-size: 1em;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-  width: 250px;
-  margin-left: 200px;
-  margin-top: 15px;
+background-color: #013484;
+color: #fff;
+border: none;
+padding: 0.75em 1.5em;
+font-size: 1em;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s, transform 0.3s;
+width: 250px;
+margin-left: 200px;
 }
 
 .button:hover {
-  background-color: #03183A;
+background-color: #03183A;
 }
 
 .button:active {
-  transform: scale(0.95);
+transform: scale(0.95);
 }
 
-.checkbox {
+.checkbox{
   display: flex;
   gap: 10px;
   font-size: 17px;
@@ -104,7 +103,6 @@
   margin-top: 5px;
   width: 100%;
 }
-
 .check {
   margin-bottom: 20px;
   margin-left: 30px;
@@ -146,8 +144,6 @@
   font-size: 45px;
   color: #FFFFFF;
   margin-bottom: 20px;
-  margin-top: 20px;
-  margin-left: 105px;
   justify-content: space-between;
   align-items: center;
   display: flex;
