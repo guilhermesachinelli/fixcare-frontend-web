@@ -2,7 +2,6 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
-import { useEffect, useState } from "react"
 import { useState } from "react"
 import HeaderIB from "../components/HeaderIB/page";
 
@@ -15,9 +14,6 @@ function Manutencao() {
         descricao: '',
         data_de_solicitacao: '',
     });
-
-
-
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setMaquina(prevState => ({
@@ -64,9 +60,9 @@ function Manutencao() {
             <div className={styles.titleContainer}>
                 <h1 className={styles.title}>Solicitação de Manutenção</h1>
             </div>
+                 
             <form className={styles.card}>
                 <div className={styles.inputsContainer}>
-
                     <input
                         type="text"
                         name="numero_de_patrimonioID"

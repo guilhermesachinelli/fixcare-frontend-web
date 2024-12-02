@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-
+  width: 100%;
 }
 
 .footer {
@@ -13,24 +13,35 @@
   align-items: center;
   background: #3737b1;
   color: white;
-  height: auto; /* Permite que o rodapé se ajuste ao conteúdo */
+  height: auto;
+  /* Permite que o rodapé se ajuste ao conteúdo */
   width: 100%;
-  margin-top: 20px; /* Ajusta a margem do rodapé */
+  margin-top: 10%;
+  /* Ajusta a margem do rodapé */
 }
 
 .sidebar {
-  width: 250px; /* Largura da barra lateral */
-  background-color: #0f3246; /* Azul marinho */
-  color: white; /* Texto branco */
-  padding: 20px; /* Espaçamento interno */
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve à direita */
-  position: fixed; /* Mantém a barra lateral fixa */
-  height: 100%; /* Ocupa toda a altura da tela */
-  transition: width 0.3s; /* Transição suave para ajustes de largura */
+  width: 250px;
+  /* Largura da barra lateral */
+  background-color: #0f3246;
+  /* Azul marinho */
+  color: white;
+  /* Texto branco */
+  padding: 20px;
+  /* Espaçamento interno */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  /* Sombra leve à direita */
+  position: fixed;
+  /* Mantém a barra lateral fixa */
+  height: 100%;
+  /* Ocupa toda a altura da tela */
+  transition: width 0.3s;
+  /* Transição suave para ajustes de largura */
 }
 
 .sidebar:hover {
-  width: 260px; /* Aumenta a largura ao passar o mouse */
+  width: 260px;
+  /* Aumenta a largura ao passar o mouse */
 }
 
 .header {
@@ -52,7 +63,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   padding: 0 20px;
 }
 
@@ -100,27 +111,34 @@
 @media (max-width: 768px) {
   .Cards {
     display: flex;
-    flex-direction: column; /* Alinha os cartões em coluna em telas menores */
-    align-items: center; /* Centraliza os cartões */
+    flex-direction: column;
+    /* Alinha os cartões em coluna em telas menores */
+    align-items: center;
+    /* Centraliza os cartões */
     margin-top: 50px;
   }
 
   .manutencao,
   .lubrificacao {
-    width: 200px; /* Aumenta a largura dos cartões em telas menores */
+    width: 200px;
+    /* Aumenta a largura dos cartões em telas menores */
   }
 
   .titulo1,
   .titulo2 {
-    font-size: 1.2rem; /* Ajusta o tamanho da fonte dos títulos */
+    font-size: 1.2rem;
+    /* Ajusta o tamanho da fonte dos títulos */
   }
 }
 
 /* Estilos para telas menores que 480px */
 @media (max-width: 480px) {
+
   .manutencao,
   .lubrificacao {
-    width: 200px; /* Largura total em dispositivos muito pequenos */
-    height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    width: 200px;
+    /* Largura total em dispositivos muito pequenos */
+    height: auto;
+    /* Permite que a altura se ajuste ao conteúdo */
   }
 }

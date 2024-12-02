@@ -206,6 +206,7 @@ function Manutencao() {
                     <h4 className={styles.info}> (2)- Não misturar marcas. Caso seja necessário substituir o óleo lubrificante e drenar completamente o óleo usado antes de colocar o novo.</h4>
                 </div>
                 </div>
+            <h1 className={styles.titulo}>Solicitação de Manutenção</h1>
             <form className={styles.card}>
                 <div className={styles.inputsContainer}>
 

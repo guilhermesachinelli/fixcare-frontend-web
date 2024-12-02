@@ -35,7 +35,7 @@
   opacity: 0px;
   background: rgba(0, 57, 150, 0.93);
   margin-top: 80px;
-  margin-left: 680px;
+  margin-left: 780px;
   border-radius: 10px;
 }
 
@@ -112,9 +112,8 @@
   font-size: 1.2em;
   padding: 0.5em;
   outline: none;
-
   margin-left: -50px;
-  margin-top: -42px;
+  margin-top: -92px;
 
 }
 .toggleButton:hover {
