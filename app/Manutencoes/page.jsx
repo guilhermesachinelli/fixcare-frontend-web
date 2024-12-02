@@ -98,8 +98,7 @@ function Page() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
-                <a href='./AdmPrincipal'>
+            <HeaderIB />                <a href='./AdmPrincipal'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>

@@ -1,9 +1,11 @@
 'use client';
 import React, { useState, useEffect } from 'react';
 import styles from "./page.module.css";
+import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
-import SideBar from '../components/SideBar/page';
+import HeaderIB from '../components/HeaderIB/page';
+
 
 function MaquinaCadastrada() {
     const [maquina, setMaquina] = useState(null);
@@ -28,10 +30,36 @@ function MaquinaCadastrada() {
         fetchMaquina();
     }, []);
 
-    const handleSaveAndRedirect = () => {
-        localStorage.setItem('numero_de_patrimonio', maquina.numero_de_patrimonio);
-        console.log('Número de patrimônio:', maquina.numero_de_patrimonio);
-        window.location.href = '/LoginServicos';
+    const handleDelete = async () => {
+        const id = new URLSearchParams(window.location.search).get('id');
+        try {
+            const response = await fetch(`http://10.88.200.152:4000/machine/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json',
+                }
+            });
+
+            if (response.ok) {
+                setPopup({ visible: true, message: 'Máquina excluída com sucesso', type: 'success' });
+                setTimeout(() => {
+                    setPopup({ visible: false, message: '', type: '' });
+                    window.location.href = '/Maquinas'; 
+                }, 2000);
+            } else {
+                throw new Error('Erro ao excluir máquina');
+            }
+        } catch (error) {
+            setPopup({ visible: true, message: error.message, type: 'error' });
+            setTimeout(() => {
+                setPopup({ visible: false, message: '', type: '' });
+            }, 2000);
+        }
+    };
+
+    const handleEdit = () => {
+        const id = new URLSearchParams(window.location.search).get('id');
+        window.location.href = `/CadastroMaquinas?id=${id}`;
     };
 
     if (!maquina) {
@@ -41,10 +69,9 @@ function MaquinaCadastrada() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
-                <a href='./Maquinas'>
+            <HeaderIB />                <a href='./Maquinas'>
                     <div className={styles.backbutton}>
-                        <p>Voltar para Home</p>
+                        <p>⬅</p>
                     </div>
                 </a>
             <div className={styles.content}>
@@ -58,13 +85,12 @@ function MaquinaCadastrada() {
                     <img src="/tornoNardini.png" className={styles.ImgTorno}/>
                     </div>
                     <div className={styles.Card}>
-                    <h2 className={styles.titulo1}>{maquina.marca} - {maquina.modelo}</h2>
+                    <h2 className={styles.titulo}>{maquina.marca} - {maquina.modelo}</h2>
                     <p className={styles.subtitulo}>Categoria: {maquina.categoria}</p>
                     <p className={styles.subtitulo}>Número de Patrimônio: {maquina.numero_de_patrimonio}</p>
                     <p className={styles.subtitulo}>Número de Série: {maquina.numero_de_serie}</p>
                     <p className={styles.subtitulo}>Número do Torno: {maquina.numero_do_torno}</p>
                     <p className={styles.subtitulo}>Data de Aquisição: {maquina.data_de_aquisicao}</p>
-                    <button className={styles.button} onClick={handleSaveAndRedirect}>Solicitar Manutenção</button>
                     </div>
                 </div>
             </div>

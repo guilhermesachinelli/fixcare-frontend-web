@@ -69,8 +69,7 @@ function MaquinaCadastrada() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB/>
-                <a href='./MaquinaCadastradaAdm'>
+            <HeaderIB />                <a href='./MaquinaCadastradaAdm'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>

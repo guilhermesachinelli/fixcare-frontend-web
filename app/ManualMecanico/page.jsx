@@ -1,13 +1,13 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
+import HeaderIB from "../components/HeaderIB/page";
 
 function ManualMecanico() {
     return (
         <div className={styles.container}>
             
-                <Header />
-            
+            <HeaderIB />            
             <div className={styles.Cards}>
                 <a href="./NardiniMecanico">
                 <div className={styles.Nardini}>

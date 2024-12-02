@@ -1,13 +1,16 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
+import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
-import SideBar from '../components/SideBar/page.jsx';
+import PopupMessage from '../components/PopUp/PopUp';
+import HeaderIB from '../components/HeaderIB/page';
 
 function LoginServicos() {
     const [showPassword, setShowPassword] = useState(false);
+
     const togglePasswordVisibility = () => {
         setShowPassword(!showPassword);
     };
@@ -18,7 +21,9 @@ function LoginServicos() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response1 = await fetch('http://10.88.199.220:4000/aluno', {
+
+        const response1 = await fetch('http://10.88.200.152:4000/aluno', {
+
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -26,9 +31,11 @@ function LoginServicos() {
             body: JSON.stringify({
                 email,
                 senha: password,
+
             }),
         });
-        const response2 = await fetch('http://10.88.199.223:4000/funcionario', {
+
+        const response2 = await fetch('http://10.88.200.152:4000/funcionario', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -36,76 +43,75 @@ function LoginServicos() {
             body: JSON.stringify({
                 email,
                 senha: password,
+
             }),
         });
-        const data = await response1.json() || await response2.json();
+
+        const data = await response1.json();
+        const data2 = await response2.json();
         console.log(data.length);
-        if (data.length === 1) {
-            setPopup({ visible: true, message: 'Login efetuado com sucesso', type: 'success' });
+        console.log(data2.length);
+        if (data.length === undefined && data2.length === undefined) {
             setTimeout(() => {
-              localStorage.setItem('email', email);
-                window.location.href = '/Servico';
-            }
-                , 2000);
-        } else {
-            setPopup({ visible: true, message: 'Email ou senha incorretos', type: 'error' });
-            setTimeout(() => {
-                setPopup({ visible: false, message: '', type: '' });
-            }
-                , 2000);
+                setPopup({ visible: true, message: 'Usuário ou senha inválidos', type: 'error' });
+            }, 2500);
+        }
+        if (data.length > 0 || data2.length > 0) {
+            localStorage.setItem('userEmail', email);
+            console.log(localStorage.getItem('userEmail'));
+                setPopup({ visible: true, message: 'Login realizado com sucesso', type: 'success' });
+                setTimeout(() => {
+                    window.location.href = '/Servico';
+                }, 2500)
         }
     } 
+
     return (
         <div className={styles.container}>
-
-        <SideBar className={styles.sidebar}>
-            <SideBar />
-        </SideBar>
             
-            <div className={styles.containerlogin}>
-                <div className={styles.wraplogin}>
-                    <form className={styles.loginform} onSubmit={fetchLogin}>
-                    <span className={styles.loginformtitle}>
-                            <img src="/senaiLogo.png" alt="Senai Logo" />
-                    </span>
-                        <span className={styles.loginformtitle}> Alunos e Funcionários </span>
-                        
-                        <div className={styles.wrapinput}>
+                <HeaderIB />
+            
+            <form onSubmit={fetchLogin}>
+                <div className={styles.Card}>
+                    <img className={styles.logoSenai} src="/senaiLogo.png" />
+                    <div className={styles.inputsContainer}>
+                        <div className={styles.inputWrapper}>
                             <input
                                 className={styles.input}
+                                type="text"
                                 value={email}
-                                onChange={(e) => setEmail(e.target.value)}
+                                placeholder="E-mail"
+                                onChange={(event) => setEmail(event.target.value)}
                             />
-                            <span className={styles.focusinput} data-placeholder="Email"></span>
                         </div>
-                        <div className={styles.wrapinput}>
+                        <div className={styles.inputWrapper}>
                             <input
-                                className={styles.input}
-                                type={showPassword ? "text" : "password"}
+                                className={styles.input2}
                                 value={password}
-                                onChange={(e) => setPassword(e.target.value)}
+                                type={showPassword ? "text" : "password"}
+                                placeholder='Senha'
+                                onChange={(event) => setPassword(event.target.value)}
                             />
-                            <span className={styles.focusinput} data-placeholder="Password"></span>
                             <button
                                 type="button"
                                 className={styles.toggleButton}
                                 onClick={togglePasswordVisibility}
                             >
-                                <FontAwesomeIcon icon={showPassword ? faEye : faEyeSlash} />
+                                <FontAwesomeIcon className={styles.icon} icon={showPassword ? faEye : faEyeSlash} />
                             </button>
                         </div>
-                        <div className={styles.containerloginformbtn}>
-                            <button className={styles.loginformbtn}>Acessar</button>
-                        </div>
-                        
-                    </form>
+                    </div>
+                    {popup.visible && <PopupMessage message={popup.message} type={popup.type} />}
+                    <div className={styles.buttonContainer}>
+                        <button className={styles.buttonText}>Entrar</button>
+                    </div>
                 </div>
-            </div>
+            </form>
             <footer className={styles.footer}>
-            <Footer />
+                <Footer />
             </footer>
         </div>
-        
-    );
+    )
 }
+
 export default LoginServicos;

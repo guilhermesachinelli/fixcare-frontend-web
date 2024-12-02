@@ -78,7 +78,7 @@ function Manutencao() {
     const handlePost = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://10.88.199.152:4000/manutencao', {
+            const response = await fetch('http://10.88.200.152:4000/manutencao', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -105,8 +105,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
-                <a href='./Servico'>
+            <HeaderIB />                <a href='./Servico'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>
