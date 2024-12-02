@@ -1,35 +1,13 @@
 'use client';
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
+import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
-import { useEffect, useState } from "react"
-import SideBar from "../components/SideBar/page";
+import { useState } from "react"
+
 
 function Manutencao() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
-
-    useEffect(() => {
-        // Recuperar o nome do responsável do localStorage
-        const nomeDoResponsavel = localStorage.getItem('email');
-        const numeroDePatrimonio = localStorage.getItem('numero_de_patrimonio');
-        const today = new Date();
-        if (nomeDoResponsavel) {
-            setMaquina(prevState => ({
-                ...prevState,
-                nome: nomeDoResponsavel
-            }));
-        }
-        if (numeroDePatrimonio) {
-            setMaquina(prevState => ({
-                ...prevState,
-                numero_de_patrimonioID: numeroDePatrimonio
-            }));
-        }
-        setMaquina(prevState => ({
-            ...prevState,
-            data_de_solicitacao: today.toISOString().split('T')[0]
-        }));
-    }, []);
     const [maquina, setMaquina] = useState({
         numero_de_patrimonioID: '',
         nome: '',
@@ -78,10 +56,17 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+                <Header />
             
+                <a href='./Servico'>
+                    <div className={styles.backbutton}>
+                        <p>⬅</p>
+                    </div>
+                </a>
+            <div className={styles.titleContainer}>
+                <h1 className={styles.title}>Solicitação de Manutenção</h1>
+            </div>
             <form className={styles.card}>
-            <h1 className={styles.title}>Solicitação de Manutenção</h1>
                 <div className={styles.inputsContainer}>
 
                     <input
@@ -129,12 +114,6 @@ function Manutencao() {
                     <button className={styles.button} onClick={handlePost}>Enviar Solicitação</button>
                 </div>
             </form>
-
-            <a href='./Servico'>
-                    <div className={styles.backbutton}>
-                        <p>Voltar para Serviços</p>
-                    </div>
-                </a>
 
             <footer className={styles.footer}>
                 <Footer />
