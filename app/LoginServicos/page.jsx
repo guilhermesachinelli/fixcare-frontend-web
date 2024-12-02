@@ -18,7 +18,7 @@ function LoginServicos() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         
-        const response1 = await fetch('http://10.88.199.223:4000/aluno', {
+        const response1 = await fetch('http://10.88.199.220:4000/aluno', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
