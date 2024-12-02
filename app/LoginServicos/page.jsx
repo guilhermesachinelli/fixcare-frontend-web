@@ -57,8 +57,10 @@ function LoginServicos() {
     } 
     return (
         <div className={styles.container}>
-           
-                <SideBar />
+
+        <SideBar className={styles.sidebar}>
+            <SideBar />
+        </SideBar>
             
             <div className={styles.containerlogin}>
                 <div className={styles.wraplogin}>
@@ -71,7 +73,6 @@ function LoginServicos() {
                         <div className={styles.wrapinput}>
                             <input
                                 className={styles.input}
-                                type="email"
                                 value={email}
                                 onChange={(e) => setEmail(e.target.value)}
                             />

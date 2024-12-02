@@ -1,109 +1,128 @@
-/* Estilo para o contêiner principal */
-
-.container {
-  display: flex; /* Utiliza flexbox para layout */
-  flex-direction: column; /* Alinha os itens em coluna */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  justify-content: center; /* Centraliza os itens verticalmente */
-  height: 100%; /* Define a altura como 100% */
-  background-color: var(--background); /* Define a cor de fundo usando uma variável CSS */
-  color: var(--foreground); /* Define a cor do texto usando uma variável CSS */
-  transition: background-color 0.3s ease; /* Adiciona uma transição suave para mudanças de cor de fundo */
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Garante que a página ocupe toda a altura da tela */
+  background-color: #f0f4f8; /* Fundo cinza claro */
+  font-family: 'Arial', sans-serif; /* Fonte simples e legível */
 }
 
-/* Estilo para a div que contém as imagens */
-.Imgs {
-  display: flex; /* Utiliza flexbox para layout */
-  justify-content: space-between; /* Espaça os itens igualmente */
-  width: 100%; /* Define a largura como 100% */
-  padding: 0 20px; /* Adiciona padding horizontal */
+.sidebar {
+  width: 250px; /* Largura da barra lateral */
+  background-color: #0f3246; /* Azul marinho */
+  color: white; /* Texto branco */
+  padding: 20px; /* Espaçamento interno */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve à direita */
+  position: fixed; /* Mantém a barra lateral fixa */
+  height: 100%; /* Ocupa toda a altura da tela */
+  transition: width 0.3s; /* Transição suave para ajustes de largura */
 }
 
-/* Estilo para a imagem do logo do Senai */
-.logoSenai {
-  width: 100vh; /* Define a largura da imagem */
-  height: 40vh; /* Define a altura da imagem */
-  margin-left: 20px; /* Adiciona margem à esquerda */
-  margin-top: 200px; /* Adiciona margem ao topo para ajustar a posição */
+.sidebar:hover {
+  width: 260px; /* Aumenta a largura ao passar o mouse */
 }
 
-/* Estilo para a imagem do torno */
-.tornoImg {
-  width: 110vh; /* Define a largura da imagem */
-  height: 90vh; /* Define a altura da imagem */
-  margin-right: -200px; /* Adiciona margem negativa à direita para ajustar a posição */
-  margin-top: 20px; /* Adiciona margem ao topo para ajustar a posição */
-}
-
-/* Estilo para o botão */
-.button {
-  display: flex; /* Utiliza flexbox para layout */
-  justify-content: center; /* Centraliza o conteúdo horizontalmente */
-  align-items: center; /* Centraliza o conteúdo verticalmente */
-  width: 100%; /* Define a largura como 100% */
-  height: 100px; /* Define a altura do botão */
-  margin-top: 50px; /* Adiciona margem ao topo */
-}
-
-/* Estilo para o rodapé */
 .footer {
-  display: flex; /* Utiliza flexbox para layout */
-  justify-content: end; /* Alinha os itens ao final do contêiner */
-  align-items: center; /* Centraliza os itens verticalmente */
-  color: white; /* Define a cor do texto como branco */
-  height: 100%; /* Define a altura como 100% */
-  width: 100%; /* Define a largura como 100% */
+  margin-bottom: auto; /* Ajuste este valor conforme necessário */
+  background-color: #0f3246; /* Azul marinho */
+  color: white; /* Texto branco */
+  text-align: center; /* Centraliza o texto */
+  padding: 15px 0; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte do rodapé */
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra superior */
 }
 
-/* Estilo para o cabeçalho */
 .header {
-  display: flex; /* Utiliza flexbox para layout */
-  justify-content: space-between; /* Espaça os itens igualmente */
-  align-items: center; /* Centraliza os itens verticalmente */
-  height: 6rem; /* Define a altura do cabeçalho */
-  background-color: rgba(37, 37, 143, 0.01); /* Define a cor de fundo com transparência */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra ao cabeçalho */
-  width: 100%; /* Define a largura como 100% */
-  padding: 0 20px; /* Adiciona padding horizontal */
+  text-align: center; /* Centraliza o título */
+  padding: 20px; /* Espaçamento interno */
+  background-color: #ffffff; /* Fundo branco para o cabeçalho */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  margin-bottom: 20px; /* Espaçamento abaixo do cabeçalho */
+  border-radius: 10px; /* Bordas arredondadas */
+  margin-top: -670px;
+  margin-right: 250px;
 }
 
-/* Estilos para telas menores que 768px */
-@media (max-width: 768px) {
-  .Imgs {
-    flex-direction: column; /* Muda a direção das imagens para coluna em telas menores */
-    align-items: center; /* Centraliza as imagens */
-  }
-
-  .logoSenai {
-    width: 80vw; /* Ajusta a largura da imagem para 80% da largura da viewport */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 20px 0; /* Ajusta as margens */
-  }
-
-  .tornoImg {
-    width: 90vw; /* Ajusta a largura da imagem para 90% da largura da viewport */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 20px 0; /* Ajusta as margens */
-  }
-
-  .footer {
-    flex-direction: column; /* Muda a direção do rodapé para coluna em telas menores */
-    align-items: center; /* Centraliza os itens no rodapé */
-  }
+.header h1 {
+  font-size: 2.5rem; /* Tamanho do título */
+  color: #0f3246; /* Azul marinho */
+  margin: 0; /* Remove margens padrão */
+  margin-left: -9px;
 }
 
-/* Estilos para telas menores que 480px */
-@media (max-width: 480px) {
-  .logoSenai {
-    width: 90vw; /* Ajusta ainda mais a largura para dispositivos muito pequenos */
+.content {
+  flex: 1; /* Permite que este container ocupe o espaço restante */
+  padding: 20px; /* Espaçamento interno */
+  margin-left: 300px; /* Margem à esquerda para deixar espaço para a barra lateral */
+  display: flex;
+  flex-direction: column; /* Permite adicionar seções verticalmente */
+  align-items: center; /* Centraliza o conteúdo */
+}
+
+.section {
+  width: 100%; /* Largura total da seção */
+  max-width: 760px; /* Largura máxima */
+  background-color: #ffffff; /* Fundo branco */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-bottom: 20px; /* Espaçamento entre seções */
+  padding: 20px; /* Espaçamento interno */
+  transition: transform 0.3s; /* Transição suave para hover */
+  margin-right: 250px; 
+}
+
+.section:hover {
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+}
+
+.section h2 {
+  font-size: 1.8rem; /* Tamanho do subtítulo */
+  color: #0f3246; /* Azul marinho */
+  margin-bottom: 10px; /* Espaçamento abaixo do subtítulo */
+}
+
+.section p {
+  color: #555; /* Texto cinza escuro para melhor legibilidade */
+  line-height: 1.6; /* Aumenta o espaçamento entre linhas */
+  font-size: 1rem; /* Tamanho da fonte para parágrafos */
+}
+
+.buttonContainer {
+  text-align: center; /* Centraliza os botões */
+  margin-top: 20px; /* Adiciona margem superior, se necessário */
+}
+
+.button {
+  height: 40px; /* Altura dos botões */
+  display: inline-block; /* Garante que os botões sejam exibidos em linha */
+  margin: 10px; /* Adiciona margem ao redor dos botões */
+  padding: 10px 20px; /* Ajusta o espaçamento interno dos botões */
+  background-color: #0f3246; /* Cor de fundo do botão */
+  color: white; /* Cor do texto do botão */
+  border: none; /* Remove a borda padrão */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+  cursor: pointer; /* Adiciona o cursor de ponteiro ao passar o mouse */
+}
+
+.button:hover {
+  background-color: #0a2635; /* Azul marinho mais escuro ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+  .sidebar {
+      width: 200px; /* Reduz a largura da barra lateral em telas pequenas */
   }
 
-  .tornoImg {
-    width: 95vw; /* Ajusta ainda mais a largura para dispositivos muito pequenos */
+  .header h1 {
+      font-size: 2rem; /* Ajusta o tamanho do título para telas menores */
   }
 
-  .button {
-    height: 80px; /* Reduz a altura do botão em telas menores */
-    margin-top: 30px; /* Ajusta a margem superior do botão */
+  .content {
+      margin-left: 0; /* Remove margem esquerda em telas pequenas */
+      padding: 10px; /* Reduz o espaçamento interno */
+  }
+
+  .section {
+      width: 90%; /* Torna as seções mais largas em telas pequenas */
+      margin-top: -600px;
   }
 }

@@ -5,26 +5,29 @@
 }
 
 .containerlogin {
-  width: 100%;
-  min-height: 100vh;
+  width: 40%;
+  height: 10vh;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   padding: 15px;
   background-color: #F5F5F5;
+  margin-left: 550px;
+  margin-top: 200px;
 }
 
 .wraplogin {
   width: 750px;
-  height: 650px;
-  margin-top: -800px; 
+  height: 60vh;
+  margin-top: -1000px; 
   margin-bottom: 3000px;
   background-color: #0f3246;
   border-radius: 8px;
   overflow: hidden;
   padding: 77px 55px 33px 55px;
   box-shadow: 0 5px 10px 0px rgba(109, 83, 83, 0.2);
+  margin-left: 60px;
 }
 
 .loginform {
@@ -38,7 +41,7 @@
   color: azure;
   line-height: 1.2;
   text-align: center;
-  margin-top: 10px;
+  margin-top: -10px;
   white-space: nowrap; 
 }
 
@@ -46,11 +49,11 @@
 .loginformtitle img {
   display: block;
   margin: 0 auto 10px; 
-  width: 200px; 
+  width: 200px;
 }
 
 .wrapinput {
-  width: 600px;
+  width: 520px;
   position: relative;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, gray, #09455f) 1;
@@ -59,21 +62,21 @@
   background-color: #0f3246;
   padding: 10px;
   border-radius: 5px;
-  font-size: 0px;
   color: #0f3246;
 }
 
 .input {
-  font-size: 95px;
-  color: #0f3246;
+  width: 100%;
+  height: 50px;
+  font-size: 30px;
+  color: #ffffff;
   line-height: 1.2;
   border: none;
   display: block;
-  width: 100%;
-  height: 50px;
   background-color: #0f3246;
   padding: 0 5px;
   font-family: Nunito, sans-serif;
+  margin-left: 70px;
 }
 
 .focusinput {
@@ -86,7 +89,7 @@
   pointer-events: none;
   color: #0f3246;
   font-family: Nunito, sans-serif;
-  font-size: 50px;
+  font-size: 500px;
 }
 
 .focusinput::before {
@@ -99,14 +102,14 @@
   height: 2px;
   transition: all 0.4s;
   background: #6a7dfe;
-  background: linear-gradient(to left, #21d4fd, #b721ff);
+  background: linear-gradient(to left, #09424d, #060750);
 }
 
 .focusinput::after {
   font-family: Nunito, sans-serif;
   font-size: 15px;
   color: #999999;
-  line-height: 1.2;
+  line-height: 5;
   content: attr(data-placeholder);
   display: block;
   width: 100%;
@@ -122,7 +125,7 @@
 }
 
 .input:focus+.focusinput::after {
-  top: -15px;
+  top: -35px;
 }
 
 .input:focus+.focusinput::before {
@@ -130,7 +133,7 @@
 }
 
 .has-val+.focusinput::after {
-  top: -15px;
+  top: -35px;
 }
 
 .has-val+.focusinput::before {
@@ -165,26 +168,6 @@
   cursor: pointer;
 }
 
-.text-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-.txt1 {
-  font-size: 14px;
-  color: #adadad;
-  line-height: 1.5;
-  padding-right: 5px;
-}
-
-.txt2 {
-  font-size: 14px;
-  color: #6a7dfe;
-  line-height: 1.5;
-  text-decoration: none;
-}
 
 .toggleButton {
   background: none;
@@ -196,6 +179,7 @@
   cursor: pointer;
   color: #dee1e4;
   margin-left: 90px;
+  font-size: 20px;
 }
 
 .toggleButton:hover {
@@ -218,13 +202,16 @@
 }
 
 .footer {
-  position: relative; /* Ajuste a posição conforme necessário */
-  left: 0;
+  position: relative; 
   bottom: 0;
   width: 100%;
   background-color: #0f3246;
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: -100px; /* Move o footer para cima */
+  margin-top: -300px; 
+}
+
+.sidebar {
+  height: 1000vh;
 }

@@ -97,24 +97,24 @@ function Page() {
 
     return (
         <div className={styles.container}>
-            
-                <SideBar />
-            
-                <div className={styles.Center}>
-            <form onSubmit={handleFilter} className={styles.searchForm}>
-                        <input
-                            type="text"
-                            value={patrimonioFiltro}
-                            onChange={handleFilterChange}
-                            placeholder="Pesquisar máquinas por número de patrimônio"
-                            className={styles.searchInput}
-                        />
-                        <button type="submit" className={styles.searchButton} > {<SearchOutlined />}</button>
-                    </form>
-                </div>
-                <div className={styles.Cards}>
+
+            <SideBar />
+
+            <div className={styles.Center}>
+                <form onSubmit={handleFilter} className={styles.searchForm}>
+                    <input
+                        type="text"
+                        value={patrimonioFiltro}
+                        onChange={handleFilterChange}
+                        placeholder="Pesquisar máquinas por número de patrimônio"
+                        className={styles.searchInput}
+                    />
+                    <button type="submit" className={styles.searchButton} > {<SearchOutlined />}</button>
+                </form>
+            </div>
+            <div className={styles.Cards}>
                 <div className={styles.CardsRow}>
-                    
+
                     {data.map((maquina) => (
                         <Link
                             key={maquina.id}
