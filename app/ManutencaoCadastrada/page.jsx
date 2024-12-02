@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import styles from "./page.module.css";
-import Header from "../components/header/page.jsx";
 import Footer from "../components/footer/page.jsx";
 import HeaderIB from '../components/HeaderIB/page';
 

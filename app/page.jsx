@@ -1,18 +1,13 @@
 // Indica que este componente deve ser renderizado no lado do cliente.
 'use client';
 
-// Importa os estilos definidos no arquivo CSS.
-import styles from "./page.module.css";
-
-const Home = () => {
-  return (
-    <div className={styles.main}>
-
-
 
 // Importa o componente Footer.
 import Footer from "./components/footer/page.jsx";
 import HeaderIB from "./components/HeaderIB/page";
+
+// Importa os estilos definidos no arquivo CSS.
+import styles from "./page.module.css";
 
 // Define o componente funcional Home.
 const Home = () => {
@@ -39,5 +34,4 @@ const Home = () => {
   );
 }
 
-// Exporta o componente Home como padrão.
 export default Home; 

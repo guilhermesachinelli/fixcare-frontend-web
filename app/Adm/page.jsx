@@ -1,7 +1,6 @@
 'use client'
 import React, { useState } from 'react';
 import styles from "./page.module.css"
-import Header from "../components/header/page.jsx"
 import Footer from "../components/footer/page.jsx"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
