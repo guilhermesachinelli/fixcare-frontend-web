@@ -22,7 +22,7 @@
     gap: 0px;
     border-radius: 10px 10px 10px 10px;
     opacity: 0px;
-    background: #0f3246;
+    background: #0050ceee;
     margin-right: 100px;
     margin-left: 90px;
     margin-top: 100px;
@@ -116,26 +116,15 @@
     width: 100%;
 }
 
-.manualM:hover {
-    background-color: #4e565c;
-    transition: 0.5s;
-    opacity: 0.7;
-}
-
-.manualE:hover {
-    background-color: #4e565c;
-    transition: 0.5s;
-    opacity: 0.7;
-}
 
 .Fds:hover {
-    background-color: #4e565c;
+    background-color: #3880b8fa;
     transition: 0.5s;
     opacity: 0.7;
 }
 
 .Pls:hover {
-    background-color: #4e565c;
+    background-color: #3880b8fa;
     transition: 0.5s;
     opacity: 0.7;
 }

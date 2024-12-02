@@ -5,6 +5,7 @@ import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
 import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
+import HeaderIB from '../components/HeaderIB/page';
 
 function Page() {
     const [popup, setPopup] = useState({ visible: false, message: '', type: '' });
@@ -97,7 +98,7 @@ function Page() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <HeaderIB/>
             
             
                 <div className={styles.Center}>
@@ -123,7 +124,7 @@ function Page() {
                             <div className={styles.Corretiva}>
                                 <img className={styles.corretiva} src="/torno.png" />
                                 <h1 className={styles.titulo}>{maquina.marca}</h1>
-                                <h1 className={styles.titulo}>{maquina.modelo}</h1>
+                                <h3 className={styles.titulo}>{maquina.modelo}</h3>
                             </div>
                         </Link>
                     ))}
