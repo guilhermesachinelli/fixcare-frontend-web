@@ -4,6 +4,7 @@ import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useState } from "react"
+import HeaderIB from "../components/HeaderIB/page";
 
 
 function Manutencao() {
@@ -56,7 +57,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <Header />
+                <HeaderIB />
             
                 <a href='./Servico'>
                     <div className={styles.backbutton}>

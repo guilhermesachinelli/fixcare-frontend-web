@@ -1,4 +1,5 @@
 import Footer from "../components/footer/page";
+import HeaderIB from "../components/HeaderIB/page";
 import SideBar from "../components/sidebar/page"; // Corrigido para "sidebar"
 
 import styles from "./page.module.css";
@@ -6,8 +7,7 @@ import styles from "./page.module.css";
 function Page() { // Corrigido para "Page" com letra maiúscula
     return (
         <div className={styles.container}>
-            <SideBar />
-            <div className={styles.allcards}>
+ <HeaderIB />            <div className={styles.allcards}>
                 <div className={styles.titleContainer}>
                     <h1 className={styles.titulo1}>Desenvolvedores</h1>
                 </div>

@@ -4,6 +4,7 @@ import Footer from "../components/footer/page.jsx"
 import Header from "../components/header/page.jsx"
 import PopupMessage from '../components/PopUp/PopUp';
 import { useState, useEffect } from "react"
+import HeaderIB from "../components/HeaderIB/page";
 
 function Manutencao() {
     const [selectAll, setSelectAll] = useState(false);
@@ -104,8 +105,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <Header />
-                <a href='./Servico'>
+            <HeaderIB />                <a href='./Servico'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>

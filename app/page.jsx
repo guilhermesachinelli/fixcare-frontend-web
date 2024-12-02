@@ -9,6 +9,7 @@ import Header from "./components/header/page.jsx";
 
 // Importa o componente Footer.
 import Footer from "./components/footer/page.jsx";
+import HeaderIB from "./components/HeaderIB/page";
 
 // Define o componente funcional Home.
 const Home = () => {
@@ -18,7 +19,7 @@ const Home = () => {
 
       {/* Define o cabeçalho da página e aplica a classe CSS 'header'.*/}
         {/*Renderiza o componente Header.*/}
-        <Header />
+        <HeaderIB />
       {/* Define uma div para conter as imagens e aplica a classe CSS 'Imgs'.*/}
       <div className={styles.Imgs}>
         {/* Renderiza a imagem do logo do Senai e aplica a classe CSS 'logoSenai'.*/}
