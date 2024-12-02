@@ -6,7 +6,9 @@ function Servico() {
     return (
         <div className={styles.container}>
             
-                <SideBar />
+            <SideBar className={styles.sidebar}>
+            <SideBar />
+        </SideBar>
             
             <div className={styles.Cards}>
                 <a href='./SolicitacaoManutencao'>
