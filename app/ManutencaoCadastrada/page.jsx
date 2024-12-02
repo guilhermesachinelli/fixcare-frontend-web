@@ -36,8 +36,7 @@ function ManutencaoCadastrada() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
-                <a href='./Manutencoes'>
+            <HeaderIB />                <a href='./Manutencoes'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>

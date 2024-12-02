@@ -1,14 +1,13 @@
 import styles from "./page.module.css"
 import Footer from "../components/footer/page.jsx"
-import SideBar from "../components/SideBar/page";
 import HeaderIB from "../components/HeaderIB/page";
 
 function Servico() {
     return (
         <div className={styles.container}>
-            
-            <HeaderIB />
-            <div className={styles.Cards}>
+
+                <HeaderIB />
+          <div className={styles.Cards}>
                 <a href='./SolicitacaoManutencao'>
                     <div className={styles.manutencao}>
                         <img className={styles.ferramentas} src="/ferramentas.png" />
@@ -22,7 +21,6 @@ function Servico() {
                         <h1 className={styles.titulo2}>Manutenção</h1>
                     </div>
                 </a>
-        
 
             </div>
             <footer className={styles.footer}>

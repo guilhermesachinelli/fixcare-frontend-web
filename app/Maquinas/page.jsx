@@ -3,9 +3,8 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from "./page.module.css";
 import Footer from "../components/footer/page.jsx";
+import Header from "../components/header/page.jsx";
 import PopupMessage from '../components/PopUp/PopUp';
-import SideBar from '../components/SideBar/page';
-import { SearchOutlined } from '@ant-design/icons';
 import HeaderIB from '../components/HeaderIB/page';
 
 function Page() {
@@ -19,7 +18,7 @@ function Page() {
 
     const fetchMaquinas = async () => {
         try {
-            const response = await fetch('http://10.88.199.223:4000/machine', {
+            const response = await fetch('http://10.88.200.152:4000/machine', {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -114,17 +113,18 @@ function Page() {
                 </form>
             </div>
             <div className={styles.Cards}>
-                <div className={styles.CardsRow}>
 
+                <div className={styles.CardsRow}>
+                    
                     {data.map((maquina) => (
                         <Link
                             key={maquina.id}
                             href={`/MaquinaCadastrada?id=${maquina.id}`}
                         >
                             <div className={styles.Corretiva}>
-                                <img className={styles.corretiva} src="/tornoNardini.png" />
-                                <h1 className={styles.titulom}>{maquina.marca}</h1>
-                                <h1 className={styles.titulo}>{maquina.modelo}</h1>
+                                <img className={styles.corretiva} src="/torno.png" />
+                                <h1 className={styles.titulo}>{maquina.marca}</h1>
+                                <h3 className={styles.titulo}>{maquina.modelo}</h3>
                             </div>
                         </Link>
                     ))}

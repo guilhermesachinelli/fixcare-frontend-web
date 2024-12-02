@@ -105,8 +105,7 @@ function Manutencao() {
     return (
         <div className={styles.container}>
             
-                <HeaderIB />
-                <a href='./Servico'>
+            <HeaderIB />                <a href='./Servico'>
                     <div className={styles.backbutton}>
                         <p>⬅</p>
                     </div>

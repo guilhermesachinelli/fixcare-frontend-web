@@ -8,8 +8,9 @@ function Page() { // Corrigido para "Page" com letra maiúscula
     return (
         
         <div className={styles.container}>
-            <HeaderIB />
-            <div className={styles.allcards}>
+            <HeaderIB />           
+  <div className={styles.allcards}>
+
                 <div className={styles.titleContainer}>
                     <h1 className={styles.titulo1}>Desenvolvedores</h1>
                 </div>
