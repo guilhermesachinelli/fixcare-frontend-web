@@ -4,13 +4,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  background-color: #e7e9e8;
 }
 
 .footer {
   display: flex;
   justify-content: end;
   align-items: center;
+  background: #3737b1;
   color: white;
   height: auto; /* Permite que o rodapé se ajuste ao conteúdo */
   width: 100%;
@@ -34,7 +34,6 @@
   align-items: center;
   flex-wrap: wrap; 
   padding: 0 20px;
-  margin-bottom: 80px;
 }
 
 .manutencao,
@@ -45,14 +44,14 @@
   gap: 0px;
   border-radius: 10px 10px 10px 10px;
   opacity: 0px;
-  background: #0f3246;
+  background: rgba(0, 57, 150, 0.93);
   margin-left: 50px;
   margin-top: 100px;
 }
 
 .manutencao:hover,
 .lubrificacao:hover {
-  background-color: #4e565c;
+  background-color: rgba(0, 57, 150, 0.603);
   transition: 0.5s;
   opacity: 0.7;
 }
@@ -105,4 +104,3 @@
     height: auto; /* Permite que a altura se ajuste ao conteúdo */
   }
 }
-
