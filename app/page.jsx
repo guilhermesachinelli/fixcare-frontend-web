@@ -4,8 +4,11 @@
 // Importa os estilos definidos no arquivo CSS.
 import styles from "./page.module.css";
 
-// Importa o componente Header.
-import Header from "./components/header/page.jsx";
+const Home = () => {
+  return (
+    <div className={styles.main}>
+
+
 
 // Importa o componente Footer.
 import Footer from "./components/footer/page.jsx";

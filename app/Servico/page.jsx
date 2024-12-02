@@ -6,8 +6,9 @@ import HeaderIB from "../components/HeaderIB/page";
 function Servico() {
     return (
         <div className={styles.container}>
-            
+
                 <HeaderIB />
+
             
 
             <div className={styles.Cards}>
