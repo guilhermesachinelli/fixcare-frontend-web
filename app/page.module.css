@@ -49,6 +49,10 @@
   margin-left: -9px;
 }
 
+.sidebar {
+  height: 1000vh;
+}
+
 .content {
   flex: 1; /* Permite que este container ocupe o espaço restante */
   padding: 20px; /* Espaçamento interno */

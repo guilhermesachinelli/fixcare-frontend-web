@@ -7,7 +7,9 @@ import Footer from "./components/footer/page";
 const Home = () => {
   return (
     <div className={styles.main}>
-      <SideBar />
+      <SideBar className={styles.sidebar}>
+            <SideBar />
+        </SideBar>
 
       <div className={styles.content}>
         <div className={styles.header}>
